@@ -1,0 +1,33 @@
+@prefix : <https://knowledge.c-innovationhub.com/my-ontology#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@base <https://knowledge.c-innovationhub.com/my-ontology#> .
+
+<https://knowledge.c-innovationhub.com/my-ontology> rdf:type owl:Ontology ;
+                                                        owl:versionIRI <https://knowledge.c-innovationhub.com/my-ontology/1.0.0> ;
+                                                        schema:funding <https://doi.org/CORDIS_DOI> ;
+                                                        dct:creator "Mario Scrocca (Cefriel)"@en ;
+                                                        dct:contributor "My Contributor (My Organisation)"@en ;
+                                                        dct:description "My Ontology for my project."@en ;
+                                                        dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                        dct:publisher "Cefriel"@en ;
+                                                        dct:title "My Ontology"@en ;
+                                                        <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+                                                        rdfs:comment "My Ontology for my project." ;
+                                                        rdfs:label "My Ontology" ;
+                                                        owl:versionInfo "1.0.0"@en .
+
+
+:exampleObjectProperty rdf:type owl:ObjectProperty .
+
+:exampleDatatypeProperty rdf:type owl:DatatypeProperty .
+
+:exampleClass rdf:type owl:Class .
+
+:exampleIndividual rdf:type owl:NamedIndividual ,
+                           :exampleClass .
