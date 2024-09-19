@@ -1,30 +1,14 @@
-# Template repository for an ontology
+# Procedural Knowledge Ontology (PKO)
 
-Repository for My Ontology.
+Repository for the Procedural Knowledge Ontology (PKO) 
 
 | Prefix    | IRI |
 | -- | ------- |
-| my-prefix:  | [https://knowledge.c-innovationhub.com/my-ontology#](https://knowledge.c-innovationhub.com/my-ontology#)  |
+| pko:  | [https://w3id.org/pko/](https://w3id.org/pko/)  |
 
-## How to
+## Contentn
 
-Create a repository starting from this template repository. Rename the folders and the repository accordingly to the identifier of the ontology. The new repository name should be used to replace `my-ontology` in all the places.
+The resources associated with the requirements specification are available in the `requirements` folder.
+The RDF files describing the ontology can be found in the ontology folder [pko.owl](.pko/pko.owl) file. The OWL file is associated with the corresponding [Chowlk](https://chowlk.linkeddata.es/) diagram.
 
-1. The RDF files describing the controlled vocabularies can be defined manually or by modifying the [my-ontology.owl](.my-ontology/my-ontology.owl) file.
-
-2. Download the Widoco tool as discussed below and put the JAR in the `tools` folder to automatise its execution through the `run-onto.sh` script. A Java installation is required.
-
-### `widoco`: RDF to HTML
-Download release JAR from [here](https://github.com/dgarijo/Widoco/releases) and rename it as `widoco.jar`. Documentation for the CLI tool is available [here](https://github.com/dgarijo/Widoco#how-to-use-widoco). The `run-onto.sh` script was tested with version `1.4.21`.
-
-3. Execute the `sh run-onto.sh my-ontology x.y.z` script providing as argument the correct version number.
-
-4. Edit the documentation in the [sections](.my-ontology/sections) folder
-
-5. Git commit and push
-
-6. Enable GitHub Pages to host the ontology
-
-7. Configure a webserver by using the provided [.htaccess](.my-ontology/.htaccess) file.
-
-
+The Widoco tool is used to automatise the ontology publication through the `run-onto.sh` script as described in the template repo https://github.com/cefriel/ontology-template.
