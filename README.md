@@ -6,7 +6,7 @@ Repository for the Procedural Knowledge Ontology (PKO)
 | -- | ------- |
 | pko:  | [https://w3id.org/pko/](https://w3id.org/pko/)  |
 
-## Contentn
+## Content of the repository
 
 The resources associated with the requirements specification are available in the `requirements` folder.
 The RDF files describing the ontology can be found in the ontology folder [pko.owl](.pko/pko.owl) file. The OWL file is associated with the corresponding [Chowlk](https://chowlk.linkeddata.es/) diagram.
