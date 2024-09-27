@@ -4,7 +4,7 @@ Repository for the Procedural Knowledge Ontology (PKO)
 
 | Prefix    | IRI |
 | -- | ------- |
-| pko:  | [https://w3id.org/pko/](https://w3id.org/pko/)  |
+| pko:  | [https://w3id.org/pko#](https://w3id.org/pko#)  |
 
 ## Ontology purpose and scope
 
