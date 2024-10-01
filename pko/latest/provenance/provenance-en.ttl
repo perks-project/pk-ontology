@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://w3id.org/pko/0.0.1> a prov:Entity;
+<..\index-en.html> a prov:Entity;
 	 dc:title "Procedural Knowledge Ontology (PKO)";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
@@ -11,8 +11,8 @@
 	 prov:wasAttributedTo :agent4;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .
-:agent0 a prov:Agent; foaf:name "Mario Scrocca (Cefriel)".
+:agent0 a prov:Agent; foaf:name "Mario Scrocca (Cefriel)".
 :agent1 a prov:Agent; foaf:name "Valentina Carriero (Cefriel)".
-:agent2 a prov:Agent; foaf:name "Antonia Azzini (Cefriel)".
-:agent3 a prov:Agent; foaf:name "Ilaria Baroni (Cefriel)".
-:agent4 a prov:Agent; foaf:name "Irene Celino (Cefriel)".
+:agent2 a prov:Agent; foaf:name "Antonia Azzini (Cefriel)".
+:agent3 a prov:Agent; foaf:name "Ilaria Baroni (Cefriel)".
+:agent4 a prov:Agent; foaf:name "Irene Celino (Cefriel)".
