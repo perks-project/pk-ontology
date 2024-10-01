@@ -19,6 +19,6 @@ The Procedural Knowledge Ontology (PKO) is defined to support the holistic gover
 
 The resources associated with the requirements specification are available in the [`requirements`](./requirements) folder. A draft version of the requirements is currently available in the folder.
 
-The RDF files describing the ontology can be found in the ontology folder [pko.owl](.pko/pko.owl) file. The OWL file is associated with the corresponding [Chowlk](https://chowlk.linkeddata.es/) diagram.
+The RDF files describing the different versions of the ontology can be found in the folder [pko](./pko). A [Chowlk](https://chowlk.linkeddata.es/) diagram for the current version of the ontology can be found in the [ontology](./ontology) folder.
 
 The Widoco tool is used to automatise the ontology publication through the `run-onto.sh` script as described in the template repo https://github.com/cefriel/ontology-template.
