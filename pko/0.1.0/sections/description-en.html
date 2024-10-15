@@ -1,7 +1,34 @@
 <h2 id="desc" class="list">Procedural Knowledge Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
 <span class="markdown">
-Procedural Knowledge Ontology (PKO) description. You can use Markdown syntax: **bold**, *italic*, etc. Otherwise, you can embed HTML.
+The main class of the ontology is Procedure, which is defined as a sequence of actions to be executed in order to achieve a desired outcome.
+Such outcome can be expressed in terms of a Procedure Type (e.g., a maintenance activity), that is
+the type of procedure being executed on a Target (e.g., a production line for a specific type of machines). 
+The class Procedure is declared as a subclass of both Plan, and Resource (intended as any entity that can be included in a catalog.)
+
+If someone wants to manage version control, and keep track of updates and revisions to the same procedure, it is possible to link an "abstract" procedure to its versioned procedures (hasVersion), which are in a sequential order (nextVersion, previousVersion).
+
+A Procedure can be associated with a ProcedureStatus (e.g., draft, validated, approved).
+
+A Procedure is linked to all its Steps with the property hasStep. A Step groups one or more Actions (from a human - requiresAction) or Functions (from an algorithm/software - requiresFunction) to execute a portion of a Procedure, possibly with the use of some Tools (requiresTool).
+
+A Step can be decomposed as a set of multiple steps itself (Multistep). 
+The class StepVerification represents the way in which the execution of a Step can be verified.
+
+When different agents (e.g., a junior vs a senior technician) perform the same procedure, we may need to specify the ExpertiseLevel of each (Multi)Steps, meaning that the step is targeted at an agent with that level of expertise. This allows for different formulations and levels of detail of the same steps.
+
+A certain Procedure can be executed one or multiple times, by one or more agents,
+at a certain time. This is represented by the classes of ProcedureExecution and StepExecution, which are defined as subclasses of Activity, and thanks to which we can track the execution of the procedure as a whole, and as a composition of executions of the individual steps. 
+
+The ProcedureExecution can be associated with a ProcedureExecutionStatus (e.g., in progress, completed, paused).
+
+The UserFeedbackOccurrence represents the case in which an Agent leaves a feedback either on the procedure or the procedure execution.
+The UserQuestionOccurrence allows to keep track of the questions that an Agent may come up with while performing the procedure, and to the possible Resource that allowed to address the question.
+The IssueOccurrence models the occurrence of an Error that may be encountered by an Agent at some point during execution, and allows to record the cause, as identified by the Agent, and the solution that has been applied by the Agent. Such Error may be associated with an errorCode, and may be addressed by a specific fallback (Multi)Step included in the Procedure.
+
+An Agent, while interacting with a procedure, can play a certain Role (e.g., editor, supervisor, user). The class RoleInTime makes it possible to model a role that an agent may have and to restrict itto a particular PeriodOfTime.
+
+A Procedure can reference (property references) different Resources, like documents and images that constitute relevant documentation; it can be extracted from (wasExtractedFrom) a Resource, as in the case of e.g. a PDF containing some text describing a procedure to execute.
 </span>
 
-<p align="center"><img src="./sections/media/cefriel.png" alt="Example of image" height="50"></p>
+<p align="center"><img src="./sections/media/pko-v0.1.0-short.png" alt="Simplified version of the diagram representing the PKO ontology" height="50"></p>
