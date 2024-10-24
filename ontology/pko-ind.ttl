@@ -1,0 +1,161 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pko: <https://w3id.org/pko#> .
+@prefix pko-ind: <https://w3id.org/pko/industry#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+dc:contributor a owl:AnnotationProperty .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+schema:funding a owl:AnnotationProperty .
+
+rdfs:label a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+prov:atLocation a owl:ObjectProperty ;
+    rdfs:label "at location" .
+
+<https://w3id.org/pko/industry> a owl:Ontology ;
+    rdfs:label "Industry module of Procedural Knowledge Ontology (PKO)" ;
+    dc:contributor "Antonia Azzini (Cefriel)",
+        "Ilaria Baroni (Cefriel)",
+        "Irene Celino (Cefriel)" ;
+    dc:creator "Mario Scrocca (Cefriel)",
+        "Valentina Carriero (Cefriel)" ;
+    dc:title "Industry module of Procedural Knowledge Ontology (PKO)" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:publisher "Cefriel" ;
+    schema:funding <https://doi.org/10.3030/101120323> ;
+    owl:versionInfo "0.0.1" ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+pko-ind:BumpCap a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:ButterflyValvePadlock a owl:NamedIndividual,
+        pko-ind:Padlock .
+
+pko-ind:CablePadlock a owl:NamedIndividual,
+        pko-ind:Padlock .
+
+pko-ind:CoolantEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:Device a owl:Class ;
+    rdfs:label "Device" ;
+    rdfs:subClassOf pko-ind:Machine .
+
+pko-ind:ElectricalEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:Factory a owl:Class ;
+    rdfs:label "Factory" ;
+    rdfs:subClassOf prov:Location .
+
+pko-ind:GasEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:GateValvePadlock a owl:NamedIndividual,
+        pko-ind:Padlock .
+
+pko-ind:Gloves a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:GravitationalEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:HardHat a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:Harness a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:HearingProtection a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:HydraulicEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:LongPadlock a owl:NamedIndividual,
+        pko-ind:Padlock .
+
+pko-ind:PadlockAndChain a owl:NamedIndividual,
+        pko-ind:Padlock .
+
+pko-ind:PneumaticEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:SafetyGlasses a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:SafetyShoes a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:Sleeves a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:StandardPadlock a owl:NamedIndividual,
+        pko-ind:Padlock .
+
+pko-ind:ThermalEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:WaterEnergy a owl:NamedIndividual,
+        pko-ind:EnergySource .
+
+pko-ind:hasMachineType a owl:ObjectProperty ;
+    rdfs:label "has machine type" ;
+    rdfs:domain pko-ind:Machine ;
+    rdfs:range pko-ind:MachineType .
+
+pko-ind:requiresPPE a owl:ObjectProperty ;
+    rdfs:label "requires p p e" ;
+    rdfs:domain pko:Step ;
+    rdfs:range pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:requiresPadlock a owl:ObjectProperty ;
+    rdfs:label "requires padlock" ;
+    rdfs:domain pko:Step ;
+    rdfs:range pko-ind:Padlock .
+
+pko-ind:wasManufacturedBy a owl:ObjectProperty ;
+    rdfs:label "was manufactured by" ;
+    rdfs:domain pko-ind:Machine ;
+    rdfs:range prov:Agent .
+
+prov:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+prov:Location a owl:Class ;
+    rdfs:label "Location" .
+
+pko-ind:MachineType a owl:Class ;
+    rdfs:label "Machine Type" .
+
+pko:Step a owl:Class ;
+    rdfs:label "Step" .
+
+pko-ind:Machine a owl:Class ;
+    rdfs:label "Machine" .
+
+pko-ind:Padlock a owl:Class ;
+    rdfs:label "Padlock" .
+
+pko-ind:EnergySource a owl:Class ;
+    rdfs:label "Energy Source" .
+
+pko-ind:PersonalProtectiveEquipment a owl:Class ;
+    rdfs:label "Personal Protective Equipment" .
+
