@@ -141,9 +141,6 @@ prov:Entity a owl:Class ;
 prov:Organization a owl:Class ;
     rdfs:label "Organization" .
 
-prov:atLocation a owl:ObjectProperty ;
-    rdfs:label "at location" .
-
 prov:atTime a owl:DatatypeProperty ;
     rdfs:label "at time" .
 
@@ -175,10 +172,6 @@ prov:wasGeneratedBy a owl:ObjectProperty ;
     schema:funding <https://doi.org/10.3030/101120323> ;
     owl:versionInfo "0.1.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
-
-pko:Factory a owl:Class ;
-    rdfs:label "Factory" ;
-    rdfs:subClassOf prov:Location .
 
 pko:ProcedureExecutionStatus a owl:Class ;
     rdfs:label "Procedure Execution Status" .
@@ -263,20 +256,10 @@ pko:hasIssueOccurrence a owl:ObjectProperty ;
     rdfs:domain prov:Activity ;
     rdfs:range pko:IssueOccurrence .
 
-pko:hasMachineType a owl:ObjectProperty ;
-    rdfs:label "has machine type" ;
-    rdfs:domain pko:ProcedureTarget ;
-    rdfs:range pko:MachineType .
-
 pko:hasProcedureTarget a owl:ObjectProperty ;
     rdfs:label "has procedure target" ;
     rdfs:domain pko:Procedure ;
-    rdfs:range pko:ProcedureTarget .
-
-pko:hasProcedureTargetType a owl:ObjectProperty ;
-    rdfs:label "has procedure target type" ;
-    rdfs:domain pko:ProcedureTarget ;
-    rdfs:range pko:ProcedureTargetType .
+    rdfs:range owl:Thing .
 
 pko:hasProcedureType a owl:ObjectProperty ;
     rdfs:label "has procedure type" ;
@@ -336,8 +319,18 @@ pko:isTemplate a owl:DatatypeProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range xsd:boolean .
 
+pko:issueCauseBySoftwareAgent a owl:DatatypeProperty ;
+    rdfs:label "issue cause by software agent" ;
+    rdfs:domain pko:IssueOccurrence ;
+    rdfs:range xsd:string .
+
 pko:issueCauseByUser a owl:DatatypeProperty ;
     rdfs:label "issue cause by user" ;
+    rdfs:domain pko:IssueOccurrence ;
+    rdfs:range xsd:string .
+
+pko:issueSolutionBySoftwareAgent a owl:DatatypeProperty ;
+    rdfs:label "issue solution by software agent" ;
     rdfs:domain pko:IssueOccurrence ;
     rdfs:range xsd:string .
 
@@ -381,6 +374,10 @@ pko:nextVersion a owl:ObjectProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
 
+pko:notesBySoftwareAgent a owl:DatatypeProperty ;
+    rdfs:label "notes by software agent" ;
+    rdfs:range xsd:string .
+
 pko:notesByUser a owl:DatatypeProperty ;
     rdfs:label "notes by user" ;
     rdfs:range xsd:string .
@@ -419,6 +416,11 @@ pko:requiresTool a owl:ObjectProperty ;
     rdfs:label "requires tool" ;
     rdfs:domain pplan:Step ;
     rdfs:range m4ing:Tool .
+
+pko:stepNumber a owl:DatatypeProperty ;
+    rdfs:label "step number" ;
+    rdfs:domain pplan:Step ;
+    rdfs:range xsd:string .
 
 pko:versionNumber a owl:DatatypeProperty ;
     rdfs:label "version number" ;
@@ -469,8 +471,8 @@ pplan:Plan a owl:Class ;
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
 
-prov:Location a owl:Class ;
-    rdfs:label "Location" .
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
 
 pko:Action a owl:Class ;
     rdfs:label "Action" .
@@ -487,15 +489,9 @@ pko:FAQTarget a owl:Class ;
 pko:Function a owl:Class ;
     rdfs:label "Function" .
 
-pko:MachineType a owl:Class ;
-    rdfs:label "Machine Type" .
-
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
-
-pko:ProcedureTargetType a owl:Class ;
-    rdfs:label "Procedure Target Type" .
 
 pko:ProcedureType a owl:Class ;
     rdfs:label "Procedure Type" .
@@ -506,9 +502,6 @@ pko:StepVerification a owl:Class ;
 
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
-
-pko:ProcedureTarget a owl:Class ;
-    rdfs:label "Procedure Target" .
 
 pko:Error a owl:Class ;
     rdfs:label "Error" .
@@ -525,10 +518,6 @@ pko:UserQuestionOccurrence a owl:Class ;
     rdfs:label "User Question Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
 
-pko:IssueOccurrence a owl:Class ;
-    rdfs:label "Issue Occurrence" ;
-    rdfs:subClassOf prov:InstantaneousEvent .
-
 pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" ;
     rdfs:subClassOf prov:Activity .
@@ -541,6 +530,10 @@ prov:Agent a owl:Class ;
 
 prov:Activity a owl:Class ;
     rdfs:label "Activity" .
+
+pko:IssueOccurrence a owl:Class ;
+    rdfs:label "Issue Occurrence" ;
+    rdfs:subClassOf prov:InstantaneousEvent .
 
 pko:Procedure a owl:Class ;
     rdfs:label "Procedure" ;
