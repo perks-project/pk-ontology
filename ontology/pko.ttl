@@ -425,7 +425,7 @@ pko:stepNumber a owl:DatatypeProperty ;
 pko:versionNumber a owl:DatatypeProperty ;
     rdfs:label "version number" ;
     rdfs:domain pko:Procedure ;
-    rdfs:range xsd:decimal .
+    rdfs:range xsd:string .
 
 pko:wasAskedBy a owl:ObjectProperty ;
     rdfs:label "was asked by" ;
