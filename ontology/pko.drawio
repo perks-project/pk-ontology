@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-11-18T17:33:04.976Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="7lrQ-TdzvasKzwa-3xp4" version="23.0.2" type="device" pages="3">
+<mxfile host="Electron" modified="2024-11-18T17:44:31.980Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="rq01j0Cyo2P5A3EfK9rU" version="23.0.2" type="device" pages="3">
   <diagram name="pko" id="m8YNppsp5nKSXWjHvn1q">
-    <mxGraphModel dx="1438" dy="1479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1540" dy="1544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -460,12 +460,12 @@
         <mxCell id="9d43khAp4z9KavK-o5Pn-85" value="pko:StepExecution" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
           <mxGeometry x="480" y="918" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-86" value="" style="endArrow=block;html=1;fontColor=#000099;exitX=0.8;exitY=0;exitDx=0;exitDy=0;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="9d43khAp4z9KavK-o5Pn-84" target="9d43khAp4z9KavK-o5Pn-74" edge="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-86" value="" style="endArrow=block;html=1;fontColor=#000099;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="9d43khAp4z9KavK-o5Pn-84" target="9d43khAp4z9KavK-o5Pn-74" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="798" y="183" as="sourcePoint" />
             <mxPoint x="764" y="-152" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="421" y="733" />
+              <mxPoint x="355" y="733" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1275,6 +1275,21 @@
         </mxCell>
         <mxCell id="L0IWrYRe1VUCox_zoRnf-1" value="pko:stepNumber: string" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
           <mxGeometry x="1210" y="729.94" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tFydXXD5LqOP6NpmtRVQ-1" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-85" target="9d43khAp4z9KavK-o5Pn-84">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="900" as="sourcePoint" />
+            <mxPoint x="658" y="928" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="522" y="870" />
+              <mxPoint x="418" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tFydXXD5LqOP6NpmtRVQ-2" value="&lt;div&gt;pko:isIncludedInProcedureExecution&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tFydXXD5LqOP6NpmtRVQ-1">
+          <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
+            <mxPoint x="-22" y="16" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

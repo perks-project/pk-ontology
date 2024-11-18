@@ -294,6 +294,11 @@ pko:isCurrentVersionOf a owl:ObjectProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
 
+pko:isIncludedInProcedureExecution a owl:ObjectProperty ;
+    rdfs:label "is included in procedure execution" ;
+    rdfs:domain pko:StepExecution ;
+    rdfs:range pko:ProcedureExecution .
+
 pko:isQuestionAddressedBy a owl:ObjectProperty ;
     rdfs:label "is question addressed by" ;
     rdfs:domain pko:UserQuestionOccurrence ;
@@ -489,12 +494,12 @@ pko:FAQTarget a owl:Class ;
 pko:Function a owl:Class ;
     rdfs:label "Function" .
 
+pko:ProcedureType a owl:Class ;
+    rdfs:label "Procedure Type" .
+
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
-
-pko:ProcedureType a owl:Class ;
-    rdfs:label "Procedure Type" .
 
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
@@ -518,15 +523,15 @@ pko:UserQuestionOccurrence a owl:Class ;
     rdfs:label "User Question Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
 
-pko:StepExecution a owl:Class ;
-    rdfs:label "Step Execution" ;
-    rdfs:subClassOf prov:Activity .
-
 dcat:Resource a owl:Class ;
     rdfs:label "Resource" .
 
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
+
+pko:StepExecution a owl:Class ;
+    rdfs:label "Step Execution" ;
+    rdfs:subClassOf prov:Activity .
 
 prov:Activity a owl:Class ;
     rdfs:label "Activity" .
