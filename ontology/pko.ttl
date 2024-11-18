@@ -381,10 +381,12 @@ pko:nextVersion a owl:ObjectProperty ;
 
 pko:notesBySoftwareAgent a owl:DatatypeProperty ;
     rdfs:label "notes by software agent" ;
+    rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
 pko:notesByUser a owl:DatatypeProperty ;
     rdfs:label "notes by user" ;
+    rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
 pko:previousStep a owl:ObjectProperty ;
@@ -476,9 +478,6 @@ pplan:Plan a owl:Class ;
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
 
-owl:Thing a owl:Class ;
-    rdfs:label "Thing" .
-
 pko:Action a owl:Class ;
     rdfs:label "Action" .
 
@@ -504,6 +503,9 @@ pko:ProcedureExecution a owl:Class ;
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
     rdfs:subClassOf pplan:Step .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
 
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
