@@ -9,6 +9,7 @@
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -95,9 +96,6 @@ schema:funding a owl:AnnotationProperty .
 rdfs:label a owl:AnnotationProperty .
 
 owl:versionInfo a owl:AnnotationProperty .
-
-time:Duration a owl:Class ;
-    rdfs:label "Duration" .
 
 time:TemporalUnit a owl:Class ;
     rdfs:label "Temporal Unit" .
@@ -230,7 +228,10 @@ pko:hasEncounteredError a owl:ObjectProperty ;
     rdfs:range pko:Error .
 
 pko:hasExpectedDuration a owl:ObjectProperty ;
-    rdfs:label "has expected duration" .
+    rdfs:label "has expected duration" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pko:Procedure pplan:Step ) ] ;
+    rdfs:range time:Duration .
 
 pko:hasFAQCategory a owl:ObjectProperty ;
     rdfs:label "has f a q category" ;
@@ -249,6 +250,8 @@ pko:hasFallbackStep a owl:ObjectProperty ;
 
 pko:hasFirstStep a owl:ObjectProperty ;
     rdfs:label "has first step" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pko:Procedure pplan:MultiStep ) ] ;
     rdfs:range pplan:Step .
 
 pko:hasIssueOccurrence a owl:ObjectProperty ;
@@ -268,6 +271,8 @@ pko:hasProcedureType a owl:ObjectProperty ;
 
 pko:hasStep a owl:ObjectProperty ;
     rdfs:label "has step" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pko:Procedure pplan:MultiStep ) ] ;
     rdfs:range pplan:Step .
 
 pko:hasStepVerification a owl:ObjectProperty ;
@@ -469,14 +474,14 @@ pko:wasProvidedBy a owl:ObjectProperty ;
     rdfs:domain pko:UserFeedbackOccurrence ;
     rdfs:range prov:Agent .
 
-pplan:MultiStep a owl:Class ;
-    rdfs:label "Multi Step" .
-
 pplan:Plan a owl:Class ;
     rdfs:label "Plan" .
 
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
+
+time:Duration a owl:Class ;
+    rdfs:label "Duration" .
 
 pko:Action a owl:Class ;
     rdfs:label "Action" .
@@ -503,6 +508,9 @@ pko:ProcedureExecution a owl:Class ;
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
     rdfs:subClassOf pplan:Step .
+
+pplan:MultiStep a owl:Class ;
+    rdfs:label "Multi Step" .
 
 owl:Thing a owl:Class ;
     rdfs:label "Thing" .
