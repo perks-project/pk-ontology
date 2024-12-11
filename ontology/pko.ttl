@@ -6,6 +6,7 @@
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pko: <https://w3id.org/pko#> .
+@prefix pko-ind: <https://w3id.org/pko/industry#> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -299,6 +300,11 @@ pko:isCurrentVersionOf a owl:ObjectProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
 
+pko:isExecutedOnMachine a owl:ObjectProperty ;
+    rdfs:label "is executed on machine" ;
+    rdfs:domain prov:Activity ;
+    rdfs:range pko-ind:Machine .
+
 pko:isIncludedInProcedureExecution a owl:ObjectProperty ;
     rdfs:label "is included in procedure execution" ;
     rdfs:domain pko:StepExecution ;
@@ -501,6 +507,9 @@ pko:Function a owl:Class ;
 pko:ProcedureType a owl:Class ;
     rdfs:label "Procedure Type" .
 
+pko-ind:Machine a owl:Class ;
+    rdfs:label "Machine" .
+
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
@@ -543,12 +552,12 @@ pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" ;
     rdfs:subClassOf prov:Activity .
 
-prov:Activity a owl:Class ;
-    rdfs:label "Activity" .
-
 pko:IssueOccurrence a owl:Class ;
     rdfs:label "Issue Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Activity" .
 
 pko:Procedure a owl:Class ;
     rdfs:label "Procedure" ;
