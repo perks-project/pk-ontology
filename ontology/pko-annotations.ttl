@@ -1,6 +1,7 @@
 @prefix : <https://w3id.org/pko/external#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pko: <https://w3id.org/pko#> .
+@prefix pko-ind: <https://w3id.org/pko/industry#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -280,7 +281,7 @@ pko:FAQCategory rdfs:comment "This class represents the Category of a Frequently
 pko:FAQTarget rdfs:comment "This class represents the Target of a Frequently Asked Question (FAQ)."@en .
 
 
-pko:Factory rdfs:comment "This class represents a building or set of buildings with facilities for manufacturing."@en .
+pko-ind:Factory rdfs:comment "This class represents a building or set of buildings with facilities for manufacturing."@en .
 
 
 pko:FrequentlyAskedQuestion rdfs:comment "A Frequently Asked Question (FAQ) is a Resource representing a question that people often ask about a particular resource, and the answer to the question."@en ;
@@ -295,7 +296,7 @@ pko:IssueOccurrence rdfs:comment "This class represents the occurrence of an iss
                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the occurrence of an issue during the Procedure or Step Execution. The Issue Occurrence is associated with the cause as identified and defined by the Agent, the solution as identified and applied by the Agent, and is linked to the Agent that encountered the issue."@en .
 
 
-pko:MachineType rdfs:comment "This class represents the Type of a Machine."@en ;
+pko-ind:MachineType rdfs:comment "This class represents the Type of a Machine."@en ;
                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type linked to the Procedure Target, in the case it refers to a machine."@en .
 
 
@@ -385,7 +386,7 @@ pko:hasFirstStep skos:scopeNote "In the context of the Procedural Knowledge Onto
 pko:hasIssueOccurrence skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to an Issue Occurrence, that is the occurrence of an issue during the execution."@en .
 
 
-pko:hasMachineType skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Machine Type of the Procedure Target, in the case it refers to a machine."@en .
+pko-ind:hasMachineType skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Machine Type of the Procedure Target, in the case it refers to a machine."@en .
 
 
 pko:hasProcedureTarget skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation."@en .
