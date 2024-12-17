@@ -2,8 +2,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pko: <https://w3id.org/pko#> .
 @prefix pko-ind: <https://w3id.org/pko/industry#> .
+@prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -122,12 +122,12 @@ pko-ind:hasMachineType a owl:ObjectProperty ;
 
 pko-ind:requiresPPE a owl:ObjectProperty ;
     rdfs:label "requires p p e" ;
-    rdfs:domain pko:Step ;
+    rdfs:domain pplan:Step ;
     rdfs:range pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:requiresPadlock a owl:ObjectProperty ;
     rdfs:label "requires padlock" ;
-    rdfs:domain pko:Step ;
+    rdfs:domain pplan:Step ;
     rdfs:range pko-ind:Padlock .
 
 pko-ind:wasManufacturedBy a owl:ObjectProperty ;
@@ -144,7 +144,7 @@ prov:Location a owl:Class ;
 pko-ind:MachineType a owl:Class ;
     rdfs:label "Machine Type" .
 
-pko:Step a owl:Class ;
+pplan:Step a owl:Class ;
     rdfs:label "Step" .
 
 pko-ind:Machine a owl:Class ;
