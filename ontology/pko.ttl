@@ -169,7 +169,10 @@ prov:wasGeneratedBy a owl:ObjectProperty ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
     schema:funding <https://doi.org/10.3030/101120323> ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "1.0.0" ;
+    <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+    owl:priorVersion <https://w3id.org/pko/0.1.0> ;
+    owl:versionIRI <https://w3id.org/pko/1.0.0> ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 pko:ProcedureExecutionStatus a owl:Class ;

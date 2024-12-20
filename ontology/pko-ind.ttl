@@ -38,7 +38,9 @@ prov:atLocation a owl:ObjectProperty ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
     schema:funding <https://doi.org/10.3030/101120323> ;
-    owl:versionInfo "0.0.1" ;
+    owl:versionInfo "1.0.0" ;
+    <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+    owl:versionIRI <https://w3id.org/pko/industry/1.0.0> ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 pko-ind:BumpCap a owl:NamedIndividual,
