@@ -1,0 +1,292 @@
+@prefix : <https://w3id.org/pko/industry#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/pko/industry#> .
+
+<https://w3id.org/pko/industry> rdf:type owl:Ontology ;
+                                 owl:versionIRI <https://w3id.org/pko/industry/1.0.0> ;
+                                 <http://purl.org/dc/elements/1.1/contributor> "Antonia Azzini (Cefriel)" ,
+                                                                               "Ilaria Baroni (Cefriel)" ,
+                                                                               "Irene Celino (Cefriel)" ;
+                                 <http://purl.org/dc/elements/1.1/creator> "Mario Scrocca (Cefriel)" ,
+                                                                           "Valentina Carriero (Cefriel)" ;
+                                 <http://purl.org/dc/elements/1.1/title> "Industry module of Procedural Knowledge Ontology (PKO)" ;
+                                 <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                 <http://purl.org/dc/terms/publisher> "Cefriel" ;
+                                 <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+                                 <http://schema.org/funding> <https://doi.org/10.3030/101120323> ;
+                                 rdfs:label "Industry module of Procedural Knowledge Ontology (PKO)" ;
+                                 owl:versionInfo "1.0.0" ;
+                                 <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/funding
+<http://schema.org/funding> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#atLocation
+<http://www.w3.org/ns/prov#atLocation> rdf:type owl:ObjectProperty ;
+                                       rdfs:label "at location" .
+
+
+###  https://w3id.org/pko/industry#hasMachineType
+:hasMachineType rdf:type owl:ObjectProperty ;
+                rdfs:domain :Machine ;
+                rdfs:range :MachineType ;
+                rdfs:label "has machine type" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type."@en .
+
+
+###  https://w3id.org/pko/industry#requiresPPE
+:requiresPPE rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://purl.org/net/p-plan#Step> ;
+             rdfs:range :PersonalProtectiveEquipment ;
+             rdfs:label "requires p p e" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en .
+
+
+###  https://w3id.org/pko/industry#requiresPadlock
+:requiresPadlock rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://purl.org/net/p-plan#Step> ;
+                 rdfs:range :Padlock ;
+                 rdfs:label "requires padlock" ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires."@en .
+
+
+###  https://w3id.org/pko/industry#wasManufacturedBy
+:wasManufacturedBy rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Machine ;
+                   rdfs:range <http://www.w3.org/ns/prov#Agent> ;
+                   rdfs:label "was manufactured by" ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Agent that manufactured it."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> rdf:type owl:Class ;
+                                  rdfs:label "Step" .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:label "Agent" .
+
+
+###  http://www.w3.org/ns/prov#Location
+<http://www.w3.org/ns/prov#Location> rdf:type owl:Class ;
+                                     rdfs:label "Location" .
+
+
+###  https://w3id.org/pko/industry#Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf :Machine ;
+        rdfs:comment "This class represents a Device."@en ;
+        rdfs:label "Device" .
+
+
+###  https://w3id.org/pko/industry#EnergySource
+:EnergySource rdf:type owl:Class ;
+              rdfs:comment "This class represents an Energy Source, that is a source of energy on the machine that needs to be identified and isolated during the LOTO procedure."@en ;
+              rdfs:label "Energy Source" .
+
+
+###  https://w3id.org/pko/industry#Factory
+:Factory rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
+         rdfs:comment "This class represents a building or set of buildings with facilities for manufacturing."@en ;
+         rdfs:label "Factory" .
+
+
+###  https://w3id.org/pko/industry#Machine
+:Machine rdf:type owl:Class ;
+         rdfs:comment "This class represents a Machine."@en ;
+         rdfs:label "Machine" .
+
+
+###  https://w3id.org/pko/industry#MachineType
+:MachineType rdf:type owl:Class ;
+             rdfs:comment "This class represents the Type of a Machine."@en ;
+             rdfs:label "Machine Type" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type of a Machine."@en .
+
+
+###  https://w3id.org/pko/industry#Padlock
+:Padlock rdf:type owl:Class ;
+         rdfs:comment "This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure."@en ;
+         rdfs:label "Padlock" .
+
+
+###  https://w3id.org/pko/industry#PersonalProtectiveEquipment
+:PersonalProtectiveEquipment rdf:type owl:Class ;
+                             rdfs:comment "This class represents a Personal Protective Equipment."@en ;
+                             rdfs:label "Personal Protective Equipment" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/pko/industry#BumpCap
+:BumpCap rdf:type owl:NamedIndividual ,
+                  :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#ButterflyValvePadlock
+:ButterflyValvePadlock rdf:type owl:NamedIndividual ,
+                                :Padlock .
+
+
+###  https://w3id.org/pko/industry#CablePadlock
+:CablePadlock rdf:type owl:NamedIndividual ,
+                       :Padlock .
+
+
+###  https://w3id.org/pko/industry#CoolantEnergy
+:CoolantEnergy rdf:type owl:NamedIndividual ,
+                        :EnergySource .
+
+
+###  https://w3id.org/pko/industry#ElectricalEnergy
+:ElectricalEnergy rdf:type owl:NamedIndividual ,
+                           :EnergySource .
+
+
+###  https://w3id.org/pko/industry#GasEnergy
+:GasEnergy rdf:type owl:NamedIndividual ,
+                    :EnergySource .
+
+
+###  https://w3id.org/pko/industry#GateValvePadlock
+:GateValvePadlock rdf:type owl:NamedIndividual ,
+                           :Padlock .
+
+
+###  https://w3id.org/pko/industry#Gloves
+:Gloves rdf:type owl:NamedIndividual ,
+                 :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#GravitationalEnergy
+:GravitationalEnergy rdf:type owl:NamedIndividual ,
+                              :EnergySource .
+
+
+###  https://w3id.org/pko/industry#HardHat
+:HardHat rdf:type owl:NamedIndividual ,
+                  :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#Harness
+:Harness rdf:type owl:NamedIndividual ,
+                  :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#HearingProtection
+:HearingProtection rdf:type owl:NamedIndividual ,
+                            :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#HydraulicEnergy
+:HydraulicEnergy rdf:type owl:NamedIndividual ,
+                          :EnergySource .
+
+
+###  https://w3id.org/pko/industry#LongPadlock
+:LongPadlock rdf:type owl:NamedIndividual ,
+                      :Padlock .
+
+
+###  https://w3id.org/pko/industry#PadlockAndChain
+:PadlockAndChain rdf:type owl:NamedIndividual ,
+                          :Padlock .
+
+
+###  https://w3id.org/pko/industry#PneumaticEnergy
+:PneumaticEnergy rdf:type owl:NamedIndividual ,
+                          :EnergySource .
+
+
+###  https://w3id.org/pko/industry#SafetyGlasses
+:SafetyGlasses rdf:type owl:NamedIndividual ,
+                        :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#SafetyShoes
+:SafetyShoes rdf:type owl:NamedIndividual ,
+                      :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#Sleeves
+:Sleeves rdf:type owl:NamedIndividual ,
+                  :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#StandardPadlock
+:StandardPadlock rdf:type owl:NamedIndividual ,
+                          :Padlock .
+
+
+###  https://w3id.org/pko/industry#ThermalEnergy
+:ThermalEnergy rdf:type owl:NamedIndividual ,
+                        :EnergySource .
+
+
+###  https://w3id.org/pko/industry#WaterEnergy
+:WaterEnergy rdf:type owl:NamedIndividual ,
+                      :EnergySource .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

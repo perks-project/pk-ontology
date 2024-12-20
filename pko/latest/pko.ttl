@@ -7,8 +7,7 @@
 @base <https://w3id.org/pko#> .
 
 <https://w3id.org/pko> rdf:type owl:Ontology ;
-                        owl:versionIRI <https://w3id.org/pko/1.0.0 ;
-    mod:createdWith <https://chowlk.linkeddata.es/> ;
+                        owl:versionIRI <https://w3id.org/pko/1.0.0> ;
                         <http://purl.org/dc/elements/1.1/contributor> "Antonia Azzini (Cefriel)" ,
                                                                       "Ilaria Baroni (Cefriel)" ,
                                                                       "Irene Celino (Cefriel)" ;
@@ -21,7 +20,8 @@
                         <http://schema.org/funding> <https://doi.org/10.3030/101120323> ;
                         rdfs:label "Procedural Knowledge Ontology (PKO)" ;
                         owl:priorVersion <https://w3id.org/pko/0.1.0> ;
-                        owl:versionInfo "1.0.0" .
+                        owl:versionInfo "1.0.0" ;
+                        <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
 #################################################################
 #    Annotation properties
@@ -73,6 +73,10 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 <http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
 
 
 #################################################################

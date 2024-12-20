@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/pko#"
      xml:base="https://w3id.org/pko"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -13,8 +14,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/pko">
-        <owl:versionIRI rdf:resource="https://w3id.org/pko/1.0.0 ;
-    mod:createdWith &lt;https://chowlk.linkeddata.es/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pko/1.0.0"/>
         <dc:contributor>Antonia Azzini (Cefriel)</dc:contributor>
         <dc:contributor>Ilaria Baroni (Cefriel)</dc:contributor>
         <dc:contributor>Irene Celino (Cefriel)</dc:contributor>
@@ -28,6 +28,7 @@
         <rdfs:label>Procedural Knowledge Ontology (PKO)</rdfs:label>
         <owl:priorVersion rdf:resource="https://w3id.org/pko/0.1.0"/>
         <owl:versionInfo>1.0.0</owl:versionInfo>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
 
@@ -125,6 +126,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
     
 
 

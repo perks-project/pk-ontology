@@ -1,5 +1,5 @@
 <https://w3id.org/pko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/pko> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/1.0.0%20;%A%20%20%20%20mod:createdWith%20%3Chttps://chowlk.linkeddata.es/> .
+<https://w3id.org/pko> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/1.0.0> .
 <https://w3id.org/pko> <http://purl.org/dc/elements/1.1/contributor> "Antonia Azzini (Cefriel)" .
 <https://w3id.org/pko> <http://purl.org/dc/elements/1.1/contributor> "Ilaria Baroni (Cefriel)" .
 <https://w3id.org/pko> <http://purl.org/dc/elements/1.1/contributor> "Irene Celino (Cefriel)" .
@@ -13,6 +13,7 @@
 <https://w3id.org/pko> <http://www.w3.org/2000/01/rdf-schema#label> "Procedural Knowledge Ontology (PKO)" .
 <https://w3id.org/pko> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/pko/0.1.0> .
 <https://w3id.org/pko> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/pko> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
 # #################################################################
@@ -57,6 +58,9 @@
 # 
 # http://www.w3.org/2004/02/skos/core#scopeNote
 <http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 

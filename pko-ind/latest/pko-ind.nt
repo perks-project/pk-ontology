@@ -1,0 +1,255 @@
+<https://w3id.org/pko/industry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/pko/industry> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/industry/1.0.0> .
+<https://w3id.org/pko/industry> <http://purl.org/dc/elements/1.1/contributor> "Antonia Azzini (Cefriel)" .
+<https://w3id.org/pko/industry> <http://purl.org/dc/elements/1.1/contributor> "Ilaria Baroni (Cefriel)" .
+<https://w3id.org/pko/industry> <http://purl.org/dc/elements/1.1/contributor> "Irene Celino (Cefriel)" .
+<https://w3id.org/pko/industry> <http://purl.org/dc/elements/1.1/creator> "Mario Scrocca (Cefriel)" .
+<https://w3id.org/pko/industry> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (Cefriel)" .
+<https://w3id.org/pko/industry> <http://purl.org/dc/elements/1.1/title> "Industry module of Procedural Knowledge Ontology (PKO)" .
+<https://w3id.org/pko/industry> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/pko/industry> <http://purl.org/dc/terms/publisher> "Cefriel" .
+<https://w3id.org/pko/industry> <http://purl.org/ontology/bibo/status> "Published Ontology"@en .
+<https://w3id.org/pko/industry> <http://schema.org/funding> <https://doi.org/10.3030/101120323> .
+<https://w3id.org/pko/industry> <http://www.w3.org/2000/01/rdf-schema#label> "Industry module of Procedural Knowledge Ontology (PKO)" .
+<https://w3id.org/pko/industry> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/pko/industry> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/funding
+<http://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#atLocation
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2000/01/rdf-schema#label> "at location" .
+# 
+# https://w3id.org/pko/industry#hasMachineType
+<https://w3id.org/pko/industry#hasMachineType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/industry#hasMachineType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko/industry#Machine> .
+<https://w3id.org/pko/industry#hasMachineType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#MachineType> .
+<https://w3id.org/pko/industry#hasMachineType> <http://www.w3.org/2000/01/rdf-schema#label> "has machine type" .
+<https://w3id.org/pko/industry#hasMachineType> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type."@en .
+# 
+# https://w3id.org/pko/industry#requiresPPE
+<https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
+<https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+<https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2000/01/rdf-schema#label> "requires p p e" .
+<https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en .
+# 
+# https://w3id.org/pko/industry#requiresPadlock
+<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
+<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#Padlock> .
+<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2000/01/rdf-schema#label> "requires padlock" .
+<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires."@en .
+# 
+# https://w3id.org/pko/industry#wasManufacturedBy
+<https://w3id.org/pko/industry#wasManufacturedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/industry#wasManufacturedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko/industry#Machine> .
+<https://w3id.org/pko/industry#wasManufacturedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/pko/industry#wasManufacturedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was manufactured by" .
+<https://w3id.org/pko/industry#wasManufacturedBy> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Agent that manufactured it."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step" .
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# http://www.w3.org/ns/prov#Location
+<http://www.w3.org/ns/prov#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+# 
+# https://w3id.org/pko/industry#Device
+<https://w3id.org/pko/industry#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pko/industry#Machine> .
+<https://w3id.org/pko/industry#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Device."@en .
+<https://w3id.org/pko/industry#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# https://w3id.org/pko/industry#EnergySource
+<https://w3id.org/pko/industry#EnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#EnergySource> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents an Energy Source, that is a source of energy on the machine that needs to be identified and isolated during the LOTO procedure."@en .
+<https://w3id.org/pko/industry#EnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Source" .
+# 
+# https://w3id.org/pko/industry#Factory
+<https://w3id.org/pko/industry#Factory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Factory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Location> .
+<https://w3id.org/pko/industry#Factory> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a building or set of buildings with facilities for manufacturing."@en .
+<https://w3id.org/pko/industry#Factory> <http://www.w3.org/2000/01/rdf-schema#label> "Factory" .
+# 
+# https://w3id.org/pko/industry#Machine
+<https://w3id.org/pko/industry#Machine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Machine> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Machine."@en .
+<https://w3id.org/pko/industry#Machine> <http://www.w3.org/2000/01/rdf-schema#label> "Machine" .
+# 
+# https://w3id.org/pko/industry#MachineType
+<https://w3id.org/pko/industry#MachineType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#MachineType> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the Type of a Machine."@en .
+<https://w3id.org/pko/industry#MachineType> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Type" .
+<https://w3id.org/pko/industry#MachineType> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type of a Machine."@en .
+# 
+# https://w3id.org/pko/industry#Padlock
+<https://w3id.org/pko/industry#Padlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Padlock> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure."@en .
+<https://w3id.org/pko/industry#Padlock> <http://www.w3.org/2000/01/rdf-schema#label> "Padlock" .
+# 
+# https://w3id.org/pko/industry#PersonalProtectiveEquipment
+<https://w3id.org/pko/industry#PersonalProtectiveEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#PersonalProtectiveEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Personal Protective Equipment."@en .
+<https://w3id.org/pko/industry#PersonalProtectiveEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Protective Equipment" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/pko/industry#BumpCap
+<https://w3id.org/pko/industry#BumpCap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#BumpCap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#ButterflyValvePadlock
+<https://w3id.org/pko/industry#ButterflyValvePadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#ButterflyValvePadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Padlock> .
+# 
+# https://w3id.org/pko/industry#CablePadlock
+<https://w3id.org/pko/industry#CablePadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#CablePadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Padlock> .
+# 
+# https://w3id.org/pko/industry#CoolantEnergy
+<https://w3id.org/pko/industry#CoolantEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#CoolantEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# https://w3id.org/pko/industry#ElectricalEnergy
+<https://w3id.org/pko/industry#ElectricalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#ElectricalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# https://w3id.org/pko/industry#GasEnergy
+<https://w3id.org/pko/industry#GasEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#GasEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# https://w3id.org/pko/industry#GateValvePadlock
+<https://w3id.org/pko/industry#GateValvePadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#GateValvePadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Padlock> .
+# 
+# https://w3id.org/pko/industry#Gloves
+<https://w3id.org/pko/industry#Gloves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#Gloves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#GravitationalEnergy
+<https://w3id.org/pko/industry#GravitationalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#GravitationalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# https://w3id.org/pko/industry#HardHat
+<https://w3id.org/pko/industry#HardHat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#HardHat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#Harness
+<https://w3id.org/pko/industry#Harness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#Harness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#HearingProtection
+<https://w3id.org/pko/industry#HearingProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#HearingProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#HydraulicEnergy
+<https://w3id.org/pko/industry#HydraulicEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#HydraulicEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# https://w3id.org/pko/industry#LongPadlock
+<https://w3id.org/pko/industry#LongPadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#LongPadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Padlock> .
+# 
+# https://w3id.org/pko/industry#PadlockAndChain
+<https://w3id.org/pko/industry#PadlockAndChain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#PadlockAndChain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Padlock> .
+# 
+# https://w3id.org/pko/industry#PneumaticEnergy
+<https://w3id.org/pko/industry#PneumaticEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#PneumaticEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# https://w3id.org/pko/industry#SafetyGlasses
+<https://w3id.org/pko/industry#SafetyGlasses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#SafetyGlasses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#SafetyShoes
+<https://w3id.org/pko/industry#SafetyShoes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#SafetyShoes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#Sleeves
+<https://w3id.org/pko/industry#Sleeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#Sleeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#PersonalProtectiveEquipment> .
+# 
+# https://w3id.org/pko/industry#StandardPadlock
+<https://w3id.org/pko/industry#StandardPadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#StandardPadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Padlock> .
+# 
+# https://w3id.org/pko/industry#ThermalEnergy
+<https://w3id.org/pko/industry#ThermalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#ThermalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# https://w3id.org/pko/industry#WaterEnergy
+<https://w3id.org/pko/industry#WaterEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/pko/industry#WaterEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#EnergySource> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

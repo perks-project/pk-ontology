@@ -2,8 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://w3id.org/pko/1.0.0 ;
-    mod:createdWith <https://chowlk.linkeddata.es/> a prov:Entity;
+<https://w3id.org/pko/1.0.0> a prov:Entity;
 	 dc:title "Procedural Knowledge Ontology (PKO)";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;

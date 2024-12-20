@@ -1,0 +1,606 @@
+<h2 id="crossreference" class="list">Cross-reference for Industry module of Procedural Knowledge Ontology (PKO) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Industry module of Procedural Knowledge Ontology (PKO).
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a></li>
+  <li><a href="#Device" title="https://w3id.org/pko/industry#Device">Device</a></li>
+  <li><a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a></li>
+  <li><a href="#Factory" title="https://w3id.org/pko/industry#Factory">Factory</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#Location" title="http://www.w3.org/ns/prov#Location">Location</a></li>
+  <li><a href="#Machine" title="https://w3id.org/pko/industry#Machine">Machine</a></li>
+  <li><a href="#MachineType" title="https://w3id.org/pko/industry#MachineType">Machine Type</a></li>
+  <li><a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a></li>
+  <li><a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a></li>
+  <li><a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step">Step</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/ns/prov#Agent">
+  <h3>Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Agent</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#wasManufacturedBy" title="https://w3id.org/pko/industry#wasManufacturedBy">was manufactured by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Device">
+  <h3>Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Device</p>
+  <div class="comment">
+   <span class="markdown">This class represents a Device.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Machine" title="https://w3id.org/pko/industry#Machine">Machine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EnergySource">
+  <h3>Energy Source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#EnergySource</p>
+  <div class="comment">
+   <span class="markdown">This class represents an Energy Source, that is a source of energy on the machine that needs to be identified and isolated during the LOTO procedure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#CoolantEnergy" title="https://w3id.org/pko/industry#CoolantEnergy">Coolant Energy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ElectricalEnergy" title="https://w3id.org/pko/industry#ElectricalEnergy">Electrical Energy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GasEnergy" title="https://w3id.org/pko/industry#GasEnergy">Gas Energy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GravitationalEnergy" title="https://w3id.org/pko/industry#GravitationalEnergy">Gravitational Energy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HydraulicEnergy" title="https://w3id.org/pko/industry#HydraulicEnergy">Hydraulic Energy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PneumaticEnergy" title="https://w3id.org/pko/industry#PneumaticEnergy">Pneumatic Energy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ThermalEnergy" title="https://w3id.org/pko/industry#ThermalEnergy">Thermal Energy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#WaterEnergy" title="https://w3id.org/pko/industry#WaterEnergy">Water Energy</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Factory">
+  <h3>Factory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Factory</p>
+  <div class="comment">
+   <span class="markdown">This class represents a building or set of buildings with facilities for manufacturing.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#Location" title="http://www.w3.org/ns/prov#Location">Location</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#Location">
+  <h3>Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Location</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Factory" title="https://w3id.org/pko/industry#Factory">Factory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Machine">
+  <h3>Machine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Machine</p>
+  <div class="comment">
+   <span class="markdown">This class represents a Machine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="https://w3id.org/pko/industry#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasMachineType" title="https://w3id.org/pko/industry#hasMachineType">has machine type</a> <sup class="type-op" title="object property">op</sup>, <a href="#wasManufacturedBy" title="https://w3id.org/pko/industry#wasManufacturedBy">was manufactured by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MachineType">
+  <h3>Machine Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#MachineType</p>
+  <div class="comment">
+   <span class="markdown">This class represents the Type of a Machine.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type of a Machine.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasMachineType" title="https://w3id.org/pko/industry#hasMachineType">has machine type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Padlock">
+  <h3>Padlock<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Padlock</p>
+  <div class="comment">
+   <span class="markdown">This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#requiresPadlock" title="https://w3id.org/pko/industry#requiresPadlock">requires padlock</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#ButterflyValvePadlock" title="https://w3id.org/pko/industry#ButterflyValvePadlock">Butterfly Valve Padlock</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CablePadlock" title="https://w3id.org/pko/industry#CablePadlock">Cable Padlock</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GateValvePadlock" title="https://w3id.org/pko/industry#GateValvePadlock">Gate Valve Padlock</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#LongPadlock" title="https://w3id.org/pko/industry#LongPadlock">Long Padlock</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PadlockAndChain" title="https://w3id.org/pko/industry#PadlockAndChain">Padlock And Chain</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#StandardPadlock" title="https://w3id.org/pko/industry#StandardPadlock">Standard Padlock</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PersonalProtectiveEquipment">
+  <h3>Personal Protective Equipment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#PersonalProtectiveEquipment</p>
+  <div class="comment">
+   <span class="markdown">This class represents a Personal Protective Equipment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#requiresPPE" title="https://w3id.org/pko/industry#requiresPPE">requires p p e</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#BumpCap" title="https://w3id.org/pko/industry#BumpCap">Bump Cap</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Gloves" title="https://w3id.org/pko/industry#Gloves">Gloves</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HardHat" title="https://w3id.org/pko/industry#HardHat">Hard Hat</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Harness" title="https://w3id.org/pko/industry#Harness">Harness</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HearingProtection" title="https://w3id.org/pko/industry#HearingProtection">Hearing Protection</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafetyGlasses" title="https://w3id.org/pko/industry#SafetyGlasses">Safety Glasses</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafetyShoes" title="https://w3id.org/pko/industry#SafetyShoes">Safety Shoes</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Sleeves" title="https://w3id.org/pko/industry#Sleeves">Sleeves</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/net/p-plan#Step">
+  <h3>Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/p-plan#Step</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#requiresPPE" title="https://w3id.org/pko/industry#requiresPPE">requires p p e</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresPadlock" title="https://w3id.org/pko/industry#requiresPadlock">requires padlock</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/prov#atLocation" title="http://www.w3.org/ns/prov#atLocation">at location</a></li>
+  <li><a href="#hasMachineType" title="https://w3id.org/pko/industry#hasMachineType">has machine type</a></li>
+  <li><a href="#requiresPPE" title="https://w3id.org/pko/industry#requiresPPE">requires p p e</a></li>
+  <li><a href="#requiresPadlock" title="https://w3id.org/pko/industry#requiresPadlock">requires padlock</a></li>
+  <li><a href="#wasManufacturedBy" title="https://w3id.org/pko/industry#wasManufacturedBy">was manufactured by</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/ns/prov#atLocation">
+  <h3>at location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#atLocation</p>
+ </div>
+ <div class="entity" id="hasMachineType">
+  <h3>has machine type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#hasMachineType</p>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Machine" title="https://w3id.org/pko/industry#Machine">Machine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MachineType" title="https://w3id.org/pko/industry#MachineType">Machine Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="requiresPPE">
+  <h3>requires p p e<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#requiresPPE</p>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="requiresPadlock">
+  <h3>requires padlock<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#requiresPadlock</p>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="wasManufacturedBy">
+  <h3>was manufactured by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#wasManufacturedBy</p>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Agent that manufactured it.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Machine" title="https://w3id.org/pko/industry#Machine">Machine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#BumpCap" title="https://w3id.org/pko/industry#BumpCap"> <span>Bump Cap</span> </a></li>
+  <li><a href="#ButterflyValvePadlock" title="https://w3id.org/pko/industry#ButterflyValvePadlock"> <span>Butterfly Valve Padlock</span> </a></li>
+  <li><a href="#CablePadlock" title="https://w3id.org/pko/industry#CablePadlock"> <span>Cable Padlock</span> </a></li>
+  <li><a href="#CoolantEnergy" title="https://w3id.org/pko/industry#CoolantEnergy"> <span>Coolant Energy</span> </a></li>
+  <li><a href="#ElectricalEnergy" title="https://w3id.org/pko/industry#ElectricalEnergy"> <span>Electrical Energy</span> </a></li>
+  <li><a href="#GasEnergy" title="https://w3id.org/pko/industry#GasEnergy"> <span>Gas Energy</span> </a></li>
+  <li><a href="#GateValvePadlock" title="https://w3id.org/pko/industry#GateValvePadlock"> <span>Gate Valve Padlock</span> </a></li>
+  <li><a href="#Gloves" title="https://w3id.org/pko/industry#Gloves"> <span>Gloves</span> </a></li>
+  <li><a href="#GravitationalEnergy" title="https://w3id.org/pko/industry#GravitationalEnergy"> <span>Gravitational Energy</span> </a></li>
+  <li><a href="#HardHat" title="https://w3id.org/pko/industry#HardHat"> <span>Hard Hat</span> </a></li>
+  <li><a href="#Harness" title="https://w3id.org/pko/industry#Harness"> <span>Harness</span> </a></li>
+  <li><a href="#HearingProtection" title="https://w3id.org/pko/industry#HearingProtection"> <span>Hearing Protection</span> </a></li>
+  <li><a href="#HydraulicEnergy" title="https://w3id.org/pko/industry#HydraulicEnergy"> <span>Hydraulic Energy</span> </a></li>
+  <li><a href="#LongPadlock" title="https://w3id.org/pko/industry#LongPadlock"> <span>Long Padlock</span> </a></li>
+  <li><a href="#PadlockAndChain" title="https://w3id.org/pko/industry#PadlockAndChain"> <span>Padlock And Chain</span> </a></li>
+  <li><a href="#PneumaticEnergy" title="https://w3id.org/pko/industry#PneumaticEnergy"> <span>Pneumatic Energy</span> </a></li>
+  <li><a href="#SafetyGlasses" title="https://w3id.org/pko/industry#SafetyGlasses"> <span>Safety Glasses</span> </a></li>
+  <li><a href="#SafetyShoes" title="https://w3id.org/pko/industry#SafetyShoes"> <span>Safety Shoes</span> </a></li>
+  <li><a href="#Sleeves" title="https://w3id.org/pko/industry#Sleeves"> <span>Sleeves</span> </a></li>
+  <li><a href="#StandardPadlock" title="https://w3id.org/pko/industry#StandardPadlock"> <span>Standard Padlock</span> </a></li>
+  <li><a href="#ThermalEnergy" title="https://w3id.org/pko/industry#ThermalEnergy"> <span>Thermal Energy</span> </a></li>
+  <li><a href="#WaterEnergy" title="https://w3id.org/pko/industry#WaterEnergy"> <span>Water Energy</span> </a></li>
+ </ul>
+ <div class="entity" id="BumpCap">
+  <h3>Bump Cap<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#BumpCap</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ButterflyValvePadlock">
+  <h3>Butterfly Valve Padlock<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#ButterflyValvePadlock</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CablePadlock">
+  <h3>Cable Padlock<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#CablePadlock</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CoolantEnergy">
+  <h3>Coolant Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#CoolantEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ElectricalEnergy">
+  <h3>Electrical Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#ElectricalEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GasEnergy">
+  <h3>Gas Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#GasEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GateValvePadlock">
+  <h3>Gate Valve Padlock<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#GateValvePadlock</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Gloves">
+  <h3>Gloves<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Gloves</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GravitationalEnergy">
+  <h3>Gravitational Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#GravitationalEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HardHat">
+  <h3>Hard Hat<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#HardHat</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Harness">
+  <h3>Harness<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Harness</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HearingProtection">
+  <h3>Hearing Protection<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#HearingProtection</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HydraulicEnergy">
+  <h3>Hydraulic Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#HydraulicEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LongPadlock">
+  <h3>Long Padlock<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#LongPadlock</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PadlockAndChain">
+  <h3>Padlock And Chain<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#PadlockAndChain</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PneumaticEnergy">
+  <h3>Pneumatic Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#PneumaticEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SafetyGlasses">
+  <h3>Safety Glasses<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#SafetyGlasses</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SafetyShoes">
+  <h3>Safety Shoes<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#SafetyShoes</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Sleeves">
+  <h3>Sleeves<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Sleeves</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StandardPadlock">
+  <h3>Standard Padlock<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#StandardPadlock</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ThermalEnergy">
+  <h3>Thermal Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#ThermalEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WaterEnergy">
+  <h3>Water Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#WaterEnergy</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
