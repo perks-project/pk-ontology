@@ -1,5 +1,6 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix m4ing: <http://w3id.org/nfdi4ing/metadata4ing#> .
@@ -9,8 +10,10 @@
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -96,9 +99,6 @@ rdfs:label a owl:AnnotationProperty .
 
 owl:versionInfo a owl:AnnotationProperty .
 
-time:Duration a owl:Class ;
-    rdfs:label "Duration" .
-
 time:TemporalUnit a owl:Class ;
     rdfs:label "Temporal Unit" .
 
@@ -141,9 +141,6 @@ prov:Entity a owl:Class ;
 prov:Organization a owl:Class ;
     rdfs:label "Organization" .
 
-prov:atLocation a owl:ObjectProperty ;
-    rdfs:label "at location" .
-
 prov:atTime a owl:DatatypeProperty ;
     rdfs:label "at time" .
 
@@ -173,12 +170,11 @@ prov:wasGeneratedBy a owl:ObjectProperty ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
     schema:funding <https://doi.org/10.3030/101120323> ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "1.0.0" ;
+    <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+    owl:priorVersion <https://w3id.org/pko/0.1.0> ;
+    owl:versionIRI <https://w3id.org/pko/1.0.0 ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
-
-pko:Factory a owl:Class ;
-    rdfs:label "Factory" ;
-    rdfs:subClassOf prov:Location .
 
 pko:ProcedureExecutionStatus a owl:Class ;
     rdfs:label "Procedure Execution Status" .
@@ -237,7 +233,10 @@ pko:hasEncounteredError a owl:ObjectProperty ;
     rdfs:range pko:Error .
 
 pko:hasExpectedDuration a owl:ObjectProperty ;
-    rdfs:label "has expected duration" .
+    rdfs:label "has expected duration" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pko:Procedure pplan:Step ) ] ;
+    rdfs:range time:Duration .
 
 pko:hasFAQCategory a owl:ObjectProperty ;
     rdfs:label "has f a q category" ;
@@ -256,6 +255,8 @@ pko:hasFallbackStep a owl:ObjectProperty ;
 
 pko:hasFirstStep a owl:ObjectProperty ;
     rdfs:label "has first step" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pko:Procedure pplan:MultiStep ) ] ;
     rdfs:range pplan:Step .
 
 pko:hasIssueOccurrence a owl:ObjectProperty ;
@@ -263,20 +264,10 @@ pko:hasIssueOccurrence a owl:ObjectProperty ;
     rdfs:domain prov:Activity ;
     rdfs:range pko:IssueOccurrence .
 
-pko:hasMachineType a owl:ObjectProperty ;
-    rdfs:label "has machine type" ;
-    rdfs:domain pko:ProcedureTarget ;
-    rdfs:range pko:MachineType .
-
 pko:hasProcedureTarget a owl:ObjectProperty ;
     rdfs:label "has procedure target" ;
     rdfs:domain pko:Procedure ;
-    rdfs:range pko:ProcedureTarget .
-
-pko:hasProcedureTargetType a owl:ObjectProperty ;
-    rdfs:label "has procedure target type" ;
-    rdfs:domain pko:ProcedureTarget ;
-    rdfs:range pko:ProcedureTargetType .
+    rdfs:range owl:Thing .
 
 pko:hasProcedureType a owl:ObjectProperty ;
     rdfs:label "has procedure type" ;
@@ -285,6 +276,8 @@ pko:hasProcedureType a owl:ObjectProperty ;
 
 pko:hasStep a owl:ObjectProperty ;
     rdfs:label "has step" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pko:Procedure pplan:MultiStep ) ] ;
     rdfs:range pplan:Step .
 
 pko:hasStepVerification a owl:ObjectProperty ;
@@ -311,6 +304,11 @@ pko:isCurrentVersionOf a owl:ObjectProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
 
+pko:isIncludedInProcedureExecution a owl:ObjectProperty ;
+    rdfs:label "is included in procedure execution" ;
+    rdfs:domain pko:StepExecution ;
+    rdfs:range pko:ProcedureExecution .
+
 pko:isQuestionAddressedBy a owl:ObjectProperty ;
     rdfs:label "is question addressed by" ;
     rdfs:domain pko:UserQuestionOccurrence ;
@@ -336,8 +334,18 @@ pko:isTemplate a owl:DatatypeProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range xsd:boolean .
 
+pko:issueCauseBySoftwareAgent a owl:DatatypeProperty ;
+    rdfs:label "issue cause by software agent" ;
+    rdfs:domain pko:IssueOccurrence ;
+    rdfs:range xsd:string .
+
 pko:issueCauseByUser a owl:DatatypeProperty ;
     rdfs:label "issue cause by user" ;
+    rdfs:domain pko:IssueOccurrence ;
+    rdfs:range xsd:string .
+
+pko:issueSolutionBySoftwareAgent a owl:DatatypeProperty ;
+    rdfs:label "issue solution by software agent" ;
     rdfs:domain pko:IssueOccurrence ;
     rdfs:range xsd:string .
 
@@ -381,8 +389,14 @@ pko:nextVersion a owl:ObjectProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
 
+pko:notesBySoftwareAgent a owl:DatatypeProperty ;
+    rdfs:label "notes by software agent" ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
 pko:notesByUser a owl:DatatypeProperty ;
     rdfs:label "notes by user" ;
+    rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
 pko:previousStep a owl:ObjectProperty ;
@@ -420,10 +434,15 @@ pko:requiresTool a owl:ObjectProperty ;
     rdfs:domain pplan:Step ;
     rdfs:range m4ing:Tool .
 
+pko:stepNumber a owl:DatatypeProperty ;
+    rdfs:label "step number" ;
+    rdfs:domain pplan:Step ;
+    rdfs:range xsd:string .
+
 pko:versionNumber a owl:DatatypeProperty ;
     rdfs:label "version number" ;
     rdfs:domain pko:Procedure ;
-    rdfs:range xsd:decimal .
+    rdfs:range xsd:string .
 
 pko:wasAskedBy a owl:ObjectProperty ;
     rdfs:label "was asked by" ;
@@ -460,17 +479,14 @@ pko:wasProvidedBy a owl:ObjectProperty ;
     rdfs:domain pko:UserFeedbackOccurrence ;
     rdfs:range prov:Agent .
 
-pplan:MultiStep a owl:Class ;
-    rdfs:label "Multi Step" .
-
 pplan:Plan a owl:Class ;
     rdfs:label "Plan" .
 
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
 
-prov:Location a owl:Class ;
-    rdfs:label "Location" .
+time:Duration a owl:Class ;
+    rdfs:label "Duration" .
 
 pko:Action a owl:Class ;
     rdfs:label "Action" .
@@ -487,28 +503,25 @@ pko:FAQTarget a owl:Class ;
 pko:Function a owl:Class ;
     rdfs:label "Function" .
 
-pko:MachineType a owl:Class ;
-    rdfs:label "Machine Type" .
+pko:ProcedureType a owl:Class ;
+    rdfs:label "Procedure Type" .
 
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
 
-pko:ProcedureTargetType a owl:Class ;
-    rdfs:label "Procedure Target Type" .
-
-pko:ProcedureType a owl:Class ;
-    rdfs:label "Procedure Type" .
-
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
     rdfs:subClassOf pplan:Step .
 
+pplan:MultiStep a owl:Class ;
+    rdfs:label "Multi Step" .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
-
-pko:ProcedureTarget a owl:Class ;
-    rdfs:label "Procedure Target" .
 
 pko:Error a owl:Class ;
     rdfs:label "Error" .
@@ -525,19 +538,19 @@ pko:UserQuestionOccurrence a owl:Class ;
     rdfs:label "User Question Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
 
-pko:IssueOccurrence a owl:Class ;
-    rdfs:label "Issue Occurrence" ;
-    rdfs:subClassOf prov:InstantaneousEvent .
-
-pko:StepExecution a owl:Class ;
-    rdfs:label "Step Execution" ;
-    rdfs:subClassOf prov:Activity .
-
 dcat:Resource a owl:Class ;
     rdfs:label "Resource" .
 
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
+
+pko:StepExecution a owl:Class ;
+    rdfs:label "Step Execution" ;
+    rdfs:subClassOf prov:Activity .
+
+pko:IssueOccurrence a owl:Class ;
+    rdfs:label "Issue Occurrence" ;
+    rdfs:subClassOf prov:InstantaneousEvent .
 
 prov:Activity a owl:Class ;
     rdfs:label "Activity" .
@@ -554,6 +567,14 @@ pplan:Step a owl:Class ;
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/dcam/domainIncludes
+dcam:domainIncludes rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/dcam/rangeIncludes
+dcam:rangeIncludes rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 skos:scopeNote rdf:type owl:AnnotationProperty .
 
@@ -564,21 +585,29 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/net/p-plan#isStepOfPlan
 <http://purl.org/net/p-plan#isStepOfPlan> owl:inverseOf pko:hasStep ;
+                                          dcam:domainIncludes <http://purl.org/net/p-plan#Step> ,
+                                                              pko:Procedure ;
                                           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Procedure it is a step of."@en .
 
 
 ###  http://www.w3.org/ns/dcat#hasCurrentVersion
 <http://www.w3.org/ns/dcat#hasCurrentVersion> owl:inverseOf pko:isCurrentVersionOf ;
+                                              dcam:domainIncludes pko:Procedure ;
+                                              dcam:rangeIncludes pko:Procedure ;
                                               skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure, for which we want to manage version control, to its current version."@en .
 
 
 ###  http://www.w3.org/ns/dcat#previousVersion
 <http://www.w3.org/ns/dcat#previousVersion> owl:inverseOf pko:nextVersion ;
+                                            dcam:domainIncludes pko:Procedure ;
+                                            dcam:rangeIncludes pko:Procedure ;
                                             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct previous version of the same Procedure."@en .
 
 
 ###  http://www.w3.org/ns/prov#wasAssociatedWith
-<http://www.w3.org/ns/prov#wasAssociatedWith> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (either a Procedure Execution or a Step Execution) to an Agent that had some role/responsibility in that Activity."@en .
+<http://www.w3.org/ns/prov#wasAssociatedWith> dcam:domainIncludes <http://www.w3.org/ns/prov#Activity> ;
+                                              dcam:rangeIncludes <http://www.w3.org/ns/prov#Agent> ;
+                                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (either a Procedure Execution or a Step Execution) to an Agent that had some role/responsibility in that Activity."@en .
 
 
 ###  https://w3id.org/pko#hasStep
@@ -628,100 +657,160 @@ pko:wasExecutedBy rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWit
 #    Annotations
 #################################################################
 
-<http://purl.org/dc/terms/created> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the creation dateTime of a Resource (e.g., a Procedure)."@en .
+<http://purl.org/dc/terms/created> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                   dcam:rangeIncludes xsd:dateTime ;
+                                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the creation dateTime of a Resource (e.g., a Procedure)."@en .
 
 
-<http://purl.org/dc/terms/creator> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that created it."@en .
+<http://purl.org/dc/terms/creator> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                   dcam:rangeIncludes <http://www.w3.org/ns/prov#Agent> ;
+                                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that created it."@en .
 
 
-<http://purl.org/dc/terms/description> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a description of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a Resource that is referenced by or which a Procedure was extracted from."@en .
+<http://purl.org/dc/terms/description> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ,
+                                                           <http://www.w3.org/ns/prov#Activity> ;
+                                       dcam:rangeIncludes xsd:string ;
+                                       skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a description of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a Resource that is referenced by or which a Procedure was extracted from."@en .
 
 
-<http://purl.org/dc/terms/format> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure or a Resource referenced by a Procedure), to the Media Type or Extent of the resource."@en .
+<http://purl.org/dc/terms/format> dcam:domainIncludes <http://purl.org/dc/terms/MediaTypeOrExtent> ,
+                                                      <http://www.w3.org/ns/dcat#Resource> ;
+                                  skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure or a Resource referenced by a Procedure), to the Media Type or Extent of the resource."@en .
 
 
-<http://purl.org/dc/terms/identifier> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the identifier of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from."@en .
+<http://purl.org/dc/terms/identifier> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                      dcam:rangeIncludes xsd:string ;
+                                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the identifier of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from."@en .
 
 
-<http://purl.org/dc/terms/language> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the language of a Resource (e.g., a Procedure)."@en .
+<http://purl.org/dc/terms/language> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                    dcam:rangeIncludes xsd:string ;
+                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the language of a Resource (e.g., a Procedure)."@en .
 
 
-<http://purl.org/dc/terms/modified> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime when a Resource  (e.g., a Procedure) has been modified."@en .
+<http://purl.org/dc/terms/modified> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                    dcam:rangeIncludes xsd:dateTime ;
+                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime when a Resource  (e.g., a Procedure) has been modified."@en .
 
 
-<http://purl.org/dc/terms/references> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to another Resource (e.g., a document, an image, or another Procedure) that the Procedure references."@en .
+<http://purl.org/dc/terms/references> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                      dcam:rangeIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to another Resource (e.g., a document, an image, or another Procedure) that the Procedure references."@en .
 
 
-<http://purl.org/dc/terms/temporal> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time held by an Agent to the Period of Time in which that Role is valid."@en .
+<http://purl.org/dc/terms/temporal> dcam:domainIncludes <http://purl.org/spar/pro/RoleInTime> ;
+                                    dcam:rangeIncludes <http://purl.org/dc/terms/PeriodOfTime> ;
+                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time held by an Agent to the Period of Time in which that Role is valid."@en .
 
 
-<http://purl.org/dc/terms/title> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the name/title of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from."@en .
+<http://purl.org/dc/terms/title> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                 dcam:rangeIncludes xsd:string ;
+                                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the name/title of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from."@en .
 
 
-<http://purl.org/net/p-plan#correspondsToVariable> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Entity used by an Activity (either a Procedure Execution or a Step Execution) to the Variable it represented in the Procedure."@en .
+<http://purl.org/net/p-plan#correspondsToVariable> dcam:domainIncludes <http://www.w3.org/ns/prov#Entity> ;
+                                                   dcam:rangeIncludes <http://purl.org/net/p-plan#Variable> ;
+                                                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Entity used by an Activity (either a Procedure Execution or a Step Execution) to the Variable it represented in the Procedure."@en .
 
 
-<http://purl.org/net/p-plan#hasInputVar> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Variable that the Step needs to take as input for the Step Execution."@en .
+<http://purl.org/net/p-plan#hasInputVar> dcam:domainIncludes <http://purl.org/net/p-plan#Step> ;
+                                         dcam:rangeIncludes <http://purl.org/net/p-plan#Variable> ;
+                                         skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Variable that the Step needs to take as input for the Step Execution."@en .
 
 
-<http://purl.org/net/p-plan#hasOutputVar> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Variable that the Step needs to produce as output of the Step Execution."@en .
+<http://purl.org/net/p-plan#hasOutputVar> dcam:domainIncludes <http://purl.org/net/p-plan#Step> ;
+                                          dcam:rangeIncludes <http://purl.org/net/p-plan#Variable> ;
+                                          skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Variable that the Step needs to produce as output of the Step Execution."@en .
 
 
-<http://purl.org/spar/pro/holdsRoleInTime> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Agent to the Role In Time, that is the role that the Agent holds for a certain Period of Time."@en .
+<http://purl.org/spar/pro/holdsRoleInTime> dcam:domainIncludes <http://www.w3.org/ns/prov#Agent> ;
+                                           dcam:rangeIncludes <http://purl.org/spar/pro/RoleInTime> ;
+                                           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Agent to the Role In Time, that is the role that the Agent holds for a certain Period of Time."@en .
 
 
-<http://purl.org/spar/pro/relatesTo> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time, that is the role that an Agent holds for a certain Period of Time, to the Resource (e.g., a Procedure) that the Role relates to."@en .
+<http://purl.org/spar/pro/relatesTo> dcam:domainIncludes <http://purl.org/spar/pro/RoleInTime> ;
+                                     dcam:rangeIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time, that is the role that an Agent holds for a certain Period of Time, to the Resource (e.g., a Procedure) that the Role relates to."@en .
 
 
-<http://purl.org/spar/pro/withRole> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time, that is the role that an Agent holds for a certain Period of Time, to the Role that is held."@en .
+<http://purl.org/spar/pro/withRole> dcam:domainIncludes <http://purl.org/spar/pro/RoleInTime> ;
+                                    dcam:rangeIncludes <http://purl.org/spar/pro/Role> ;
+                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time, that is the role that an Agent holds for a certain Period of Time, to the Role that is held."@en .
 
 
 <http://w3id.org/nfdi4ing/metadata4ing#Tool> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents an object needed to execute a Step of a Procedure."@en .
 
 
-<http://www.w3.org/2006/time#numericDuration> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the value of a temporal extent expressed as a number scaled by a temporal unit (in the form of xsd:decimal)."@en .
+<http://www.w3.org/2006/time#numericDuration> dcam:domainIncludes <http://www.w3.org/2006/time#Duration> ;
+                                              dcam:rangeIncludes xsd:date ;
+                                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the value of a temporal extent expressed as a number scaled by a temporal unit (in the form of xsd:decimal)."@en .
 
 
-<http://www.w3.org/2006/time#unitType> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Duration of time to the Temporal Unit which provides the precision of a date-time value or scale of a temporal extent."@en .
+<http://www.w3.org/2006/time#unitType> dcam:domainIncludes <http://www.w3.org/2006/time#Duration> ;
+                                       dcam:rangeIncludes <http://www.w3.org/2006/time#TemporalUnit> ;
+                                       skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Duration of time to the Temporal Unit which provides the precision of a date-time value or scale of a temporal extent."@en .
 
 
-<http://www.w3.org/ns/adms#status> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link either a Procedure or a Procedure Execution to its Status."@en .
+<http://www.w3.org/ns/adms#status> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                   dcam:rangeIncludes pko:ProcedureStatus ;
+                                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link either a Procedure or a Procedure Execution to its Status."@en .
 
 
-<http://www.w3.org/ns/dcat#accessURL> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a URL of a Resource (e.g., a Procedure or a document referenced by a Procedure) that gives access to a distribution of it."@en .
+<http://www.w3.org/ns/dcat#accessURL> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a URL of a Resource (e.g., a Procedure or a document referenced by a Procedure) that gives access to a distribution of it."@en .
 
 
-<http://www.w3.org/ns/dcat#endDate> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the end of a Period Of Time."@en .
+<http://www.w3.org/ns/dcat#endDate> dcam:domainIncludes <http://purl.org/dc/terms/PeriodOfTime> ;
+                                    dcam:rangeIncludes xsd:date ;
+                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the end of a Period Of Time."@en .
 
 
-<http://www.w3.org/ns/dcat#hasVersion> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure, for which we want to manage version control, to one of its versions."@en .
+<http://www.w3.org/ns/dcat#hasVersion> dcam:domainIncludes pko:Procedure ;
+                                       dcam:rangeIncludes pko:Procedure ;
+                                       skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure, for which we want to manage version control, to one of its versions."@en .
 
 
-<http://www.w3.org/ns/dcat#isVersionOf> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to a version of a procedure to the Procedure, for which we want to manage version control."@en .
+<http://www.w3.org/ns/dcat#isVersionOf> dcam:domainIncludes pko:Procedure ;
+                                        dcam:rangeIncludes pko:Procedure ;
+                                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to a version of a procedure to the Procedure, for which we want to manage version control."@en .
 
 
-<http://www.w3.org/ns/dcat#keyword> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a keyword or tag describing a Resource (e.g, a Procedure)."@en .
+<http://www.w3.org/ns/dcat#keyword> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                                    dcam:rangeIncludes xsd:string ;
+                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a keyword or tag describing a Resource (e.g, a Procedure)."@en .
 
 
-<http://www.w3.org/ns/dcat#startDate> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the start of a Period Of Time."@en .
+<http://www.w3.org/ns/dcat#startDate> dcam:domainIncludes <http://purl.org/dc/terms/PeriodOfTime> ;
+                                      dcam:rangeIncludes xsd:date ;
+                                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the start of a Period Of Time."@en .
 
 
 <http://www.w3.org/ns/prov#atLocation> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Location where is Target is located."@en .
 
 
-<http://www.w3.org/ns/prov#atTime> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an InstantaneousEvent occurred."@en .
+<http://www.w3.org/ns/prov#atTime> dcam:domainIncludes <http://www.w3.org/ns/prov#InstantaneousEvent> ;
+                                   dcam:rangeIncludes xsd:dateTime ;
+                                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an InstantaneousEvent occurred."@en .
 
 
-<http://www.w3.org/ns/prov#endedAtTime> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an activity ended."@en .
+<http://www.w3.org/ns/prov#endedAtTime> dcam:domainIncludes <http://www.w3.org/ns/prov#Activity> ;
+                                        dcam:rangeIncludes xsd:dateTime ;
+                                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an activity ended."@en .
 
 
-<http://www.w3.org/ns/prov#startedAtTime> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an activity started."@en .
+<http://www.w3.org/ns/prov#startedAtTime> dcam:domainIncludes <http://www.w3.org/ns/prov#Activity> ;
+                                          dcam:rangeIncludes xsd:dateTime ;
+                                          skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an activity started."@en .
 
 
-<http://www.w3.org/ns/prov#used> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that is being used during execution, and that may correspond to an input Variable of the Step."@en .
+<http://www.w3.org/ns/prov#used> dcam:domainIncludes pko:StepExecution ;
+                                 dcam:rangeIncludes <http://www.w3.org/ns/prov#Entity> ;
+                                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that is being used during execution, and that may correspond to an input Variable of the Step."@en .
 
 
-<http://www.w3.org/ns/prov#wasGeneratedBy> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that was generated during execution, and that may correspond to an output Variable of the Step."@en .
+<http://www.w3.org/ns/prov#wasGeneratedBy> dcam:domainIncludes <http://www.w3.org/ns/prov#Entity> ;
+                                           dcam:rangeIncludes pko:StepExecution ;
+                                           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that was generated during execution, and that may correspond to an output Variable of the Step."@en .
 
 
 pko:Action rdfs:comment "This class represents an Action performed by a human Agent."@en ;
@@ -742,9 +831,6 @@ pko:FAQCategory rdfs:comment "This class represents the Category of a Frequently
 pko:FAQTarget rdfs:comment "This class represents the Target of a Frequently Asked Question (FAQ)."@en .
 
 
-pko:Factory rdfs:comment "This class represents a building or set of buildings with facilities for manufacturing."@en .
-
-
 pko:FrequentlyAskedQuestion rdfs:comment "A Frequently Asked Question (FAQ) is a Resource representing a question that people often ask about a particular resource, and the answer to the question."@en ;
                             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents a Frequently Asked Question (FAQ) of a Procedure, and is described with an identifier, a question, an answer, and is linked to a FAQ Category and a FAQ Target."@en .
 
@@ -755,10 +841,6 @@ pko:Function rdfs:comment "This class represents a Function performed by a Softw
 
 pko:IssueOccurrence rdfs:comment "This class represents the occurrence of an issue during an Activity."@en ;
                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the occurrence of an issue during the Procedure or Step Execution. The Issue Occurrence is associated with the cause as identified and defined by the Agent, the solution as identified and applied by the Agent, and is linked to the Agent that encountered the issue."@en .
-
-
-pko:MachineType rdfs:comment "This class represents the Type of a Machine."@en ;
-                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type linked to the Procedure Target, in the case it refers to a machine."@en .
 
 
 pko:Procedure rdfs:comment "A Procedure represents a sequence of actions to be executed in order to achieve a desired outcome."@en .
@@ -845,9 +927,6 @@ pko:hasFirstStep skos:scopeNote "In the context of the Procedural Knowledge Onto
 
 
 pko:hasIssueOccurrence skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to an Issue Occurrence, that is the occurrence of an issue during the execution."@en .
-
-
-pko:hasMachineType skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Machine Type of the Procedure Target, in the case it refers to a machine."@en .
 
 
 pko:hasProcedureTarget skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation."@en .

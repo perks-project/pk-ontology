@@ -2,16 +2,19 @@
 <rdf:RDF xmlns="https://w3id.org/pko#"
      xml:base="https://w3id.org/pko"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:dcam="http://purl.org/dc/dcam/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/pko">
+        <owl:versionIRI rdf:resource="https://w3id.org/pko/1.0.0 ;
+    mod:createdWith &lt;https://chowlk.linkeddata.es/"/>
         <dc:contributor>Antonia Azzini (Cefriel)</dc:contributor>
         <dc:contributor>Ilaria Baroni (Cefriel)</dc:contributor>
         <dc:contributor>Irene Celino (Cefriel)</dc:contributor>
@@ -20,10 +23,11 @@
         <dc:title>Procedural Knowledge Ontology (PKO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:publisher>Cefriel</terms:publisher>
+        <bibo:status xml:lang="en">Published Ontology</bibo:status>
         <schema:funding rdf:resource="https://doi.org/10.3030/101120323"/>
         <rdfs:label>Procedural Knowledge Ontology (PKO)</rdfs:label>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
-        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/pko/0.1.0"/>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -37,6 +41,20 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/dcam/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/domainIncludes"/>
+    
+
+
+    <!-- http://purl.org/dc/dcam/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/rangeIncludes"/>
     
 
 
@@ -75,6 +93,13 @@
     
 
 
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
     <!-- http://schema.org/funding -->
 
 
@@ -103,13 +128,6 @@
     
 
 
-    <!-- https://w3id.org/mod#createdWith -->
-
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -126,6 +144,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:label>creator</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that created it.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -136,6 +156,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format">
+        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
         <rdfs:label>format</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure or a Resource referenced by a Procedure), to the Media Type or Extent of the resource.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -146,6 +168,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/references">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
         <rdfs:label>references</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to another Resource (e.g., a document, an image, or another Procedure) that the Procedure references.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -156,6 +180,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/temporal">
+        <dcam:domainIncludes rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
         <rdfs:label>temporal</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time held by an Agent to the Period of Time in which that Role is valid.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -166,6 +192,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#correspondsToVariable">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/net/p-plan#Variable"/>
         <rdfs:label>corresponds to variable</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Entity used by an Activity (either a Procedure Execution or a Step Execution) to the Variable it represented in the Procedure.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -176,6 +204,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#hasInputVar">
+        <dcam:domainIncludes rdf:resource="http://purl.org/net/p-plan#Step"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/net/p-plan#Variable"/>
         <rdfs:label>has input var</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Variable that the Step needs to take as input for the Step Execution.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -186,6 +216,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#hasOutputVar">
+        <dcam:domainIncludes rdf:resource="http://purl.org/net/p-plan#Step"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/net/p-plan#Variable"/>
         <rdfs:label>has output var</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Variable that the Step needs to produce as output of the Step Execution.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -197,6 +229,8 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#isStepOfPlan">
         <owl:inverseOf rdf:resource="https://w3id.org/pko#hasStep"/>
+        <dcam:domainIncludes rdf:resource="http://purl.org/net/p-plan#Step"/>
+        <dcam:domainIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
         <rdfs:label>is step of plan</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Procedure it is a step of.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -207,6 +241,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/spar/pro/holdsRoleInTime">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
         <rdfs:label>holds role in time</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Agent to the Role In Time, that is the role that the Agent holds for a certain Period of Time.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -217,6 +253,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/spar/pro/relatesTo">
+        <dcam:domainIncludes rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
         <rdfs:label>relates to</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time, that is the role that an Agent holds for a certain Period of Time, to the Resource (e.g., a Procedure) that the Role relates to.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -227,6 +265,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/spar/pro/withRole">
+        <dcam:domainIncludes rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/spar/pro/Role"/>
         <rdfs:label>with role</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Role In Time, that is the role that an Agent holds for a certain Period of Time, to the Role that is held.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -237,6 +277,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#unitType">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
         <rdfs:label>unit type</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Duration of time to the Temporal Unit which provides the precision of a date-time value or scale of a temporal extent.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -247,6 +289,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#status">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="https://w3id.org/pko#ProcedureStatus"/>
         <rdfs:label>status</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link either a Procedure or a Procedure Execution to its Status.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -258,6 +302,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#hasCurrentVersion">
         <owl:inverseOf rdf:resource="https://w3id.org/pko#isCurrentVersionOf"/>
+        <dcam:domainIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
+        <dcam:rangeIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
         <rdfs:label>has current version</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure, for which we want to manage version control, to its current version.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -268,6 +314,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#hasVersion">
+        <dcam:domainIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
+        <dcam:rangeIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
         <rdfs:label>has version</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure, for which we want to manage version control, to one of its versions.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -278,6 +326,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#isVersionOf">
+        <dcam:domainIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
+        <dcam:rangeIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
         <rdfs:label>is version of</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to a version of a procedure to the Procedure, for which we want to manage version control.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -289,18 +339,10 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#previousVersion">
         <owl:inverseOf rdf:resource="https://w3id.org/pko#nextVersion"/>
+        <dcam:domainIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
+        <dcam:rangeIncludes rdf:resource="https://w3id.org/pko#Procedure"/>
         <rdfs:label>previous version</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct previous version of the same Procedure.</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#atLocation -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#atLocation">
-        <rdfs:label>at location</rdfs:label>
-        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Location where is Target is located.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -309,6 +351,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#used">
+        <dcam:domainIncludes rdf:resource="https://w3id.org/pko#StepExecution"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:label>used</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that is being used during execution, and that may correspond to an input Variable of the Step.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -319,6 +363,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:label>was associated with</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (either a Procedure Execution or a Step Execution) to an Agent that had some role/responsibility in that Activity.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -329,6 +375,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <dcam:rangeIncludes rdf:resource="https://w3id.org/pko#StepExecution"/>
         <rdfs:label>was generated by</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that was generated during execution, and that may correspond to an output Variable of the Step.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -387,6 +435,15 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pko#hasExpectedDuration">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/net/p-plan#Step"/>
+                    <rdf:Description rdf:about="https://w3id.org/pko#Procedure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
         <rdfs:label>has expected duration</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link either a Procedure or a Step to the Duration that is expected for the execution of that Procedure/Step.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -433,6 +490,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pko#hasFirstStep">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/net/p-plan#MultiStep"/>
+                    <rdf:Description rdf:about="https://w3id.org/pko#Procedure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.org/net/p-plan#Step"/>
         <rdfs:label>has first step</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its first Step.</skos:scopeNote>
@@ -452,38 +517,14 @@
     
 
 
-    <!-- https://w3id.org/pko#hasMachineType -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/pko#hasMachineType">
-        <rdfs:domain rdf:resource="https://w3id.org/pko#ProcedureTarget"/>
-        <rdfs:range rdf:resource="https://w3id.org/pko#MachineType"/>
-        <rdfs:label>has machine type</rdfs:label>
-        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Machine Type of the Procedure Target, in the case it refers to a machine.</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/pko#hasProcedureTarget -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pko#hasProcedureTarget">
         <rdfs:domain rdf:resource="https://w3id.org/pko#Procedure"/>
-        <rdfs:range rdf:resource="https://w3id.org/pko#ProcedureTarget"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label>has procedure target</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation.</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/pko#hasProcedureTargetType -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/pko#hasProcedureTargetType">
-        <rdfs:domain rdf:resource="https://w3id.org/pko#ProcedureTarget"/>
-        <rdfs:range rdf:resource="https://w3id.org/pko#ProcedureTargetType"/>
-        <rdfs:label>has procedure target type</rdfs:label>
-        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a ProcedureTarget to its Procedure Target Type.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -504,6 +545,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pko#hasStep">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/net/p-plan#MultiStep"/>
+                    <rdf:Description rdf:about="https://w3id.org/pko#Procedure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.org/net/p-plan#Step"/>
         <rdfs:label>has step</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its Steps.</skos:scopeNote>
@@ -566,6 +615,17 @@
         <rdfs:domain rdf:resource="https://w3id.org/pko#Procedure"/>
         <rdfs:range rdf:resource="https://w3id.org/pko#Procedure"/>
         <rdfs:label>is current version of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pko#isIncludedInProcedureExecution -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko#isIncludedInProcedureExecution">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#StepExecution"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko#ProcedureExecution"/>
+        <rdfs:label>is included in procedure execution</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -828,6 +888,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>created</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the creation dateTime of a Resource (e.g., a Procedure).</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -838,6 +900,9 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>description</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a description of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a Resource that is referenced by or which a Procedure was extracted from.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -848,6 +913,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>identifier</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the identifier of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -858,6 +925,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/language">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>language</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the language of a Resource (e.g., a Procedure).</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -868,6 +937,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>modified</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime when a Resource  (e.g., a Procedure) has been modified.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -878,6 +949,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>title</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the name/title of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -888,6 +961,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#numericDuration">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:label>numeric duration</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the value of a temporal extent expressed as a number scaled by a temporal unit (in the form of xsd:decimal).</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -898,6 +973,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
         <rdfs:label>access u r l</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a URL of a Resource (e.g., a Procedure or a document referenced by a Procedure) that gives access to a distribution of it.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -908,6 +984,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#endDate">
+        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:label>end date</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the end of a Period Of Time.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -918,6 +996,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#keyword">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>keyword</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a keyword or tag describing a Resource (e.g, a Procedure).</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -928,6 +1008,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#startDate">
+        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:label>start date</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the start of a Period Of Time.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -938,6 +1020,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#atTime">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>at time</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an InstantaneousEvent occurred.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -948,6 +1032,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#endedAtTime">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>ended at time</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an activity ended.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -958,6 +1044,8 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#startedAtTime">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label>started at time</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an activity started.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -1048,6 +1136,17 @@
     
 
 
+    <!-- https://w3id.org/pko#issueCauseBySoftwareAgent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#issueCauseBySoftwareAgent">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#IssueOccurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>issue cause by software agent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/pko#issueCauseByUser -->
 
 
@@ -1056,6 +1155,17 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>issue cause by user</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/pko#issueSolutionBySoftwareAgent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#issueSolutionBySoftwareAgent">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#IssueOccurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>issue solution by software agent</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1108,10 +1218,22 @@
     
 
 
+    <!-- https://w3id.org/pko#notesBySoftwareAgent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#notesBySoftwareAgent">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>notes by software agent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/pko#notesByUser -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/pko#notesByUser">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>notes by user</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence).</skos:scopeNote>
@@ -1143,12 +1265,23 @@
     
 
 
+    <!-- https://w3id.org/pko#stepNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#stepNumber">
+        <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Step"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>step number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/pko#versionNumber -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/pko#versionNumber">
         <rdfs:domain rdf:resource="https://w3id.org/pko#Procedure"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>version number</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage access control.</skos:scopeNote>
     </owl:DatatypeProperty>
@@ -1249,6 +1382,15 @@
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:label>Thing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/2006/time#Duration -->
 
 
@@ -1308,15 +1450,6 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent">
         <rdfs:label>Instantaneous Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Location -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Location">
-        <rdfs:label>Location</rdfs:label>
     </owl:Class>
     
 
@@ -1383,17 +1516,6 @@
     
 
 
-    <!-- https://w3id.org/pko#Factory -->
-
-
-    <owl:Class rdf:about="https://w3id.org/pko#Factory">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
-        <rdfs:comment xml:lang="en">This class represents a building or set of buildings with facilities for manufacturing.</rdfs:comment>
-        <rdfs:label>Factory</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pko#FrequentlyAskedQuestion -->
 
 
@@ -1425,17 +1547,6 @@
         <rdfs:comment xml:lang="en">This class represents the occurrence of an issue during an Activity.</rdfs:comment>
         <rdfs:label>Issue Occurrence</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this class represents the occurrence of an issue during the Procedure or Step Execution. The Issue Occurrence is associated with the cause as identified and defined by the Agent, the solution as identified and applied by the Agent, and is linked to the Agent that encountered the issue.</skos:scopeNote>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pko#MachineType -->
-
-
-    <owl:Class rdf:about="https://w3id.org/pko#MachineType">
-        <rdfs:comment xml:lang="en">This class represents the Type of a Machine.</rdfs:comment>
-        <rdfs:label>Machine Type</rdfs:label>
-        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type linked to the Procedure Target, in the case it refers to a machine.</skos:scopeNote>
     </owl:Class>
     
 
@@ -1481,27 +1592,6 @@
         <rdfs:comment xml:lang="en">This class represents the Status of the Procedure (e.g.,draft, validated).</rdfs:comment>
         <rdfs:label>Procedure Status</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), a Procedure  is linked to its Procedure Status with the property adms:status.</skos:scopeNote>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pko#ProcedureTarget -->
-
-
-    <owl:Class rdf:about="https://w3id.org/pko#ProcedureTarget">
-        <rdfs:comment xml:lang="en">This class represents the Target of a Procedure, that is the object at which the actions of the Procedure are directed.</rdfs:comment>
-        <rdfs:label>Procedure Target</rdfs:label>
-        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO),  a Procedure Target can be, for instance: a Machine, an Equipment, a Workstation.</skos:scopeNote>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pko#ProcedureTargetType -->
-
-
-    <owl:Class rdf:about="https://w3id.org/pko#ProcedureTargetType">
-        <rdfs:comment xml:lang="en">This class represents the Type of a Procedure Target.</rdfs:comment>
-        <rdfs:label>Procedure Target Type</rdfs:label>
     </owl:Class>
     
 
@@ -1559,6 +1649,31 @@
         <rdfs:label>User Question Occurrence</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this class represents the occurrence of a question that an Agent came up with during the Procedure or Step Execution. The User Question Occurrence is associated with the question, and is linked to the Agent asking the question. Also, it can be linked to a Resource addressing the question.</skos:scopeNote>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#atLocation">
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Location where is Target is located.</skos:scopeNote>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/pko#ProcedureTarget">
+        <rdfs:comment xml:lang="en">This class represents the Target of a Procedure, that is the object at which the actions of the Procedure are directed.</rdfs:comment>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO),  a Procedure Target can be, for instance: a Machine, an Equipment, a Workstation.</skos:scopeNote>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/pko#ProcedureTargetType">
+        <rdfs:comment xml:lang="en">This class represents the Type of a Procedure Target.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/pko#hasProcedureTargetType">
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a ProcedureTarget to its Procedure Target Type.</skos:scopeNote>
+    </rdf:Description>
 </rdf:RDF>
 
 

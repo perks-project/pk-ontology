@@ -1,0 +1,302 @@
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/prov#Location">http://www.w3.org/ns/prov#Location</a>
+</li>
+<li><a href="#Factory">https://w3id.org/pko#Factory</a>
+</li>
+<li><a href="#MachineType">https://w3id.org/pko#MachineType</a>
+</li>
+<li><a href="#ProcedureTarget">https://w3id.org/pko#ProcedureTarget</a>
+</li>
+<li><a href="#ProcedureTargetType">https://w3id.org/pko#ProcedureTargetType</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/creator">http://purl.org/dc/terms/creator</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/ns/prov#Agent</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/format">http://purl.org/dc/terms/format</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/dc/terms/MediaTypeOrExtent</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/references">http://purl.org/dc/terms/references</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/ns/dcat#Resource</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/temporal">http://purl.org/dc/terms/temporal</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/spar/pro/RoleInTime</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://purl.org/dc/terms/PeriodOfTime</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/net/p-plan#correspondsToVariable">http://purl.org/net/p-plan#correspondsToVariable</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Entity</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://purl.org/net/p-plan#Variable</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/net/p-plan#hasInputVar">http://purl.org/net/p-plan#hasInputVar</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://purl.org/net/p-plan#Variable</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/net/p-plan#Step</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/net/p-plan#hasOutputVar">http://purl.org/net/p-plan#hasOutputVar</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/net/p-plan#Step</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://purl.org/net/p-plan#Variable</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/net/p-plan#isStepOfPlan">http://purl.org/net/p-plan#isStepOfPlan</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/net/p-plan#Step</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> https://w3id.org/pko#Procedure</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/pro/holdsRoleInTime">http://purl.org/spar/pro/holdsRoleInTime</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Agent</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://purl.org/spar/pro/RoleInTime</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/pro/relatesTo">http://purl.org/spar/pro/relatesTo</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/spar/pro/RoleInTime</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/pro/withRole">http://purl.org/spar/pro/withRole</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/spar/pro/RoleInTime</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://purl.org/spar/pro/Role</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2006/time#unitType">http://www.w3.org/2006/time#unitType</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/2006/time#Duration</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2006/time#TemporalUnit</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/adms#status">http://www.w3.org/ns/adms#status</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#ProcedureStatus</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#hasCurrentVersion">http://www.w3.org/ns/dcat#hasCurrentVersion</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> https://w3id.org/pko#Procedure</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#Procedure</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#hasVersion">http://www.w3.org/ns/dcat#hasVersion</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#Procedure</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> https://w3id.org/pko#Procedure</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#isVersionOf">http://www.w3.org/ns/dcat#isVersionOf</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#Procedure</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> https://w3id.org/pko#Procedure</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#previousVersion">http://www.w3.org/ns/dcat#previousVersion</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> https://w3id.org/pko#Procedure</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#Procedure</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#used">http://www.w3.org/ns/prov#used</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> https://w3id.org/pko#StepExecution</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/ns/prov#Entity</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#wasAssociatedWith">http://www.w3.org/ns/prov#wasAssociatedWith</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Activity</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/ns/prov#Agent</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#wasGeneratedBy">http://www.w3.org/ns/prov#wasGeneratedBy</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#StepExecution</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Entity</li>
+</ul>
+</li>
+<li><a href="#hasExpectedDuration">https://w3id.org/pko#hasExpectedDuration</a>
+<ul>
+<li>Added: Range http://www.w3.org/2006/time#Duration</li>
+<li>Added: domain Union of (http://purl.org/net/p-plan#Step, https://w3id.org/pko#Procedure)</li>
+</ul>
+</li>
+<li><a href="#hasFirstStep">https://w3id.org/pko#hasFirstStep</a>
+<ul>
+<li>Added: domain Union of (http://purl.org/net/p-plan#MultiStep, https://w3id.org/pko#Procedure)</li>
+</ul>
+</li>
+<li><a href="#hasProcedureTarget">https://w3id.org/pko#hasProcedureTarget</a>
+<ul>
+<li>Added: Range http://www.w3.org/2002/07/owl#Thing</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/pko#ProcedureTarget</li>
+</ul>
+</li>
+<li><a href="#hasStep">https://w3id.org/pko#hasStep</a>
+<ul>
+<li>Added: domain Union of (http://purl.org/net/p-plan#MultiStep, https://w3id.org/pko#Procedure)</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#isIncludedInProcedureExecution">https://w3id.org/pko#isIncludedInProcedureExecution</a>
+<ul>
+<li>Added: domain https://w3id.org/pko#StepExecution</li>
+<li>Added: Range https://w3id.org/pko#ProcedureExecution</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/prov#atLocation">http://www.w3.org/ns/prov#atLocation</a>
+</li>
+<li><a href="#hasMachineType">https://w3id.org/pko#hasMachineType</a>
+</li>
+<li><a href="#hasProcedureTargetType">https://w3id.org/pko#hasProcedureTargetType</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Modified data properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/created">http://purl.org/dc/terms/created</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#dateTime</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/description">http://purl.org/dc/terms/description</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Activity</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/identifier">http://purl.org/dc/terms/identifier</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/language">http://purl.org/dc/terms/language</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/modified">http://purl.org/dc/terms/modified</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#dateTime</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/title">http://purl.org/dc/terms/title</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2006/time#numericDuration">http://www.w3.org/2006/time#numericDuration</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#date</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/2006/time#Duration</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#accessURL">http://www.w3.org/ns/dcat#accessURL</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#endDate">http://www.w3.org/ns/dcat#endDate</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/dc/terms/PeriodOfTime</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#date</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#keyword">http://www.w3.org/ns/dcat#keyword</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/dcat#Resource</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#startDate">http://www.w3.org/ns/dcat#startDate</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://purl.org/dc/terms/PeriodOfTime</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#date</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#atTime">http://www.w3.org/ns/prov#atTime</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#InstantaneousEvent</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#dateTime</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#endedAtTime">http://www.w3.org/ns/prov#endedAtTime</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Activity</li>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#dateTime</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#startedAtTime">http://www.w3.org/ns/prov#startedAtTime</a>
+<ul>
+<li>Added: <http://purl.org/dc/dcam/rangeIncludes> http://www.w3.org/2001/XMLSchema#dateTime</li>
+<li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Activity</li>
+</ul>
+</li>
+<li><a href="#notesByUser">https://w3id.org/pko#notesByUser</a>
+<ul>
+<li>Added: Domain http://www.w3.org/2002/07/owl#Thing</li>
+</ul>
+</li>
+<li><a href="#versionNumber">https://w3id.org/pko#versionNumber</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+<ul>
+<li>Deleted: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#issueCauseBySoftwareAgent">https://w3id.org/pko#issueCauseBySoftwareAgent</a>
+<ul>
+<li>Added: Domain https://w3id.org/pko#IssueOccurrence</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#issueSolutionBySoftwareAgent">https://w3id.org/pko#issueSolutionBySoftwareAgent</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/pko#IssueOccurrence</li>
+</ul>
+</li>
+<li><a href="#notesBySoftwareAgent">https://w3id.org/pko#notesBySoftwareAgent</a>
+<ul>
+<li>Added: Domain http://www.w3.org/2002/07/owl#Thing</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#stepNumber">https://w3id.org/pko#stepNumber</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain http://purl.org/net/p-plan#Step</li>
+</ul>
+</li>
+</ul></details></div>
