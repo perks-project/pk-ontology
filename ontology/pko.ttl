@@ -1,4 +1,5 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -6,7 +7,6 @@
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pko: <https://w3id.org/pko#> .
-@prefix pko-ind: <https://w3id.org/pko/industry#> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -77,6 +77,8 @@ pplan:hasOutputVar a owl:ObjectProperty ;
 pplan:isStepOfPlan a owl:ObjectProperty ;
     rdfs:label "is step of plan" .
 
+bibo:status a owl:AnnotationProperty .
+
 pro:Role a owl:Class ;
     rdfs:label "Role" .
 
@@ -95,6 +97,10 @@ pro:withRole a owl:ObjectProperty ;
 schema:funding a owl:AnnotationProperty .
 
 rdfs:label a owl:AnnotationProperty .
+
+owl:priorVersion a owl:AnnotationProperty .
+
+owl:versionIRI a owl:AnnotationProperty .
 
 owl:versionInfo a owl:AnnotationProperty .
 
@@ -168,11 +174,11 @@ prov:wasGeneratedBy a owl:ObjectProperty ;
     dc:title "Procedural Knowledge Ontology (PKO)" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
+    bibo:status "Published Ontology"@en ;
     schema:funding <https://doi.org/10.3030/101120323> ;
-    owl:versionInfo "1.0.0" ;
-    <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
     owl:priorVersion <https://w3id.org/pko/0.1.0> ;
     owl:versionIRI <https://w3id.org/pko/1.0.0> ;
+    owl:versionInfo "1.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 pko:ProcedureExecutionStatus a owl:Class ;
@@ -302,11 +308,6 @@ pko:isCurrentVersionOf a owl:ObjectProperty ;
     rdfs:label "is current version of" ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
-
-pko:isExecutedOnMachine a owl:ObjectProperty ;
-    rdfs:label "is executed on machine" ;
-    rdfs:domain prov:Activity ;
-    rdfs:range pko-ind:Machine .
 
 pko:isIncludedInProcedureExecution a owl:ObjectProperty ;
     rdfs:label "is included in procedure execution" ;
@@ -510,9 +511,6 @@ pko:Function a owl:Class ;
 pko:ProcedureType a owl:Class ;
     rdfs:label "Procedure Type" .
 
-pko-ind:Machine a owl:Class ;
-    rdfs:label "Machine" .
-
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
@@ -555,12 +553,12 @@ pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" ;
     rdfs:subClassOf prov:Activity .
 
+prov:Activity a owl:Class ;
+    rdfs:label "Activity" .
+
 pko:IssueOccurrence a owl:Class ;
     rdfs:label "Issue Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
-
-prov:Activity a owl:Class ;
-    rdfs:label "Activity" .
 
 pko:Procedure a owl:Class ;
     rdfs:label "Procedure" ;

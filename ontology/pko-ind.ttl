@@ -1,3 +1,4 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mod: <https://w3id.org/mod#> .
@@ -18,9 +19,13 @@ dcterms:license a owl:AnnotationProperty .
 
 dcterms:publisher a owl:AnnotationProperty .
 
+bibo:status a owl:AnnotationProperty .
+
 schema:funding a owl:AnnotationProperty .
 
 rdfs:label a owl:AnnotationProperty .
+
+owl:versionIRI a owl:AnnotationProperty .
 
 owl:versionInfo a owl:AnnotationProperty .
 
@@ -37,10 +42,10 @@ prov:atLocation a owl:ObjectProperty ;
     dc:title "Industry module of Procedural Knowledge Ontology (PKO)" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
+    bibo:status "Published Ontology"@en ;
     schema:funding <https://doi.org/10.3030/101120323> ;
-    owl:versionInfo "1.0.0" ;
-    <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
     owl:versionIRI <https://w3id.org/pko/industry/1.0.0> ;
+    owl:versionInfo "1.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 pko-ind:BumpCap a owl:NamedIndividual,
@@ -122,6 +127,11 @@ pko-ind:hasMachineType a owl:ObjectProperty ;
     rdfs:domain pko-ind:Machine ;
     rdfs:range pko-ind:MachineType .
 
+pko-ind:isExecutedOnMachine a owl:ObjectProperty ;
+    rdfs:label "is executed on machine" ;
+    rdfs:domain prov:Activity ;
+    rdfs:range pko-ind:Machine .
+
 pko-ind:requiresPPE a owl:ObjectProperty ;
     rdfs:label "requires p p e" ;
     rdfs:domain pplan:Step ;
@@ -136,6 +146,9 @@ pko-ind:wasManufacturedBy a owl:ObjectProperty ;
     rdfs:label "was manufactured by" ;
     rdfs:domain pko-ind:Machine ;
     rdfs:range prov:Agent .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Activity" .
 
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
