@@ -92,11 +92,17 @@ pko-ind:Harness a owl:NamedIndividual,
 pko-ind:HearingProtection a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
+pko-ind:HighVisibility a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
 pko-ind:HydraulicEnergy a owl:NamedIndividual,
         pko-ind:EnergySource .
 
 pko-ind:LongPadlock a owl:NamedIndividual,
         pko-ind:Padlock .
+
+pko-ind:Mask a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:PadlockAndChain a owl:NamedIndividual,
         pko-ind:Padlock .
@@ -104,10 +110,16 @@ pko-ind:PadlockAndChain a owl:NamedIndividual,
 pko-ind:PneumaticEnergy a owl:NamedIndividual,
         pko-ind:EnergySource .
 
+pko-ind:ProtectiveClothing a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
 pko-ind:SafetyGlasses a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:SafetyShoes a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:SafetyShoesESD a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:Sleeves a owl:NamedIndividual,
@@ -122,10 +134,28 @@ pko-ind:ThermalEnergy a owl:NamedIndividual,
 pko-ind:WaterEnergy a owl:NamedIndividual,
         pko-ind:EnergySource .
 
+pko-ind:WeldingGlasses a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:hasArea a owl:ObjectProperty ;
+    rdfs:label "has area" ;
+    rdfs:domain prov:Location ;
+    rdfs:range pko-ind:Area .
+
+pko-ind:hasDepartment a owl:ObjectProperty ;
+    rdfs:label "has department" ;
+    rdfs:domain prov:Location ;
+    rdfs:range pko-ind:Department .
+
 pko-ind:hasMachineType a owl:ObjectProperty ;
     rdfs:label "has machine type" ;
     rdfs:domain pko-ind:Machine ;
     rdfs:range pko-ind:MachineType .
+
+pko-ind:hasSite a owl:ObjectProperty ;
+    rdfs:label "has site" ;
+    rdfs:domain prov:Location ;
+    rdfs:range pko-ind:Site .
 
 pko-ind:isExecutedOnMachine a owl:ObjectProperty ;
     rdfs:label "is executed on machine" ;
@@ -153,14 +183,23 @@ prov:Activity a owl:Class ;
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
 
-prov:Location a owl:Class ;
-    rdfs:label "Location" .
+pko-ind:Area a owl:Class ;
+    rdfs:label "Area" .
+
+pko-ind:Department a owl:Class ;
+    rdfs:label "Department" .
 
 pko-ind:MachineType a owl:Class ;
     rdfs:label "Machine Type" .
 
+pko-ind:Site a owl:Class ;
+    rdfs:label "Site" .
+
 pplan:Step a owl:Class ;
     rdfs:label "Step" .
+
+prov:Location a owl:Class ;
+    rdfs:label "Location" .
 
 pko-ind:Machine a owl:Class ;
     rdfs:label "Machine" .
