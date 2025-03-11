@@ -181,11 +181,20 @@ prov:wasGeneratedBy a owl:ObjectProperty ;
     owl:versionInfo "1.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
+pko:Approval a owl:NamedIndividual,
+        pko:ProcedureStatus .
+
+pko:Approved a owl:NamedIndividual,
+        pko:ProcedureStatus .
+
 pko:Cancelled a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
 pko:Completed a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
+
+pko:Draft a owl:NamedIndividual,
+        pko:ProcedureStatus .
 
 pko:InProgress a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
@@ -193,8 +202,8 @@ pko:InProgress a owl:NamedIndividual,
 pko:Paused a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
-pko:ProcedureStatus a owl:Class ;
-    rdfs:label "Procedure Status" .
+pko:Validation a owl:NamedIndividual,
+        pko:ProcedureStatus .
 
 pko:addressesError a owl:ObjectProperty ;
     rdfs:label "addresses error" ;
@@ -546,6 +555,9 @@ pko:FrequentlyAskedQuestion a owl:Class ;
 
 pko:ProcedureExecutionStatus a owl:Class ;
     rdfs:label "Procedure Execution Status" .
+
+pko:ProcedureStatus a owl:Class ;
+    rdfs:label "Procedure Status" .
 
 pko:UserFeedbackOccurrence a owl:Class ;
     rdfs:label "User Feedback Occurrence" ;
