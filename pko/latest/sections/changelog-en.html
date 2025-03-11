@@ -1,7 +1,13 @@
 <div id="changelog">
 <h2 id="changes" class="list">Changes from last version</h2>
 <h3 id="changeClass" class="list">Classes</h3>
-<details><summary><u>Added classes</u></summary>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#UserQuestionOccurrence">https://w3id.org/pko#UserQuestionOccurrence</a>
+<ul>
+<li>Added: rdfs:comment "This class represents the occurrence of a question that an Agent came up with during the Procedure or Step Execution."@en</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
 <ul><li><a href="#http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a>
 </li>
 </ul></details><details><summary><u>Deleted classes</u></summary>
@@ -137,28 +143,199 @@
 <li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Entity</li>
 </ul>
 </li>
+<li><a href="#addressesError">https://w3id.org/pko#addressesError</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a (Multi)Step of a Procedure to the Error it addresses. Such (Multi)Step represents a Fallback procedure."@en</li>
+</ul>
+</li>
+<li><a href="#executesProcedure">https://w3id.org/pko#executesProcedure</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en</li>
+</ul>
+</li>
+<li><a href="#executesStep">https://w3id.org/pko#executesStep</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en</li>
+</ul>
+</li>
+<li><a href="#hasEncounteredError">https://w3id.org/pko#hasEncounteredError</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link the Occurrence of an Issue to the Error that is being encountered by the Agent executing a Procedure or Step."@en</li>
+</ul>
+</li>
 <li><a href="#hasExpectedDuration">https://w3id.org/pko#hasExpectedDuration</a>
 <ul>
 <li>Added: Range http://www.w3.org/2006/time#Duration</li>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link the Occurrence of an Issue to the Error that is being encountered by the Agent executing a Procedure or Step."@en</li>
 <li>Added: domain Union of (http://purl.org/net/p-plan#Step, https://w3id.org/pko#Procedure)</li>
+</ul>
+</li>
+<li><a href="#hasFAQCategory">https://w3id.org/pko#hasFAQCategory</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to a Category it belongs to."@en</li>
+</ul>
+</li>
+<li><a href="#hasFAQTarget">https://w3id.org/pko#hasFAQTarget</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to the Target of such FAQ."@en</li>
+</ul>
+</li>
+<li><a href="#hasFallbackStep">https://w3id.org/pko#hasFallbackStep</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to a (Multi)Step that represents a Fallback procedure for a specific Error that can be encountered during execution."@en</li>
 </ul>
 </li>
 <li><a href="#hasFirstStep">https://w3id.org/pko#hasFirstStep</a>
 <ul>
 <li>Added: domain Union of (http://purl.org/net/p-plan#MultiStep, https://w3id.org/pko#Procedure)</li>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its first Step."@en</li>
+</ul>
+</li>
+<li><a href="#hasIssueOccurrence">https://w3id.org/pko#hasIssueOccurrence</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to an Issue Occurrence, that is the occurrence of an issue during the execution."@en</li>
 </ul>
 </li>
 <li><a href="#hasProcedureTarget">https://w3id.org/pko#hasProcedureTarget</a>
 <ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation."@en</li>
 <li>Added: Range http://www.w3.org/2002/07/owl#Thing</li>
 </ul>
 <ul>
 <li>Deleted: Range https://w3id.org/pko#ProcedureTarget</li>
 </ul>
 </li>
+<li><a href="#hasProcedureType">https://w3id.org/pko#hasProcedureType</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Type (e.g., a LOTO Procedure)."@en</li>
+</ul>
+</li>
 <li><a href="#hasStep">https://w3id.org/pko#hasStep</a>
 <ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its Steps."@en</li>
 <li>Added: domain Union of (http://purl.org/net/p-plan#MultiStep, https://w3id.org/pko#Procedure)</li>
+</ul>
+</li>
+<li><a href="#hasStepVerification">https://w3id.org/pko#hasStepVerification</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Step Verification, that is the way in which the execution of the step can be verified."@en</li>
+</ul>
+</li>
+<li><a href="#hasUserFeedbackOccurrence">https://w3id.org/pko#hasUserFeedbackOccurrence</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to a User Feedback Occurrence, that is the occurrence of a feedback that the user provides during execution about wither the Procedure or the Procedure Execution."@en</li>
+</ul>
+</li>
+<li><a href="#hasUserQuestionOccurrence">https://w3id.org/pko#hasUserQuestionOccurrence</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to a User Question Occurrence, that is the occurrence of a question that the user came up with during execution."@en</li>
+</ul>
+</li>
+<li><a href="#isAdoptedBy">https://w3id.org/pko#isAdoptedBy</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to an Organization which the Procedure is adopted by."@en</li>
+</ul>
+</li>
+<li><a href="#isQuestionAddressedBy">https://w3id.org/pko#isQuestionAddressedBy</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to a Resource that addresses/answers to the question that the user came up with during the Procedure/Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#isStepForExpertiseLevel">https://w3id.org/pko#isStepForExpertiseLevel</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Expertise Level, meaning that the Step, or MultiStep, is targeted at persons with a certain level of expertise (e.g., junior, senior)."@en</li>
+</ul>
+</li>
+<li><a href="#isStepOfMultiStep">https://w3id.org/pko#isStepOfMultiStep</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the MultiStep it is a step of."@en</li>
+</ul>
+</li>
+<li><a href="#isStepVerificationOf">https://w3id.org/pko#isStepVerificationOf</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Verification, that is the way in which the execution of the step can be verified, to the Step it verifies."@en</li>
+</ul>
+</li>
+<li><a href="#nextAlternativeStep">https://w3id.org/pko#nextAlternativeStep</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to at least two alternative Steps, if only one of such steps should be executed."@en</li>
+</ul>
+</li>
+<li><a href="#nextStep">https://w3id.org/pko#nextStep</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step."@en</li>
+</ul>
+</li>
+<li><a href="#nextStepExecution">https://w3id.org/pko#nextStepExecution</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct next Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#nextVersion">https://w3id.org/pko#nextVersion</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct next version of the same Procedure."@en</li>
+</ul>
+</li>
+<li><a href="#previousStep">https://w3id.org/pko#previousStep</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct previous Step."@en</li>
+</ul>
+</li>
+<li><a href="#previousStepExecution">https://w3id.org/pko#previousStepExecution</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct previous Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#requiresAction">https://w3id.org/pko#requiresAction</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to an Action that needs to be performed by a human Agent (a Person) for executing the Step."@en</li>
+</ul>
+</li>
+<li><a href="#requiresFunction">https://w3id.org/pko#requiresFunction</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to a Function that needs to be performed by a Software Agent for executing the Step."@en</li>
+</ul>
+</li>
+<li><a href="#requiresTool">https://w3id.org/pko#requiresTool</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Tool required by the Step, that is an object needed to execute the Step."@en</li>
+</ul>
+</li>
+<li><a href="#wasAskedBy">https://w3id.org/pko#wasAskedBy</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to the Agent that asked the question during the Procedure/Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#wasConfirmedBy">https://w3id.org/pko#wasConfirmedBy</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity."@en</li>
+<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity."@en</li>
+</ul>
+</li>
+<li><a href="#wasEncounteredBy">https://w3id.org/pko#wasEncounteredBy</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Issue Occurrence to the Agent that encountered the issue during the Procedure/Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#wasExecutedBy">https://w3id.org/pko#wasExecutedBy</a>
+<ul>
+<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity."@en</li>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity."@en</li>
+</ul>
+</li>
+<li><a href="#wasExtractedFrom">https://w3id.org/pko#wasExtractedFrom</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Resource it was extracted from."@en</li>
+</ul>
+</li>
+<li><a href="#wasModifiedBy">https://w3id.org/pko#wasModifiedBy</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that modified the Resource."@en</li>
+</ul>
+</li>
+<li><a href="#wasProvidedBy">https://w3id.org/pko#wasProvidedBy</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Feedback Occurrence to the Agent that provided the feedback about either the procedure or the procedure execution during the Procedure Execution."@en</li>
 </ul>
 </li>
 </ul></details><details><summary><u>Added object properties</u></summary>
@@ -261,13 +438,85 @@
 <li>Added: <http://purl.org/dc/dcam/domainIncludes> http://www.w3.org/ns/prov#Activity</li>
 </ul>
 </li>
+<li><a href="#answer">https://w3id.org/pko#answer</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the answer of a Frequently Asked Question."@en</li>
+</ul>
+</li>
+<li><a href="#changelogDescription">https://w3id.org/pko#changelogDescription</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the changelog description of a Procedure, that details all updates with respect to the previous version of the same Procedure."@en</li>
+</ul>
+</li>
+<li><a href="#errorCause">https://w3id.org/pko#errorCause</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an Error that can be encountered during the Procedure or Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#errorCode">https://w3id.org/pko#errorCode</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the code of an Error that can be encountered during the Procedure or Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#feedbackOnProcedure">https://w3id.org/pko#feedbackOnProcedure</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure that was provided by an Agent during the Procedure or Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#feedbackOnProcedureExecution">https://w3id.org/pko#feedbackOnProcedureExecution</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure execution that was provided by an Agent during the Procedure or Step Execution."@en</li>
+</ul>
+</li>
+<li><a href="#isTemplate">https://w3id.org/pko#isTemplate</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent whether a Procedure is a Template or not. A Procedure is a Template if it is associated with a preset of Steps that can be used to define an Executable Procedure. Such steps are not directly executable in the form they are specified."@en</li>
+</ul>
+</li>
+<li><a href="#issueCauseByUser">https://w3id.org/pko#issueCauseByUser</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en</li>
+</ul>
+</li>
+<li><a href="#issueSolutionByUser">https://w3id.org/pko#issueSolutionByUser</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user."@en</li>
+</ul>
+</li>
+<li><a href="#maxRepetitions">https://w3id.org/pko#maxRepetitions</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the maxRepetitions is equal to 1, it means that the Step is not repeatable."@en</li>
+</ul>
+</li>
+<li><a href="#minRepetitions">https://w3id.org/pko#minRepetitions</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the minRepetitions is equal to 1, it means that the Step is mandatory. If the minRepetitions is equal to 0, it means that the Step is optional."@en</li>
+</ul>
+</li>
+<li><a href="#newVersionMotivation">https://w3id.org/pko#newVersionMotivation</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en</li>
+</ul>
+</li>
 <li><a href="#notesByUser">https://w3id.org/pko#notesByUser</a>
 <ul>
 <li>Added: Domain http://www.w3.org/2002/07/owl#Thing</li>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence)."@en</li>
+</ul>
+</li>
+<li><a href="#question">https://w3id.org/pko#question</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question of a Frequently Asked Question."@en</li>
+</ul>
+</li>
+<li><a href="#questionByUser">https://w3id.org/pko#questionByUser</a>
+<ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question that a user came up with during the Procedure/Step Execution (User Question Occurrence)."@en</li>
 </ul>
 </li>
 <li><a href="#versionNumber">https://w3id.org/pko#versionNumber</a>
 <ul>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage access control."@en</li>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
 </ul>
 <ul>

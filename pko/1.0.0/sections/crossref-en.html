@@ -399,6 +399,14 @@ This section provides details for each class and property defined by Procedural 
     In the context of the Procedural Knowledge Ontology (PKO), a Procedure Execution is linked to its Procedure Execution Status with the property adms:status.
    </dd>
   </dl>
+  <dl class="description">
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Cancelled" title="https://w3id.org/pko#Cancelled">Cancelled</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Completed" title="https://w3id.org/pko#Completed">Completed</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#InProgress" title="https://w3id.org/pko#InProgress">In Progress</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Paused" title="https://w3id.org/pko#Paused">Paused</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
  </div>
  <div class="entity" id="ProcedureStatus">
   <h3>Procedure Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -412,6 +420,14 @@ This section provides details for each class and property defined by Procedural 
    </dt>
    <dd>
     In the context of the Procedural Knowledge Ontology (PKO), a Procedure is linked to its Procedure Status with the property adms:status.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Approval" title="https://w3id.org/pko#Approval">Approval</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Approved" title="https://w3id.org/pko#Approved">Approved</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Draft" title="https://w3id.org/pko#Draft">Draft</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Validation" title="https://w3id.org/pko#Validation">Validation</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -628,6 +644,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="UserQuestionOccurrence">
   <h3>User Question Occurrence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#UserQuestionOccurrence</p>
+  <div class="comment">
+   <span class="markdown">This class represents the occurrence of a question that an Agent came up with during the Procedure or Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -727,6 +746,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="addressesError">
   <h3>addresses error<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#addressesError</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a (Multi)Step of a Procedure to the Error it addresses. Such (Multi)Step represents a Fallback procedure.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -779,6 +801,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="executesProcedure">
   <h3>executes procedure<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#executesProcedure</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -807,6 +832,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="executesStep">
   <h3>executes step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#executesStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -869,6 +897,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasEncounteredError">
   <h3>has encountered error<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasEncounteredError</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link the Occurrence of an Issue to the Error that is being encountered by the Agent executing a Procedure or Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -897,6 +928,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasExpectedDuration">
   <h3>has expected duration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasExpectedDuration</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link the Occurrence of an Issue to the Error that is being encountered by the Agent executing a Procedure or Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -925,6 +959,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasFAQCategory">
   <h3>has f a q category<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasFAQCategory</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to a Category it belongs to.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -953,6 +990,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasFAQTarget">
   <h3>has f a q target<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasFAQTarget</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to the Target of such FAQ.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -981,6 +1021,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasFallbackStep">
   <h3>has fallback step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasFallbackStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to a (Multi)Step that represents a Fallback procedure for a specific Error that can be encountered during execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1009,6 +1052,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasFirstStep">
   <h3>has first step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasFirstStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its first Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1049,6 +1095,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasIssueOccurrence">
   <h3>has issue occurrence<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasIssueOccurrence</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to an Issue Occurrence, that is the occurrence of an issue during the execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1089,6 +1138,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasProcedureTarget">
   <h3>has procedure target<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasProcedureTarget</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1117,6 +1169,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasProcedureType">
   <h3>has procedure type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasProcedureType</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Type (e.g., a LOTO Procedure).</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1145,6 +1200,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasStep">
   <h3>has step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its Steps.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1179,6 +1237,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasStepVerification">
   <h3>has step verification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasStepVerification</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Step Verification, that is the way in which the execution of the step can be verified.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1213,6 +1274,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasUserFeedbackOccurrence">
   <h3>has user feedback occurrence<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasUserFeedbackOccurrence</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to a User Feedback Occurrence, that is the occurrence of a feedback that the user provides during execution about wither the Procedure or the Procedure Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1241,6 +1305,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="hasUserQuestionOccurrence">
   <h3>has user question occurrence<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#hasUserQuestionOccurrence</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to a User Question Occurrence, that is the occurrence of a question that the user came up with during execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1293,6 +1360,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="isAdoptedBy">
   <h3>is adopted by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#isAdoptedBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to an Organization which the Procedure is adopted by.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1361,6 +1431,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="isQuestionAddressedBy">
   <h3>is question addressed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#isQuestionAddressedBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to a Resource that addresses/answers to the question that the user came up with during the Procedure/Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1389,6 +1462,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="isStepForExpertiseLevel">
   <h3>is step for expertise level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#isStepForExpertiseLevel</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Expertise Level, meaning that the Step, or MultiStep, is targeted at persons with a certain level of expertise (e.g., junior, senior).</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1417,6 +1493,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="isStepOfMultiStep">
   <h3>is step of multi step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#isStepOfMultiStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the MultiStep it is a step of.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1467,6 +1546,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="isStepVerificationOf">
   <h3>is step verification of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#isStepVerificationOf</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Verification, that is the way in which the execution of the step can be verified, to the Step it verifies.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1513,6 +1595,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="nextAlternativeStep">
   <h3>next alternative step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#nextAlternativeStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to at least two alternative Steps, if only one of such steps should be executed.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1541,6 +1626,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="nextStep">
   <h3>next step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#nextStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1575,6 +1663,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="nextStepExecution">
   <h3>next step execution<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#nextStepExecution</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct next Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1609,6 +1700,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="nextVersion">
   <h3>next version<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#nextVersion</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct next version of the same Procedure.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1643,6 +1737,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="previousStep">
   <h3>previous step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#previousStep</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct previous Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1677,6 +1774,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="previousStepExecution">
   <h3>previous step execution<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#previousStepExecution</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct previous Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1757,6 +1857,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="requiresAction">
   <h3>requires action<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#requiresAction</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to an Action that needs to be performed by a human Agent (a Person) for executing the Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1785,6 +1888,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="requiresFunction">
   <h3>requires function<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#requiresFunction</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to a Function that needs to be performed by a Software Agent for executing the Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1813,6 +1919,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="requiresTool">
   <h3>requires tool<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#requiresTool</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Tool required by the Step, that is an object needed to execute the Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1889,6 +1998,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="wasAskedBy">
   <h3>was asked by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#wasAskedBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to the Agent that asked the question during the Procedure/Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1939,6 +2051,17 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="wasConfirmedBy">
   <h3>was confirmed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#wasConfirmedBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity.
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -1965,6 +2088,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="wasEncounteredBy">
   <h3>was encountered by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#wasEncounteredBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Issue Occurrence to the Agent that encountered the issue during the Procedure/Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -1993,6 +2119,17 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="wasExecutedBy">
   <h3>was executed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#wasExecutedBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity.
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -2019,6 +2156,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="wasExtractedFrom">
   <h3>was extracted from<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#wasExtractedFrom</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Resource it was extracted from.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2059,6 +2199,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="wasModifiedBy">
   <h3>was modified by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#wasModifiedBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that modified the Resource.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2087,6 +2230,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="wasProvidedBy">
   <h3>was provided by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#wasProvidedBy</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Feedback Occurrence to the Agent that provided the feedback about either the procedure or the procedure execution during the Procedure Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2177,6 +2323,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="answer">
   <h3>answer<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#answer</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the answer of a Frequently Asked Question.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2217,6 +2366,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="changelogDescription">
   <h3>changelog description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#changelogDescription</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the changelog description of a Procedure, that details all updates with respect to the previous version of the same Procedure.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2293,6 +2445,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="errorCause">
   <h3>error cause<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#errorCause</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an Error that can be encountered during the Procedure or Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2321,6 +2476,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="errorCode">
   <h3>error code<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#errorCode</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the code of an Error that can be encountered during the Procedure or Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2349,6 +2507,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="feedbackOnProcedure">
   <h3>feedback on procedure<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#feedbackOnProcedure</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure that was provided by an Agent during the Procedure or Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2377,6 +2538,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="feedbackOnProcedureExecution">
   <h3>feedback on procedure execution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#feedbackOnProcedureExecution</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure execution that was provided by an Agent during the Procedure or Step Execution.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2417,6 +2581,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="isTemplate">
   <h3>is template<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#isTemplate</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent whether a Procedure is a Template or not. A Procedure is a Template if it is associated with a preset of Steps that can be used to define an Executable Procedure. Such steps are not directly executable in the form they are specified.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2465,6 +2632,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="issueCauseByUser">
   <h3>issue cause by user<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#issueCauseByUser</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2513,6 +2683,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="issueSolutionByUser">
   <h3>issue solution by user<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#issueSolutionByUser</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2565,6 +2738,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="maxRepetitions">
   <h3>max repetitions<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#maxRepetitions</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the maxRepetitions is equal to 1, it means that the Step is not repeatable.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2593,6 +2769,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="minRepetitions">
   <h3>min repetitions<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#minRepetitions</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the minRepetitions is equal to 1, it means that the Step is mandatory. If the minRepetitions is equal to 0, it means that the Step is optional.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2633,6 +2812,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="newVersionMotivation">
   <h3>new version motivation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#newVersionMotivation</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2681,6 +2863,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="notesByUser">
   <h3>notes by user<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#notesByUser</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence).</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2721,6 +2906,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="question">
   <h3>question<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#question</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question of a Frequently Asked Question.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2749,6 +2937,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="questionByUser">
   <h3>question by user<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#questionByUser</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question that a user came up with during the Procedure/Step Execution (User Question Occurrence).</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2833,6 +3024,9 @@ This section provides details for each class and property defined by Procedural 
  <div class="entity" id="versionNumber">
   <h3>version number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko#versionNumber</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage access control.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -2858,11 +3052,120 @@ This section provides details for each class and property defined by Procedural 
    </dl>
   </div>
  </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#Approval" title="https://w3id.org/pko#Approval"> <span>Approval</span> </a></li>
+  <li><a href="#Approved" title="https://w3id.org/pko#Approved"> <span>Approved</span> </a></li>
+  <li><a href="#Cancelled" title="https://w3id.org/pko#Cancelled"> <span>Cancelled</span> </a></li>
+  <li><a href="#Completed" title="https://w3id.org/pko#Completed"> <span>Completed</span> </a></li>
+  <li><a href="#Draft" title="https://w3id.org/pko#Draft"> <span>Draft</span> </a></li>
+  <li><a href="#InProgress" title="https://w3id.org/pko#InProgress"> <span>In Progress</span> </a></li>
+  <li><a href="#Paused" title="https://w3id.org/pko#Paused"> <span>Paused</span> </a></li>
+  <li><a href="#Validation" title="https://w3id.org/pko#Validation"> <span>Validation</span> </a></li>
+ </ul>
+ <div class="entity" id="Approval">
+  <h3>Approval<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Approval</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureStatus" title="https://w3id.org/pko#ProcedureStatus">Procedure Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Approved">
+  <h3>Approved<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Approved</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureStatus" title="https://w3id.org/pko#ProcedureStatus">Procedure Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Cancelled">
+  <h3>Cancelled<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Cancelled</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureExecutionStatus" title="https://w3id.org/pko#ProcedureExecutionStatus">Procedure Execution Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Completed">
+  <h3>Completed<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Completed</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureExecutionStatus" title="https://w3id.org/pko#ProcedureExecutionStatus">Procedure Execution Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Draft">
+  <h3>Draft<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Draft</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureStatus" title="https://w3id.org/pko#ProcedureStatus">Procedure Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InProgress">
+  <h3>In Progress<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#InProgress</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureExecutionStatus" title="https://w3id.org/pko#ProcedureExecutionStatus">Procedure Execution Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Paused">
+  <h3>Paused<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Paused</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureExecutionStatus" title="https://w3id.org/pko#ProcedureExecutionStatus">Procedure Execution Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Validation">
+  <h3>Validation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Validation</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ProcedureStatus" title="https://w3id.org/pko#ProcedureStatus">Procedure Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
 </div>
 </div>
