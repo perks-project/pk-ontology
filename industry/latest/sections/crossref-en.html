@@ -3,7 +3,10 @@ This section provides details for each class and property defined by Industry mo
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a></li>
   <li><a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a></li>
+  <li><a href="#Area" title="https://w3id.org/pko/industry#Area">Area</a></li>
+  <li><a href="#Department" title="https://w3id.org/pko/industry#Department">Department</a></li>
   <li><a href="#Device" title="https://w3id.org/pko/industry#Device">Device</a></li>
   <li><a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a></li>
   <li><a href="#Factory" title="https://w3id.org/pko/industry#Factory">Factory</a></li>
@@ -12,8 +15,21 @@ This section provides details for each class and property defined by Industry mo
   <li><a href="#MachineType" title="https://w3id.org/pko/industry#MachineType">Machine Type</a></li>
   <li><a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a></li>
   <li><a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a></li>
+  <li><a href="#Site" title="https://w3id.org/pko/industry#Site">Site</a></li>
   <li><a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step">Step</a></li>
  </ul>
+ <div class="entity" id="http://www.w3.org/ns/prov#Activity">
+  <h3>Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Activity</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isExecutedOnMachine" title="https://w3id.org/pko/industry#isExecutedOnMachine">is executed on machine</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://www.w3.org/ns/prov#Agent">
   <h3>Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Agent</p>
@@ -23,6 +39,30 @@ This section provides details for each class and property defined by Industry mo
    </dt>
    <dd>
     <a href="#wasManufacturedBy" title="https://w3id.org/pko/industry#wasManufacturedBy">was manufactured by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Area">
+  <h3>Area<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Area</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasArea" title="https://w3id.org/pko/industry#hasArea">has area</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Department">
+  <h3>Department<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Department</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDepartment" title="https://w3id.org/pko/industry#hasDepartment">has department</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -81,6 +121,12 @@ This section provides details for each class and property defined by Industry mo
    <dd>
     <a href="#Factory" title="https://w3id.org/pko/industry#Factory">Factory</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasArea" title="https://w3id.org/pko/industry#hasArea">has area</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDepartment" title="https://w3id.org/pko/industry#hasDepartment">has department</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSite" title="https://w3id.org/pko/industry#hasSite">has site</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="Machine">
@@ -101,6 +147,12 @@ This section provides details for each class and property defined by Industry mo
    </dt>
    <dd>
     <a href="#hasMachineType" title="https://w3id.org/pko/industry#hasMachineType">has machine type</a> <sup class="type-op" title="object property">op</sup>, <a href="#wasManufacturedBy" title="https://w3id.org/pko/industry#wasManufacturedBy">was manufactured by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isExecutedOnMachine" title="https://w3id.org/pko/industry#isExecutedOnMachine">is executed on machine</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -165,7 +217,19 @@ This section provides details for each class and property defined by Industry mo
     has members
    </dt>
    <dd>
-    <a href="#BumpCap" title="https://w3id.org/pko/industry#BumpCap">Bump Cap</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Gloves" title="https://w3id.org/pko/industry#Gloves">Gloves</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HardHat" title="https://w3id.org/pko/industry#HardHat">Hard Hat</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Harness" title="https://w3id.org/pko/industry#Harness">Harness</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HearingProtection" title="https://w3id.org/pko/industry#HearingProtection">Hearing Protection</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafetyGlasses" title="https://w3id.org/pko/industry#SafetyGlasses">Safety Glasses</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafetyShoes" title="https://w3id.org/pko/industry#SafetyShoes">Safety Shoes</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Sleeves" title="https://w3id.org/pko/industry#Sleeves">Sleeves</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#BumpCap" title="https://w3id.org/pko/industry#BumpCap">Bump Cap</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Gloves" title="https://w3id.org/pko/industry#Gloves">Gloves</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HardHat" title="https://w3id.org/pko/industry#HardHat">Hard Hat</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Harness" title="https://w3id.org/pko/industry#Harness">Harness</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HearingProtection" title="https://w3id.org/pko/industry#HearingProtection">Hearing Protection</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVisibility" title="https://w3id.org/pko/industry#HighVisibility">High Visibility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Mask" title="https://w3id.org/pko/industry#Mask">Mask</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ProtectiveClothing" title="https://w3id.org/pko/industry#ProtectiveClothing">Protective Clothing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafetyGlasses" title="https://w3id.org/pko/industry#SafetyGlasses">Safety Glasses</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafetyShoes" title="https://w3id.org/pko/industry#SafetyShoes">Safety Shoes</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafetyShoesESD" title="https://w3id.org/pko/industry#SafetyShoesESD">Safety Shoes E S D</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Sleeves" title="https://w3id.org/pko/industry#Sleeves">Sleeves</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#WeldingGlasses" title="https://w3id.org/pko/industry#WeldingGlasses">Welding Glasses</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Site">
+  <h3>Site<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Site</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSite" title="https://w3id.org/pko/industry#hasSite">has site</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -185,7 +249,11 @@ This section provides details for each class and property defined by Industry mo
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
   <li><a href="#http://www.w3.org/ns/prov#atLocation" title="http://www.w3.org/ns/prov#atLocation">at location</a></li>
+  <li><a href="#hasArea" title="https://w3id.org/pko/industry#hasArea">has area</a></li>
+  <li><a href="#hasDepartment" title="https://w3id.org/pko/industry#hasDepartment">has department</a></li>
   <li><a href="#hasMachineType" title="https://w3id.org/pko/industry#hasMachineType">has machine type</a></li>
+  <li><a href="#hasSite" title="https://w3id.org/pko/industry#hasSite">has site</a></li>
+  <li><a href="#isExecutedOnMachine" title="https://w3id.org/pko/industry#isExecutedOnMachine">is executed on machine</a></li>
   <li><a href="#requiresPPE" title="https://w3id.org/pko/industry#requiresPPE">requires p p e</a></li>
   <li><a href="#requiresPadlock" title="https://w3id.org/pko/industry#requiresPadlock">requires padlock</a></li>
   <li><a href="#wasManufacturedBy" title="https://w3id.org/pko/industry#wasManufacturedBy">was manufactured by</a></li>
@@ -194,9 +262,52 @@ This section provides details for each class and property defined by Industry mo
   <h3>at location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/prov#atLocation</p>
  </div>
+ <div class="entity" id="hasArea">
+  <h3>has area<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#hasArea</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Location" title="http://www.w3.org/ns/prov#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Area" title="https://w3id.org/pko/industry#Area">Area</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDepartment">
+  <h3>has department<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#hasDepartment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Location" title="http://www.w3.org/ns/prov#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Department" title="https://w3id.org/pko/industry#Department">Department</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasMachineType">
   <h3>has machine type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko/industry#hasMachineType</p>
+  <div class="comment">
+   <span class="markdown">This property is used to link a Machine to its Machine Type.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -222,9 +333,63 @@ This section provides details for each class and property defined by Industry mo
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasSite">
+  <h3>has site<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#hasSite</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Location" title="http://www.w3.org/ns/prov#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Site" title="https://w3id.org/pko/industry#Site">Site</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isExecutedOnMachine">
+  <h3>is executed on machine<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#isExecutedOnMachine</p>
+  <div class="comment">
+   <span class="markdown">This property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Machine" title="https://w3id.org/pko/industry#Machine">Machine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="requiresPPE">
   <h3>requires p p e<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko/industry#requiresPPE</p>
+  <div class="comment">
+   <span class="markdown">This property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -253,6 +418,9 @@ This section provides details for each class and property defined by Industry mo
  <div class="entity" id="requiresPadlock">
   <h3>requires padlock<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko/industry#requiresPadlock</p>
+  <div class="comment">
+   <span class="markdown">This property is used to link a Step to the Padlock it requires.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -281,6 +449,9 @@ This section provides details for each class and property defined by Industry mo
  <div class="entity" id="wasManufacturedBy">
   <h3>was manufactured by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko/industry#wasManufacturedBy</p>
+  <div class="comment">
+   <span class="markdown">This property is used to link a Machine to the Agent that manufactured it.</span>
+  </div>
   <dl>
    <dt>
     scope note
@@ -321,16 +492,21 @@ This section provides details for each class and property defined by Industry mo
   <li><a href="#HardHat" title="https://w3id.org/pko/industry#HardHat"> <span>Hard Hat</span> </a></li>
   <li><a href="#Harness" title="https://w3id.org/pko/industry#Harness"> <span>Harness</span> </a></li>
   <li><a href="#HearingProtection" title="https://w3id.org/pko/industry#HearingProtection"> <span>Hearing Protection</span> </a></li>
+  <li><a href="#HighVisibility" title="https://w3id.org/pko/industry#HighVisibility"> <span>High Visibility</span> </a></li>
   <li><a href="#HydraulicEnergy" title="https://w3id.org/pko/industry#HydraulicEnergy"> <span>Hydraulic Energy</span> </a></li>
   <li><a href="#LongPadlock" title="https://w3id.org/pko/industry#LongPadlock"> <span>Long Padlock</span> </a></li>
+  <li><a href="#Mask" title="https://w3id.org/pko/industry#Mask"> <span>Mask</span> </a></li>
   <li><a href="#PadlockAndChain" title="https://w3id.org/pko/industry#PadlockAndChain"> <span>Padlock And Chain</span> </a></li>
   <li><a href="#PneumaticEnergy" title="https://w3id.org/pko/industry#PneumaticEnergy"> <span>Pneumatic Energy</span> </a></li>
+  <li><a href="#ProtectiveClothing" title="https://w3id.org/pko/industry#ProtectiveClothing"> <span>Protective Clothing</span> </a></li>
   <li><a href="#SafetyGlasses" title="https://w3id.org/pko/industry#SafetyGlasses"> <span>Safety Glasses</span> </a></li>
   <li><a href="#SafetyShoes" title="https://w3id.org/pko/industry#SafetyShoes"> <span>Safety Shoes</span> </a></li>
+  <li><a href="#SafetyShoesESD" title="https://w3id.org/pko/industry#SafetyShoesESD"> <span>Safety Shoes E S D</span> </a></li>
   <li><a href="#Sleeves" title="https://w3id.org/pko/industry#Sleeves"> <span>Sleeves</span> </a></li>
   <li><a href="#StandardPadlock" title="https://w3id.org/pko/industry#StandardPadlock"> <span>Standard Padlock</span> </a></li>
   <li><a href="#ThermalEnergy" title="https://w3id.org/pko/industry#ThermalEnergy"> <span>Thermal Energy</span> </a></li>
   <li><a href="#WaterEnergy" title="https://w3id.org/pko/industry#WaterEnergy"> <span>Water Energy</span> </a></li>
+  <li><a href="#WeldingGlasses" title="https://w3id.org/pko/industry#WeldingGlasses"> <span>Welding Glasses</span> </a></li>
  </ul>
  <div class="entity" id="BumpCap">
   <h3>Bump Cap<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
@@ -476,6 +652,18 @@ This section provides details for each class and property defined by Industry mo
    </dd>
   </dl>
  </div>
+ <div class="entity" id="HighVisibility">
+  <h3>High Visibility<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#HighVisibility</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="HydraulicEnergy">
   <h3>Hydraulic Energy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko/industry#HydraulicEnergy</p>
@@ -497,6 +685,18 @@ This section provides details for each class and property defined by Industry mo
    </dt>
    <dd>
     <a href="#Padlock" title="https://w3id.org/pko/industry#Padlock">Padlock</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Mask">
+  <h3>Mask<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#Mask</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -524,6 +724,18 @@ This section provides details for each class and property defined by Industry mo
    </dd>
   </dl>
  </div>
+ <div class="entity" id="ProtectiveClothing">
+  <h3>Protective Clothing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#ProtectiveClothing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="SafetyGlasses">
   <h3>Safety Glasses<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko/industry#SafetyGlasses</p>
@@ -539,6 +751,18 @@ This section provides details for each class and property defined by Industry mo
  <div class="entity" id="SafetyShoes">
   <h3>Safety Shoes<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/pko/industry#SafetyShoes</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SafetyShoesESD">
+  <h3>Safety Shoes E S D<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#SafetyShoesESD</p>
   <dl class="description">
    <dt>
     belongs to
@@ -593,6 +817,18 @@ This section provides details for each class and property defined by Industry mo
    </dt>
    <dd>
     <a href="#EnergySource" title="https://w3id.org/pko/industry#EnergySource">Energy Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WeldingGlasses">
+  <h3>Welding Glasses<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/industry#WeldingGlasses</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PersonalProtectiveEquipment" title="https://w3id.org/pko/industry#PersonalProtectiveEquipment">Personal Protective Equipment</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>

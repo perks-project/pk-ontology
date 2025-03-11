@@ -26,6 +26,14 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/dcam/domainIncludes
+<http://purl.org/dc/dcam/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/dcam/rangeIncludes
+<http://purl.org/dc/dcam/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/contributor
 <http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
 
@@ -58,6 +66,10 @@
 rdfs:label rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:AnnotationProperty .
 
@@ -79,18 +91,50 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                                        rdfs:label "at location" .
 
 
+###  https://w3id.org/pko/industry#hasArea
+:hasArea rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.w3.org/ns/prov#Location> ;
+         rdfs:range :Area ;
+         rdfs:label "has area" .
+
+
+###  https://w3id.org/pko/industry#hasDepartment
+:hasDepartment rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.w3.org/ns/prov#Location> ;
+               rdfs:range :Department ;
+               rdfs:label "has department" .
+
+
 ###  https://w3id.org/pko/industry#hasMachineType
 :hasMachineType rdf:type owl:ObjectProperty ;
                 rdfs:domain :Machine ;
                 rdfs:range :MachineType ;
+                rdfs:comment "This property is used to link a Machine to its Machine Type."@en ;
                 rdfs:label "has machine type" ;
                 <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type."@en .
+
+
+###  https://w3id.org/pko/industry#hasSite
+:hasSite rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.w3.org/ns/prov#Location> ;
+         rdfs:range :Site ;
+         rdfs:label "has site" .
+
+
+###  https://w3id.org/pko/industry#isExecutedOnMachine
+:isExecutedOnMachine rdf:type owl:ObjectProperty ;
+                     rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                     rdfs:range :Machine ;
+                     rdfs:comment "This property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."@en ;
+                     rdfs:label "is executed on machine" ;
+                     <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."@en .
 
 
 ###  https://w3id.org/pko/industry#requiresPPE
 :requiresPPE rdf:type owl:ObjectProperty ;
              rdfs:domain <http://purl.org/net/p-plan#Step> ;
              rdfs:range :PersonalProtectiveEquipment ;
+             rdfs:comment "This property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en ;
              rdfs:label "requires p p e" ;
              <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en .
 
@@ -99,6 +143,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 :requiresPadlock rdf:type owl:ObjectProperty ;
                  rdfs:domain <http://purl.org/net/p-plan#Step> ;
                  rdfs:range :Padlock ;
+                 rdfs:comment "This property is used to link a Step to the Padlock it requires."@en ;
                  rdfs:label "requires padlock" ;
                  <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires."@en .
 
@@ -107,6 +152,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 :wasManufacturedBy rdf:type owl:ObjectProperty ;
                    rdfs:domain :Machine ;
                    rdfs:range <http://www.w3.org/ns/prov#Agent> ;
+                   rdfs:comment "This property is used to link a Machine to the Agent that manufactured it."@en ;
                    rdfs:label "was manufactured by" ;
                    <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Agent that manufactured it."@en .
 
@@ -120,6 +166,11 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                                   rdfs:label "Step" .
 
 
+###  http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
+                                     rdfs:label "Activity" .
+
+
 ###  http://www.w3.org/ns/prov#Agent
 <http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
                                   rdfs:label "Agent" .
@@ -128,6 +179,16 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 ###  http://www.w3.org/ns/prov#Location
 <http://www.w3.org/ns/prov#Location> rdf:type owl:Class ;
                                      rdfs:label "Location" .
+
+
+###  https://w3id.org/pko/industry#Area
+:Area rdf:type owl:Class ;
+      rdfs:label "Area" .
+
+
+###  https://w3id.org/pko/industry#Department
+:Department rdf:type owl:Class ;
+            rdfs:label "Department" .
 
 
 ###  https://w3id.org/pko/industry#Device
@@ -173,6 +234,11 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 :PersonalProtectiveEquipment rdf:type owl:Class ;
                              rdfs:comment "This class represents a Personal Protective Equipment."@en ;
                              rdfs:label "Personal Protective Equipment" .
+
+
+###  https://w3id.org/pko/industry#Site
+:Site rdf:type owl:Class ;
+      rdfs:label "Site" .
 
 
 #################################################################
@@ -239,6 +305,11 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                             :PersonalProtectiveEquipment .
 
 
+###  https://w3id.org/pko/industry#HighVisibility
+:HighVisibility rdf:type owl:NamedIndividual ,
+                         :PersonalProtectiveEquipment .
+
+
 ###  https://w3id.org/pko/industry#HydraulicEnergy
 :HydraulicEnergy rdf:type owl:NamedIndividual ,
                           :EnergySource .
@@ -247,6 +318,11 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/pko/industry#LongPadlock
 :LongPadlock rdf:type owl:NamedIndividual ,
                       :Padlock .
+
+
+###  https://w3id.org/pko/industry#Mask
+:Mask rdf:type owl:NamedIndividual ,
+               :PersonalProtectiveEquipment .
 
 
 ###  https://w3id.org/pko/industry#PadlockAndChain
@@ -259,6 +335,11 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                           :EnergySource .
 
 
+###  https://w3id.org/pko/industry#ProtectiveClothing
+:ProtectiveClothing rdf:type owl:NamedIndividual ,
+                             :PersonalProtectiveEquipment .
+
+
 ###  https://w3id.org/pko/industry#SafetyGlasses
 :SafetyGlasses rdf:type owl:NamedIndividual ,
                         :PersonalProtectiveEquipment .
@@ -267,6 +348,11 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/pko/industry#SafetyShoes
 :SafetyShoes rdf:type owl:NamedIndividual ,
                       :PersonalProtectiveEquipment .
+
+
+###  https://w3id.org/pko/industry#SafetyShoesESD
+:SafetyShoesESD rdf:type owl:NamedIndividual ,
+                         :PersonalProtectiveEquipment .
 
 
 ###  https://w3id.org/pko/industry#Sleeves
@@ -287,6 +373,11 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/pko/industry#WaterEnergy
 :WaterEnergy rdf:type owl:NamedIndividual ,
                       :EnergySource .
+
+
+###  https://w3id.org/pko/industry#WeldingGlasses
+:WeldingGlasses rdf:type owl:NamedIndividual ,
+                         :PersonalProtectiveEquipment .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

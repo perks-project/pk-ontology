@@ -1,4 +1,10 @@
 [ {
+  "@id" : "http://purl.org/dc/dcam/domainIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/dcam/rangeIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -29,11 +35,20 @@
   "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2002/07/owl#versionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#Activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Activity"
+  } ]
 }, {
   "@id" : "http://www.w3.org/ns/prov#Agent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -99,6 +114,12 @@
     "@id" : "https://chowlk.linkeddata.es/"
   } ]
 }, {
+  "@id" : "https://w3id.org/pko/industry#Area",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Area"
+  } ]
+}, {
   "@id" : "https://w3id.org/pko/industry#BumpCap",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -121,6 +142,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/pko/industry#EnergySource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pko/industry#Department",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Department"
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#Device",
@@ -207,6 +234,12 @@
     "@id" : "https://w3id.org/pko/industry#PersonalProtectiveEquipment"
   } ]
 }, {
+  "@id" : "https://w3id.org/pko/industry#HighVisibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/pko/industry#PersonalProtectiveEquipment"
+  } ]
+}, {
   "@id" : "https://w3id.org/pko/industry#HydraulicEnergy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -243,6 +276,12 @@
     "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type of a Machine."
   } ]
 }, {
+  "@id" : "https://w3id.org/pko/industry#Mask",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/pko/industry#PersonalProtectiveEquipment"
+  } ]
+}, {
   "@id" : "https://w3id.org/pko/industry#Padlock",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -275,6 +314,12 @@
     "@id" : "https://w3id.org/pko/industry#EnergySource"
   } ]
 }, {
+  "@id" : "https://w3id.org/pko/industry#ProtectiveClothing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/pko/industry#PersonalProtectiveEquipment"
+  } ]
+}, {
   "@id" : "https://w3id.org/pko/industry#SafetyGlasses",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -285,6 +330,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/pko/industry#PersonalProtectiveEquipment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pko/industry#SafetyShoesESD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/pko/industry#PersonalProtectiveEquipment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pko/industry#Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Site"
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#Sleeves",
@@ -311,8 +368,42 @@
     "@id" : "https://w3id.org/pko/industry#EnergySource"
   } ]
 }, {
+  "@id" : "https://w3id.org/pko/industry#WeldingGlasses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/pko/industry#PersonalProtectiveEquipment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pko/industry#hasArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/pko/industry#Area"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pko/industry#hasDepartment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has department"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/pko/industry#Department"
+  } ]
+}, {
   "@id" : "https://w3id.org/pko/industry#hasMachineType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Machine to its Machine Type."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/pko/industry#Machine"
   } ],
@@ -327,8 +418,44 @@
     "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type."
   } ]
 }, {
+  "@id" : "https://w3id.org/pko/industry#hasSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/pko/industry#Site"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pko/industry#isExecutedOnMachine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is executed on machine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/pko/industry#Machine"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."
+  } ]
+}, {
   "@id" : "https://w3id.org/pko/industry#requiresPPE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/net/p-plan#Step"
   } ],
@@ -345,6 +472,10 @@
 }, {
   "@id" : "https://w3id.org/pko/industry#requiresPadlock",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Step to the Padlock it requires."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/net/p-plan#Step"
   } ],
@@ -361,6 +492,10 @@
 }, {
   "@id" : "https://w3id.org/pko/industry#wasManufacturedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Machine to the Agent that manufactured it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/pko/industry#Machine"
   } ],

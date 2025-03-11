@@ -1,4 +1,5 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,9 +21,13 @@ dcterms:license a owl:AnnotationProperty .
 
 dcterms:publisher a owl:AnnotationProperty .
 
+bibo:status a owl:AnnotationProperty .
+
 schema:funding a owl:AnnotationProperty .
 
 rdfs:label a owl:AnnotationProperty .
+
+owl:versionIRI a owl:AnnotationProperty .
 
 owl:versionInfo a owl:AnnotationProperty .
 
@@ -39,10 +44,10 @@ prov:atLocation a owl:ObjectProperty ;
     dc:title "Industry module of Procedural Knowledge Ontology (PKO)" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
+    bibo:status "Published Ontology"@en ;
     schema:funding <https://doi.org/10.3030/101120323> ;
-    owl:versionInfo "1.0.0" ;
-    <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
     owl:versionIRI <https://w3id.org/pko/industry/1.0.0> ;
+    owl:versionInfo "1.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 pko-ind:BumpCap a owl:NamedIndividual,
@@ -89,11 +94,17 @@ pko-ind:Harness a owl:NamedIndividual,
 pko-ind:HearingProtection a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
+pko-ind:HighVisibility a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
 pko-ind:HydraulicEnergy a owl:NamedIndividual,
         pko-ind:EnergySource .
 
 pko-ind:LongPadlock a owl:NamedIndividual,
         pko-ind:Padlock .
+
+pko-ind:Mask a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:PadlockAndChain a owl:NamedIndividual,
         pko-ind:Padlock .
@@ -101,10 +112,16 @@ pko-ind:PadlockAndChain a owl:NamedIndividual,
 pko-ind:PneumaticEnergy a owl:NamedIndividual,
         pko-ind:EnergySource .
 
+pko-ind:ProtectiveClothing a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
 pko-ind:SafetyGlasses a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:SafetyShoes a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:SafetyShoesESD a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:Sleeves a owl:NamedIndividual,
@@ -119,10 +136,33 @@ pko-ind:ThermalEnergy a owl:NamedIndividual,
 pko-ind:WaterEnergy a owl:NamedIndividual,
         pko-ind:EnergySource .
 
+pko-ind:WeldingGlasses a owl:NamedIndividual,
+        pko-ind:PersonalProtectiveEquipment .
+
+pko-ind:hasArea a owl:ObjectProperty ;
+    rdfs:label "has area" ;
+    rdfs:domain prov:Location ;
+    rdfs:range pko-ind:Area .
+
+pko-ind:hasDepartment a owl:ObjectProperty ;
+    rdfs:label "has department" ;
+    rdfs:domain prov:Location ;
+    rdfs:range pko-ind:Department .
+
 pko-ind:hasMachineType a owl:ObjectProperty ;
     rdfs:label "has machine type" ;
     rdfs:domain pko-ind:Machine ;
     rdfs:range pko-ind:MachineType .
+
+pko-ind:hasSite a owl:ObjectProperty ;
+    rdfs:label "has site" ;
+    rdfs:domain prov:Location ;
+    rdfs:range pko-ind:Site .
+
+pko-ind:isExecutedOnMachine a owl:ObjectProperty ;
+    rdfs:label "is executed on machine" ;
+    rdfs:domain prov:Activity ;
+    rdfs:range pko-ind:Machine .
 
 pko-ind:requiresPPE a owl:ObjectProperty ;
     rdfs:label "requires p p e" ;
@@ -139,17 +179,29 @@ pko-ind:wasManufacturedBy a owl:ObjectProperty ;
     rdfs:domain pko-ind:Machine ;
     rdfs:range prov:Agent .
 
+prov:Activity a owl:Class ;
+    rdfs:label "Activity" .
+
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
 
-prov:Location a owl:Class ;
-    rdfs:label "Location" .
+pko-ind:Area a owl:Class ;
+    rdfs:label "Area" .
+
+pko-ind:Department a owl:Class ;
+    rdfs:label "Department" .
 
 pko-ind:MachineType a owl:Class ;
     rdfs:label "Machine Type" .
 
+pko-ind:Site a owl:Class ;
+    rdfs:label "Site" .
+
 pplan:Step a owl:Class ;
     rdfs:label "Step" .
+
+prov:Location a owl:Class ;
+    rdfs:label "Location" .
 
 pko-ind:Machine a owl:Class ;
     rdfs:label "Machine" .
@@ -162,6 +214,21 @@ pko-ind:EnergySource a owl:Class ;
 
 pko-ind:PersonalProtectiveEquipment a owl:Class ;
     rdfs:label "Personal Protective Equipment" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/dcam/domainIncludes
+dcam:domainIncludes rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/dcam/rangeIncludes
+dcam:rangeIncludes rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
 
 
 pko-ind:Device rdfs:comment "This class represents a Device."@en .
@@ -186,15 +253,20 @@ pko-ind:Padlock rdfs:comment "This class represents a Padlock, that is a lock to
 pko-ind:PersonalProtectiveEquipment rdfs:comment "This class represents a Personal Protective Equipment."@en .
 
 
-pko-ind:hasMachineType skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type."@en .
+pko-ind:hasMachineType rdfs:comment "This property is used to link a Machine to its Machine Type."@en ;
+                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type."@en .
 
 
-pko-ind:requiresPPE skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en .
+pko-ind:requiresPPE rdfs:comment "This property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en ;
+                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en .
 
 
-pko-ind:requiresPadlock skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires."@en .
+pko-ind:requiresPadlock rdfs:comment "This property is used to link a Step to the Padlock it requires."@en ;
+                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires."@en .
 
 
-pko-ind:wasManufacturedBy skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Agent that manufactured it."@en .
+pko-ind:wasManufacturedBy rdfs:comment "This property is used to link a Machine to the Agent that manufactured it."@en ;
+                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Agent that manufactured it."@en .
 
-
+pko-ind:isExecutedOnMachine rdfs:comment "This property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."@en ;
+                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."@en .

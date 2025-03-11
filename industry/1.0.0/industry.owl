@@ -8,6 +8,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:dcam="http://purl.org/dc/dcam/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -40,6 +41,20 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/dcam/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/domainIncludes"/>
+    
+
+
+    <!-- http://purl.org/dc/dcam/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/rangeIncludes"/>
     
 
 
@@ -99,6 +114,13 @@
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
 
@@ -141,14 +163,61 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#hasArea -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#hasArea">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Area"/>
+        <rdfs:label>has area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pko/industry#hasDepartment -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#hasDepartment">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Department"/>
+        <rdfs:label>has department</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/pko/industry#hasMachineType -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#hasMachineType">
         <rdfs:domain rdf:resource="https://w3id.org/pko/industry#Machine"/>
         <rdfs:range rdf:resource="https://w3id.org/pko/industry#MachineType"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Machine to its Machine Type.</rdfs:comment>
         <rdfs:label>has machine type</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Machine Type.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pko/industry#hasSite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#hasSite">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Site"/>
+        <rdfs:label>has site</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pko/industry#isExecutedOnMachine -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#isExecutedOnMachine">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Machine"/>
+        <rdfs:comment xml:lang="en">This property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on.</rdfs:comment>
+        <rdfs:label>is executed on machine</rdfs:label>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -159,6 +228,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#requiresPPE">
         <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Step"/>
         <rdfs:range rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step.</rdfs:comment>
         <rdfs:label>requires p p e</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -171,6 +241,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#requiresPadlock">
         <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Step"/>
         <rdfs:range rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Step to the Padlock it requires.</rdfs:comment>
         <rdfs:label>requires padlock</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -183,6 +254,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#wasManufacturedBy">
         <rdfs:domain rdf:resource="https://w3id.org/pko/industry#Machine"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Machine to the Agent that manufactured it.</rdfs:comment>
         <rdfs:label>was manufactured by</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Machine to the Agent that manufactured it.</skos:scopeNote>
     </owl:ObjectProperty>
@@ -210,6 +282,15 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
+        <rdfs:label>Activity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/prov#Agent -->
 
 
@@ -224,6 +305,24 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Location">
         <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pko/industry#Area -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pko/industry#Area">
+        <rdfs:label>Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pko/industry#Department -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pko/industry#Department">
+        <rdfs:label>Department</rdfs:label>
     </owl:Class>
     
 
@@ -297,6 +396,15 @@
     <owl:Class rdf:about="https://w3id.org/pko/industry#PersonalProtectiveEquipment">
         <rdfs:comment xml:lang="en">This class represents a Personal Protective Equipment.</rdfs:comment>
         <rdfs:label>Personal Protective Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pko/industry#Site -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pko/industry#Site">
+        <rdfs:label>Site</rdfs:label>
     </owl:Class>
     
 
@@ -421,6 +529,15 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#HighVisibility -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#HighVisibility">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/pko/industry#HydraulicEnergy -->
 
 
@@ -435,6 +552,15 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#LongPadlock">
         <rdf:type rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#Mask -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#Mask">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -457,6 +583,15 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#ProtectiveClothing -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#ProtectiveClothing">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/pko/industry#SafetyGlasses -->
 
 
@@ -470,6 +605,15 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#SafetyShoes">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#SafetyShoesESD -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#SafetyShoesESD">
         <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
     </owl:NamedIndividual>
     
@@ -507,6 +651,15 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#WaterEnergy">
         <rdf:type rdf:resource="https://w3id.org/pko/industry#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#WeldingGlasses -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#WeldingGlasses">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
