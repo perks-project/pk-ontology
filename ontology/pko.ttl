@@ -258,7 +258,7 @@ pko:hasEncounteredError a owl:ObjectProperty ;
 pko:hasExpectedDuration a owl:ObjectProperty ;
     rdfs:label "has expected duration" ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( pko:Procedure pplan:Step ) ] ;
+            owl:unionOf ( pplan:Step pko:Procedure ) ] ;
     rdfs:range time:Duration .
 
 pko:hasFAQCategory a owl:ObjectProperty ;
@@ -317,6 +317,11 @@ pko:hasUserQuestionOccurrence a owl:ObjectProperty ;
     rdfs:label "has user question occurrence" ;
     rdfs:domain prov:Activity ;
     rdfs:range pko:UserQuestionOccurrence .
+
+pko:includesStepExecution a owl:ObjectProperty ;
+    rdfs:label "includes step execution" ;
+    rdfs:domain pko:ProcedureExecution ;
+    rdfs:range pko:StepExecution .
 
 pko:isAdoptedBy a owl:ObjectProperty ;
     rdfs:label "is adopted by" ;
@@ -529,10 +534,6 @@ pko:Function a owl:Class ;
 pko:ProcedureType a owl:Class ;
     rdfs:label "Procedure Type" .
 
-pko:ProcedureExecution a owl:Class ;
-    rdfs:label "Procedure Execution" ;
-    rdfs:subClassOf prov:Activity .
-
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
     rdfs:subClassOf pplan:Step .
@@ -545,6 +546,10 @@ owl:Thing a owl:Class ;
 
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
+
+pko:ProcedureExecution a owl:Class ;
+    rdfs:label "Procedure Execution" ;
+    rdfs:subClassOf prov:Activity .
 
 pko:Error a owl:Class ;
     rdfs:label "Error" .
@@ -573,16 +578,16 @@ dcat:Resource a owl:Class ;
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
 
-pko:StepExecution a owl:Class ;
-    rdfs:label "Step Execution" ;
-    rdfs:subClassOf prov:Activity .
-
 prov:Activity a owl:Class ;
     rdfs:label "Activity" .
 
 pko:IssueOccurrence a owl:Class ;
     rdfs:label "Issue Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
+
+pko:StepExecution a owl:Class ;
+    rdfs:label "Step Execution" ;
+    rdfs:subClassOf prov:Activity .
 
 pko:Procedure a owl:Class ;
     rdfs:label "Procedure" ;
