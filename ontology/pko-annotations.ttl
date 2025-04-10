@@ -60,58 +60,69 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/pko#hasStep
-pko:hasStep skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its Steps."@en ;
-            rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its Steps."@en .
+pko:hasStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its Steps."@en ;
+            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure or a MultiStep to its Steps."@en .
 
 
 ###  https://w3id.org/pko#hasStepVerification
 pko:hasStepVerification owl:inverseOf pko:isStepVerificationOf ;
-                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Step Verification, that is the way in which the execution of the step can be verified."@en ;
-                        rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Step Verification, that is the way in which the execution of the step can be verified."@en .
+                        rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Step Verification, that is the way in which the execution of the step can be verified."@en ;
+                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Step Verification, that is the way in which the execution of the step can be verified."@en .
+
+
+###  https://w3id.org/pko#includesStepExecution
+pko:includesStepExecution owl:inverseOf pko:isIncludedInProcedureExecution ;
+                          rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to a Step Execution, that is the execution of one of the Steps of the Procedure."@en ;
+                          skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to a Step Execution, that is the execution of one of the Steps of the Procedure."@en .
+
+
+###  https://w3id.org/pko#isIncludedInProcedureExecution
+pko:isIncludedInProcedureExecution rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to a Procedure Execution, that is the execution of the whole Procedure the Step is part of."@en ;
+                                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to a Procedure Execution, that is the execution of the whole Procedure the Step is part of."@en .
 
 
 ###  https://w3id.org/pko#isStepVerificationOf
-pko:isStepVerificationOf skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Verification, that is the way in which the execution of the step can be verified, to the Step it verifies."@en ;
-                         rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Verification, that is the way in which the execution of the step can be verified, to the Step it verifies."@en .
+pko:isStepVerificationOf rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Verification, that is the way in which the execution of the step can be verified, to the Step it verifies."@en ;
+                         skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Verification, that is the way in which the execution of the step can be verified, to the Step it verifies."@en .
 
 
 ###  https://w3id.org/pko#nextStep
 pko:nextStep owl:inverseOf pko:previousStep ;
-             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step."@en ;
-             rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step."@en .
+             rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step."@en ;
+             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step."@en .
 
 
 ###  https://w3id.org/pko#nextStepExecution
 pko:nextStepExecution owl:inverseOf pko:previousStepExecution ;
-                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct next Step Execution."@en ;
-                      rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct next Step Execution."@en .
+                      rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct next Step Execution."@en ;
+                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct next Step Execution."@en .
 
 
 ###  https://w3id.org/pko#nextVersion
-pko:nextVersion skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct next version of the same Procedure."@en ;
-                rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct next version of the same Procedure."@en .
+pko:nextVersion rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct next version of the same Procedure."@en ;
+                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a version of a Procedure to its direct next version of the same Procedure."@en .
 
 
 ###  https://w3id.org/pko#previousStep
-pko:previousStep skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct previous Step."@en ;
-                 rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct previous Step."@en .
+pko:previousStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct previous Step."@en ;
+                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct previous Step."@en .
 
 
 ###  https://w3id.org/pko#previousStepExecution
-pko:previousStepExecution skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct previous Step Execution."@en ;
-                          rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct previous Step Execution."@en .
+pko:previousStepExecution rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct previous Step Execution."@en ;
+                          skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to its direct previous Step Execution."@en .
 
 
 ###  https://w3id.org/pko#wasConfirmedBy
 pko:wasConfirmedBy rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWith> ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity."@en ;
-                    rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity."@en .
+                   rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity."@en ;
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that confirmed the Activity."@en .
 
 
 ###  https://w3id.org/pko#wasExecutedBy
 pko:wasExecutedBy rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWith> ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity."@en ;
-                    rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity."@en .
+                  rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity."@en ;
+                  skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Agent that executed the Activity."@en .
 
 
 #################################################################
@@ -282,7 +293,6 @@ pko:Error rdfs:comment "This class represents an Error that can be encountered w
           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents an error that an Agent can encounter during a Procedure or Step Execution. An Error can be associated with a description, an error code, and an error cause. The Procedure may contain a (fallback) step to address such error."@en .
 
 
-
 pko:ExpertiseLevel rdfs:comment "This class represents the Expertise Level of an Agent with respect to certain activities/responsibilities."@en ;
                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the expertise level linked to a Step, or MultiStep, of a Procedure, meaning that the Step, or MultiStep, is targeted at persons with a certain level of expertise (e.g., junior, senior)."@en .
 
@@ -340,36 +350,36 @@ pko:UserFeedbackOccurrence rdfs:comment "This class represents the occurrence of
                            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the occurrence of a feedback provided by an Agent during the Procedure or Step Execution. The User Feedback Occurrence is associated with the feedback, that is about either the Procedure or the Procedure Execution, and is linked to the Agent providing the feedback."@en .
 
 
-pko:UserQuestionOccurrence rdfs:comment "This class represents the occurrence of a question that an Agent came up with during the Procedure or Step Execution."@en ; 
-                            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the occurrence of a question that an Agent came up with during the Procedure or Step Execution. The User Question Occurrence is associated with the question, and is linked to the Agent asking the question. Also, it can be linked to a Resource addressing the question."@en .
+pko:UserQuestionOccurrence rdfs:comment "This class represents the occurrence of a question that an Agent came up with during the Procedure or Step Execution."@en ;
+                           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this class represents the occurrence of a question that an Agent came up with during the Procedure or Step Execution. The User Question Occurrence is associated with the question, and is linked to the Agent asking the question. Also, it can be linked to a Resource addressing the question."@en .
 
 
 pko:addressesError rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a (Multi)Step of a Procedure to the Error it addresses. Such (Multi)Step represents a Fallback procedure."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a (Multi)Step of a Procedure to the Error it addresses. Such (Multi)Step represents a Fallback procedure."@en .
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a (Multi)Step of a Procedure to the Error it addresses. Such (Multi)Step represents a Fallback procedure."@en .
 
 
 pko:answer rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the answer of a Frequently Asked Question."@en ;
-            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the answer of a Frequently Asked Question."@en .
+           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the answer of a Frequently Asked Question."@en .
 
 
 pko:changelogDescription rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the changelog description of a Procedure, that details all updates with respect to the previous version of the same Procedure."@en ;
-                            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the changelog description of a Procedure, that details all updates with respect to the previous version of the same Procedure."@en .
+                         skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the changelog description of a Procedure, that details all updates with respect to the previous version of the same Procedure."@en .
 
 
 pko:errorCause rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an Error that can be encountered during the Procedure or Step Execution."@en ;
-                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an Error that can be encountered during the Procedure or Step Execution."@en .
+               skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an Error that can be encountered during the Procedure or Step Execution."@en .
 
 
 pko:errorCode rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the code of an Error that can be encountered during the Procedure or Step Execution."@en ;
-                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the code of an Error that can be encountered during the Procedure or Step Execution."@en .
+              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the code of an Error that can be encountered during the Procedure or Step Execution."@en .
 
 
 pko:executesProcedure rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en ;
-                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en .
+                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en .
 
 
 pko:executesStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en .
+                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en .
 
 
 pko:feedbackOnProcedure rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure that was provided by an Agent during the Procedure or Step Execution."@en ;
@@ -377,7 +387,7 @@ pko:feedbackOnProcedure rdfs:comment "In the context of the Procedural Knowledge
 
 
 pko:feedbackOnProcedureExecution rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure execution that was provided by an Agent during the Procedure or Step Execution."@en ;
-                                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure execution that was provided by an Agent during the Procedure or Step Execution."@en .
+                                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the feedback on the procedure execution that was provided by an Agent during the Procedure or Step Execution."@en .
 
 
 pko:hasEncounteredError rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link the Occurrence of an Issue to the Error that is being encountered by the Agent executing a Procedure or Step."@en ;
@@ -389,11 +399,11 @@ pko:hasExpectedDuration rdfs:comment "In the context of the Procedural Knowledge
 
 
 pko:hasFAQCategory rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to a Category it belongs to."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to a Category it belongs to."@en .
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to a Category it belongs to."@en .
 
 
 pko:hasFAQTarget rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to the Target of such FAQ."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to the Target of such FAQ."@en .
+                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Frequently Asked Question to the Target of such FAQ."@en .
 
 
 pko:hasFallbackStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to a (Multi)Step that represents a Fallback procedure for a specific Error that can be encountered during execution."@en ;
@@ -405,27 +415,27 @@ pko:hasFirstStep rdfs:comment "In the context of the Procedural Knowledge Ontolo
 
 
 pko:hasIssueOccurrence rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to an Issue Occurrence, that is the occurrence of an issue during the execution."@en ;
-                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to an Issue Occurrence, that is the occurrence of an issue during the execution."@en .
+                       skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to an Issue Occurrence, that is the occurrence of an issue during the execution."@en .
 
 
 pko:hasProcedureTarget rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation."@en ;
-                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation."@en .
+                       skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Target(s), that is the object at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Machine, an Equipment, a Workstation."@en .
 
 
 pko:hasProcedureTargetType rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a ProcedureTarget to its Procedure Target Type."@en ;
-                            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a ProcedureTarget to its Procedure Target Type."@en .
+                           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a ProcedureTarget to its Procedure Target Type."@en .
 
 
 pko:hasProcedureType rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Type (e.g., a LOTO Procedure)."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Type (e.g., a LOTO Procedure)."@en .
+                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to its Procedure Type (e.g., a LOTO Procedure)."@en .
 
 
 pko:hasUserFeedbackOccurrence rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to a User Feedback Occurrence, that is the occurrence of a feedback that the user provides during execution about wither the Procedure or the Procedure Execution."@en ;
-                                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to a User Feedback Occurrence, that is the occurrence of a feedback that the user provides during execution about wither the Procedure or the Procedure Execution."@en .
+                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to a User Feedback Occurrence, that is the occurrence of a feedback that the user provides during execution about wither the Procedure or the Procedure Execution."@en .
 
 
 pko:hasUserQuestionOccurrence rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to a User Question Occurrence, that is the occurrence of a question that the user came up with during execution."@en ;
-                                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to a User Question Occurrence, that is the occurrence of a question that the user came up with during execution."@en .
+                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to a User Question Occurrence, that is the occurrence of a question that the user came up with during execution."@en .
 
 
 pko:isAdoptedBy rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to an Organization which the Procedure is adopted by."@en ;
@@ -433,7 +443,7 @@ pko:isAdoptedBy rdfs:comment "In the context of the Procedural Knowledge Ontolog
 
 
 pko:isQuestionAddressedBy rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to a Resource that addresses/answers to the question that the user came up with during the Procedure/Step Execution."@en ;
-                            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to a Resource that addresses/answers to the question that the user came up with during the Procedure/Step Execution."@en .
+                          skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to a Resource that addresses/answers to the question that the user came up with during the Procedure/Step Execution."@en .
 
 
 pko:isStepForExpertiseLevel rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Expertise Level, meaning that the Step, or MultiStep, is targeted at persons with a certain level of expertise (e.g., junior, senior)."@en ;
@@ -441,15 +451,15 @@ pko:isStepForExpertiseLevel rdfs:comment "In the context of the Procedural Knowl
 
 
 pko:isStepOfMultiStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the MultiStep it is a step of."@en ;
-                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the MultiStep it is a step of."@en .
+                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the MultiStep it is a step of."@en .
 
 
 pko:isTemplate rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent whether a Procedure is a Template or not. A Procedure is a Template if it is associated with a preset of Steps that can be used to define an Executable Procedure. Such steps are not directly executable in the form they are specified."@en ;
-                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent whether a Procedure is a Template or not. A Procedure is a Template if it is associated with a preset of Steps that can be used to define an Executable Procedure. Such steps are not directly executable in the form they are specified."@en .
+               skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent whether a Procedure is a Template or not. A Procedure is a Template if it is associated with a preset of Steps that can be used to define an Executable Procedure. Such steps are not directly executable in the form they are specified."@en .
 
 
 pko:issueCauseByUser rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en ;
-                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en .
+                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en .
 
 
 pko:issueSolutionByUser rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user."@en ;
@@ -457,15 +467,15 @@ pko:issueSolutionByUser rdfs:comment "In the context of the Procedural Knowledge
 
 
 pko:maxRepetitions rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the maxRepetitions is equal to 1, it means that the Step is not repeatable."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the maxRepetitions is equal to 1, it means that the Step is not repeatable."@en .
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the maxRepetitions is equal to 1, it means that the Step is not repeatable."@en .
 
 
 pko:minRepetitions rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the minRepetitions is equal to 1, it means that the Step is mandatory. If the minRepetitions is equal to 0, it means that the Step is optional."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the minRepetitions is equal to 1, it means that the Step is mandatory. If the minRepetitions is equal to 0, it means that the Step is optional."@en .
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the minRepetitions is equal to 1, it means that the Step is mandatory. If the minRepetitions is equal to 0, it means that the Step is optional."@en .
 
 
 pko:newVersionMotivation rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en ;
-                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en .
+                         skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en .
 
 
 pko:nextAlternativeStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to at least two alternative Steps, if only one of such steps should be executed."@en ;
@@ -477,47 +487,47 @@ pko:notesByUser rdfs:comment "In the context of the Procedural Knowledge Ontolog
 
 
 pko:question rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question of a Frequently Asked Question."@en ;
-            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question of a Frequently Asked Question."@en .
+             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question of a Frequently Asked Question."@en .
 
 
 pko:questionByUser rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question that a user came up with during the Procedure/Step Execution (User Question Occurrence)."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question that a user came up with during the Procedure/Step Execution (User Question Occurrence)."@en .
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the question that a user came up with during the Procedure/Step Execution (User Question Occurrence)."@en .
 
 
 pko:requiresAction rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to an Action that needs to be performed by a human Agent (a Person) for executing the Step."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to an Action that needs to be performed by a human Agent (a Person) for executing the Step."@en .
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to an Action that needs to be performed by a human Agent (a Person) for executing the Step."@en .
 
 
 pko:requiresFunction rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to a Function that needs to be performed by a Software Agent for executing the Step."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to a Function that needs to be performed by a Software Agent for executing the Step."@en .
+                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to a Function that needs to be performed by a Software Agent for executing the Step."@en .
 
 
 pko:requiresTool rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Tool required by the Step, that is an object needed to execute the Step."@en ;
-                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Tool required by the Step, that is an object needed to execute the Step."@en .
+                 skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step of a Procedure to a Tool required by the Step, that is an object needed to execute the Step."@en .
 
 
 pko:versionNumber rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage access control."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage access control."@en .
+                  skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage access control."@en .
 
 
 pko:wasAskedBy rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to the Agent that asked the question during the Procedure/Step Execution."@en ;
-                skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to the Agent that asked the question during the Procedure/Step Execution."@en .
+               skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Question Occurrence to the Agent that asked the question during the Procedure/Step Execution."@en .
 
 
 pko:wasEncounteredBy rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Issue Occurrence to the Agent that encountered the issue during the Procedure/Step Execution."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Issue Occurrence to the Agent that encountered the issue during the Procedure/Step Execution."@en .
+                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Issue Occurrence to the Agent that encountered the issue during the Procedure/Step Execution."@en .
 
 
 pko:wasExtractedFrom rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Resource it was extracted from."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Resource it was extracted from."@en .
+                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Resource it was extracted from."@en .
 
 
 pko:wasModifiedBy rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that modified the Resource."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that modified the Resource."@en .
+                  skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Resource (e.g., a Procedure) to the Agent that modified the Resource."@en .
 
 
 pko:wasProvidedBy rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Feedback Occurrence to the Agent that provided the feedback about either the procedure or the procedure execution during the Procedure Execution."@en ;
-                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Feedback Occurrence to the Agent that provided the feedback about either the procedure or the procedure execution during the Procedure Execution."@en .
+                  skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a User Feedback Occurrence to the Agent that provided the feedback about either the procedure or the procedure execution during the Procedure Execution."@en .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
