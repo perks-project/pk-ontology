@@ -11,8 +11,9 @@
      xmlns:dcam="http://purl.org/dc/dcam/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/pko">
         <owl:versionIRI rdf:resource="https://w3id.org/pko/1.0.0"/>
         <dc:contributor>Antonia Azzini (Cefriel)</dc:contributor>
@@ -24,10 +25,13 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:publisher>Cefriel</terms:publisher>
         <bibo:status xml:lang="en">Published Ontology</bibo:status>
-        <schema:funding rdf:resource="https://doi.org/10.3030/101120323"/>
+        <vann:preferredNamespacePrefix xml:lang="en">pko</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/pko#</vann:preferredNamespaceUri>
         <rdfs:label>Procedural Knowledge Ontology (PKO)</rdfs:label>
         <owl:priorVersion rdf:resource="https://w3id.org/pko/0.1.0"/>
         <owl:versionInfo>1.0.0</owl:versionInfo>
+        <schema:citation>Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO).</schema:citation>
+        <schema:funding rdf:resource="https://doi.org/10.3030/101120323"/>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
@@ -101,10 +105,17 @@
     
 
 
-    <!-- http://schema.org/funding -->
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
 
-    <owl:AnnotationProperty rdf:about="http://schema.org/funding"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
@@ -140,6 +151,20 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- https://schema.org/citation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/citation"/>
+    
+
+
+    <!-- https://schema.org/funding -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funding"/>
     
 
 

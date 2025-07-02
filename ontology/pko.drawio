@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2025-04-10T08:12:03.988Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="ToCFjQEdkZy59updTKMB" version="23.0.2" type="device" pages="3">
+<mxfile host="Electron" modified="2025-07-02T07:28:05.302Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="x3-e0R2Z5BPvxoWlg-z1" version="22.1.2" type="device" pages="3">
   <diagram name="pko" id="m8YNppsp5nKSXWjHvn1q">
-    <mxGraphModel dx="1417" dy="1465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1790" dy="1737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,11 +22,11 @@
             <mxPoint x="69" y="25" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-4" value="&lt;div&gt;&lt;b&gt;@base:&lt;/b&gt; https://w3id.org/pko#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;pko:&lt;/b&gt;&amp;nbsp;https://w3id.org/pko#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;pplan:&lt;/b&gt; http://purl.org/net/p-plan#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;prov:&lt;/b&gt; http://www.w3.org/ns/prov#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcat:&lt;/b&gt;&amp;nbsp;http://www.w3.org/ns/dcat#&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:&amp;nbsp;&lt;/b&gt;http://purl.org/dc/terms/&lt;/div&gt;&lt;div&gt;&lt;b&gt;time:&lt;/b&gt;&amp;nbsp;http://www.w3.org/2006/time#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;adms:&lt;/b&gt;&amp;nbsp;http://www.w3.org/ns/adms#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;m4ing:&lt;/b&gt;&amp;nbsp;http://w3id.org/nfdi4ing/metadata4ing#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;pro:&lt;/b&gt;&amp;nbsp;http://purl.org/spar/pro/&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;schema:&lt;/b&gt; http://schema.org/&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;pko-ind:&lt;/b&gt; https://w3id.org/pko/industry#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;bibo:&lt;/b&gt;&amp;nbsp;http://purl.org/ontology/bibo/&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-4" value="&lt;div&gt;&lt;b&gt;@base:&lt;/b&gt; https://w3id.org/pko#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;pko:&lt;/b&gt;&amp;nbsp;https://w3id.org/pko#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;pplan:&lt;/b&gt; http://purl.org/net/p-plan#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;prov:&lt;/b&gt; http://www.w3.org/ns/prov#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcat:&lt;/b&gt;&amp;nbsp;http://www.w3.org/ns/dcat#&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:&amp;nbsp;&lt;/b&gt;http://purl.org/dc/terms/&lt;/div&gt;&lt;div&gt;&lt;b&gt;time:&lt;/b&gt;&amp;nbsp;http://www.w3.org/2006/time#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;adms:&lt;/b&gt;&amp;nbsp;http://www.w3.org/ns/adms#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;m4ing:&lt;/b&gt;&amp;nbsp;http://w3id.org/nfdi4ing/metadata4ing#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;pro:&lt;/b&gt;&amp;nbsp;http://purl.org/spar/pro/&lt;/div&gt;&lt;div&gt;&lt;b&gt;pko-ind:&lt;/b&gt; https://w3id.org/pko/industry#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;bibo:&lt;/b&gt;&amp;nbsp;http://purl.org/ontology/bibo/&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann:&lt;/b&gt;&amp;nbsp;http://purl.org/vocab/vann/&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;schema:&amp;nbsp;&lt;/b&gt;https://schema.org/&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
           <mxGeometry x="340" y="-530" width="290" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-5" value="&lt;div&gt;&lt;b&gt;owl:Ontology: &lt;/b&gt;&amp;lt;https://w3id.org/pko&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:title:&lt;/b&gt;&amp;nbsp;Procedural Knowledge Ontology (PKO)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs:label: &lt;/b&gt;Procedural Knowledge Ontology (PKO)&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:publisher:&lt;/b&gt;&amp;nbsp;Cefriel&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionIRI:&lt;/b&gt; &amp;lt;https://w3id.org/pko/1.0.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;d&lt;/b&gt;&lt;b&gt;c:creator:&lt;/b&gt;&amp;nbsp;Valentina Carriero (Cefriel)&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:creator:&lt;/b&gt;&amp;nbsp;Mario Scrocca&amp;nbsp;(Cefriel)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:contributor:&lt;/b&gt;&amp;nbsp;Irene Celino&amp;nbsp;(Cefriel)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:contributor:&lt;/b&gt;&amp;nbsp;Ilaria Baroni&amp;nbsp;(Cefriel)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:contributor:&lt;/b&gt;&amp;nbsp;Antonia Azzini&amp;nbsp;(Cefriel)&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo:&lt;/b&gt;&amp;nbsp;1.0.0&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;owl:priorVersion:&amp;nbsp;&lt;/b&gt;&amp;lt;https://w3id.org/pko/0.1.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;bibo:status:&lt;/b&gt;&amp;nbsp;&quot;Published Ontology&quot;@en&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:license: &lt;/b&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&amp;lt;&lt;/span&gt;https://creativecommons.org/licenses/by/4.0/&amp;gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;schema:funding:&amp;nbsp;&lt;/b&gt;&amp;lt;https://doi.org/10.3030/101120323&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.05555555555555555;" parent="1" vertex="1">
-          <mxGeometry x="-30" y="-530" width="350" height="360" as="geometry" />
+        <mxCell id="9d43khAp4z9KavK-o5Pn-5" value="&lt;div&gt;&lt;b&gt;owl:Ontology: &lt;/b&gt;&amp;lt;https://w3id.org/pko&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:title:&lt;/b&gt;&amp;nbsp;Procedural Knowledge Ontology (PKO)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs:label: &lt;/b&gt;Procedural Knowledge Ontology (PKO)&amp;nbsp;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;rdfs:comment&lt;/b&gt;:The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents.&lt;div&gt;&lt;b&gt;dct:publisher:&lt;/b&gt;&amp;nbsp;Cefriel&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionIRI:&lt;/b&gt; &amp;lt;https://w3id.org/pko/1.0.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;vann:preferredNamespacePrefix:&lt;/b&gt;&amp;nbsp;&quot;pko&quot;@en&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;vann:preferredNamespaceUri:&lt;/b&gt;&amp;nbsp;https://w3id.org/pko#&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;d&lt;/b&gt;&lt;b&gt;c:creator:&lt;/b&gt;&amp;nbsp;Valentina Carriero (Cefriel)&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:creator:&lt;/b&gt;&amp;nbsp;Mario Scrocca&amp;nbsp;(Cefriel)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:contributor:&lt;/b&gt;&amp;nbsp;Irene Celino&amp;nbsp;(Cefriel)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:contributor:&lt;/b&gt;&amp;nbsp;Ilaria Baroni&amp;nbsp;(Cefriel)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dc:contributor:&lt;/b&gt;&amp;nbsp;Antonia Azzini&amp;nbsp;(Cefriel)&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo:&lt;/b&gt;&amp;nbsp;1.0.0&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;owl:priorVersion:&amp;nbsp;&lt;/b&gt;&amp;lt;https://w3id.org/pko/0.1.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;bibo:status:&lt;/b&gt;&amp;nbsp;&quot;Published Ontology&quot;@en&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:license: &lt;/b&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&amp;lt;&lt;/span&gt;https://creativecommons.org/licenses/by/4.0/&amp;gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;schema:funding:&amp;nbsp;&lt;/b&gt;&amp;lt;https://doi.org/10.3030/101120323&amp;gt;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;schema:citation&lt;/b&gt;&lt;b&gt;:&lt;/b&gt; Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO).&lt;div&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.05555555555555555;spacing=4;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="-630" width="350" height="460" as="geometry" />
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-6" value="" style="endArrow=block;html=1;fontColor=#000099;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endFill=0;entryX=0.9;entryY=1;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="9d43khAp4z9KavK-o5Pn-8" target="9d43khAp4z9KavK-o5Pn-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -1039,7 +1039,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-194" value="prov:Agent" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#d0cee2;strokeColor=#56517e;" parent="1" vertex="1">
-          <mxGeometry x="561" y="1540" width="180" height="30" as="geometry" />
+          <mxGeometry x="650" y="1541" width="197" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-195" value="" style="endArrow=classic;html=1;exitX=0.4;exitY=0;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="9d43khAp4z9KavK-o5Pn-9" target="9d43khAp4z9KavK-o5Pn-197" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -1082,8 +1082,8 @@
             <mxPoint x="530" y="1281" as="sourcePoint" />
             <mxPoint x="490" y="1421" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="300" y="1346" />
-              <mxPoint x="300" y="1555" />
+              <mxPoint x="298" y="1555" />
+              <mxPoint x="650" y="1555" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1092,10 +1092,10 @@
             <mxPoint x="114" y="22" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-207" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-185" target="9d43khAp4z9KavK-o5Pn-194" edge="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-207" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-185" target="9d43khAp4z9KavK-o5Pn-194" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="317" y="1356" as="sourcePoint" />
-            <mxPoint x="540" y="1565" as="targetPoint" />
+            <mxPoint x="709" y="1550" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-208" value="&lt;div&gt;pko:wasAskedBy&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9d43khAp4z9KavK-o5Pn-207" vertex="1" connectable="0">
@@ -1103,15 +1103,20 @@
             <mxPoint x="13" y="31" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-209" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=0.9;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-164" target="9d43khAp4z9KavK-o5Pn-194" edge="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-209" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;exitX=0;exitY=0.7;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0.9;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-164" target="9d43khAp4z9KavK-o5Pn-194" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="698" y="1356" as="sourcePoint" />
             <mxPoint x="697" y="1550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="970" y="1277" />
+              <mxPoint x="970" y="1340" />
+              <mxPoint x="827" y="1340" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-210" value="&lt;div&gt;pko:wasEncounteredBy&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9d43khAp4z9KavK-o5Pn-209" vertex="1" connectable="0">
           <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
-            <mxPoint x="-38" y="44" as="offset" />
+            <mxPoint x="-58" y="50" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-211" value="pro:RoleInTime" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#fad9d5;strokeColor=#ae4132;" parent="1" vertex="1">
@@ -1423,7 +1428,7 @@
             <mxPoint x="1677" y="1546" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X8Fdx1AG1GVPqA0JGxig-1" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-84" target="9d43khAp4z9KavK-o5Pn-85">
+        <mxCell id="X8Fdx1AG1GVPqA0JGxig-1" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-84" target="9d43khAp4z9KavK-o5Pn-85" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="532" y="928" as="sourcePoint" />
             <mxPoint x="428" y="928" as="targetPoint" />
@@ -1433,7 +1438,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="X8Fdx1AG1GVPqA0JGxig-2" value="&lt;div&gt;pko:includesStepExecution&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X8Fdx1AG1GVPqA0JGxig-1">
+        <mxCell id="X8Fdx1AG1GVPqA0JGxig-2" value="&lt;div&gt;pko:includesStepExecution&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X8Fdx1AG1GVPqA0JGxig-1" vertex="1" connectable="0">
           <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
             <mxPoint x="33" y="-3" as="offset" />
           </mxGeometry>

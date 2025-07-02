@@ -13,7 +13,8 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
+@prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -177,10 +178,13 @@ prov:wasGeneratedBy a owl:ObjectProperty ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
     bibo:status "Published Ontology"@en ;
-    schema:funding <https://doi.org/10.3030/101120323> ;
+    vann:preferredNamespacePrefix "pko"@en ;
+    vann:preferredNamespaceUri "https://w3id.org/pko#" ;
     owl:priorVersion <https://w3id.org/pko/0.1.0> ;
     owl:versionIRI <https://w3id.org/pko/1.0.0> ;
     owl:versionInfo "1.0.0" ;
+    schema:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO)." ;
+    schema:funding <https://doi.org/10.3030/101120323> ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 pko:Approval a owl:NamedIndividual,

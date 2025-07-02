@@ -4,3 +4,4 @@ base
 !*.gitkeep
 tools
 *.sh
+*.bkp

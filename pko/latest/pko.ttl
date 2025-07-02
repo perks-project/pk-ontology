@@ -17,10 +17,13 @@
                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                         <http://purl.org/dc/terms/publisher> "Cefriel" ;
                         <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
-                        <http://schema.org/funding> <https://doi.org/10.3030/101120323> ;
+                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "pko"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/pko#" ;
                         rdfs:label "Procedural Knowledge Ontology (PKO)" ;
                         owl:priorVersion <https://w3id.org/pko/0.1.0> ;
                         owl:versionInfo "1.0.0" ;
+                        <https://schema.org/citation> "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO)." ;
+                        <https://schema.org/funding> <https://doi.org/10.3030/101120323> ;
                         <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -59,8 +62,12 @@
 <http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
 
 
-###  http://schema.org/funding
-<http://schema.org/funding> rdf:type owl:AnnotationProperty .
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#label
@@ -81,6 +88,14 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 <http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/citation
+<https://schema.org/citation> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/funding
+<https://schema.org/funding> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/mod#createdWith
