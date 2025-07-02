@@ -742,6 +742,9 @@
     "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that was generated during execution, and that may correspond to an output Variable of the Step."
   } ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://xmlns.com/foaf/0.1/Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -795,7 +798,17 @@
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@language" : "en",
-    "@value" : "Valentina Anita Carriero "
+    "@value" : "Valentina Anita Carriero"
+  } ]
+}, {
+  "@id" : "https://ror.org/046bfkz44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Cefriel"
   } ]
 }, {
   "@id" : "https://schema.org/citation",
@@ -828,7 +841,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
-    "@value" : "Cefriel"
+    "@id" : "https://ror.org/046bfkz44"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Procedural Knowledge Ontology (PKO)"
