@@ -8,16 +8,14 @@
 
 <https://w3id.org/pko> rdf:type owl:Ontology ;
                         owl:versionIRI <https://w3id.org/pko/1.0.0> ;
-                        <http://purl.org/dc/elements/1.1/contributor> "Antonia Azzini (Cefriel)" ,
-                                                                      "Ilaria Baroni (Cefriel)" ,
-                                                                      "Irene Celino (Cefriel)" ;
-                        <http://purl.org/dc/elements/1.1/creator> "Mario Scrocca (Cefriel)" ,
-                                                                  "Valentina Carriero (Cefriel)" ;
-                        <http://purl.org/dc/elements/1.1/title> "Procedural Knowledge Ontology (PKO)" ;
+                        <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-5791-8427> ,
+                                                               <https://orcid.org/0000-0001-9962-7193> ,
+                                                               <https://orcid.org/0000-0002-9066-1229> ;
                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                         <http://purl.org/dc/terms/publisher> "Cefriel" ;
+                        <http://purl.org/dc/terms/title> "Procedural Knowledge Ontology (PKO)" ;
                         <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
-                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "pko"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "pko" ;
                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/pko#" ;
                         rdfs:label "Procedural Knowledge Ontology (PKO)" ;
                         owl:priorVersion <https://w3id.org/pko/0.1.0> ;
@@ -46,8 +44,8 @@
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -56,6 +54,10 @@
 
 ###  http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/bibo/status
@@ -88,6 +90,10 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 <http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/citation
@@ -678,11 +684,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
-                                 <http://purl.org/dc/dcam/domainIncludes> <http://www.w3.org/ns/dcat#Resource> ;
-                                 <http://purl.org/dc/dcam/rangeIncludes> xsd:string ;
-                                 rdfs:label "title" ;
-                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the name/title of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from."@en .
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.w3.org/2006/time#numericDuration
@@ -1015,6 +1017,10 @@ owl:Thing rdf:type owl:Class ;
                                          rdfs:label "Organization" .
 
 
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
 ###  https://w3id.org/pko#Action
 :Action rdf:type owl:Class ;
         rdfs:comment "This class represents an Action performed by a human Agent."@en ;
@@ -1141,6 +1147,43 @@ owl:Thing rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  https://orcid.org/0000-0001-5791-8427
+<https://orcid.org/0000-0001-5791-8427> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Ilaria Baroni"@en .
+
+
+###  https://orcid.org/0000-0001-9962-7193
+<https://orcid.org/0000-0001-9962-7193> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Irene Celino"@en .
+
+
+###  https://orcid.org/0000-0002-8235-7331
+<https://orcid.org/0000-0002-8235-7331> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Mario Scrocca"@en .
+
+
+###  https://orcid.org/0000-0002-9066-1229
+<https://orcid.org/0000-0002-9066-1229> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Antonia Azzini"@en .
+
+
+###  https://orcid.org/0000-0003-1427-3723
+<https://orcid.org/0000-0003-1427-3723> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Valentina Anita Carriero "@en .
+
+
+###  https://w3id.org/pko
+<https://w3id.org/pko> rdf:type owl:NamedIndividual ;
+                       <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-8235-7331> ,
+                                                          <https://orcid.org/0000-0003-1427-3723> ;
+                       <http://purl.org/dc/terms/description> "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." .
+
+
 ###  https://w3id.org/pko#Approval
 :Approval rdf:type owl:NamedIndividual ,
                    :ProcedureStatus .
@@ -1184,6 +1227,12 @@ owl:Thing rdf:type owl:Class ;
 #################################################################
 #    Annotations
 #################################################################
+
+<http://purl.org/dc/terms/title> <http://purl.org/dc/dcam/domainIncludes> <http://www.w3.org/ns/dcat#Resource> ;
+                                 <http://purl.org/dc/dcam/rangeIncludes> xsd:string ;
+                                 rdfs:label "title" ;
+                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the name/title of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from."@en .
+
 
 <http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Location where is Target is located."@en .
 

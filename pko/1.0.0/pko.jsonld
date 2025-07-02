@@ -41,9 +41,6 @@
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/elements/1.1/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/MediaTypeOrExtent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -55,6 +52,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Period Of Time"
   } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -208,7 +208,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/dcam/domainIncludes" : [ {
     "@id" : "http://www.w3.org/ns/dcat#Resource"
   } ],
@@ -742,6 +742,62 @@
     "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that was generated during execution, and that may correspond to an output Variable of the Step."
   } ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://orcid.org/0000-0001-5791-8427",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Ilaria Baroni"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0001-9962-7193",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Irene Celino"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0002-8235-7331",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Mario Scrocca"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0002-9066-1229",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Antonia Azzini"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0003-1427-3723",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Valentina Anita Carriero "
+  } ]
+}, {
   "@id" : "https://schema.org/citation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -752,21 +808,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/pko",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/contributor" : [ {
-    "@value" : "Antonia Azzini (Cefriel)"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@id" : "https://orcid.org/0000-0001-5791-8427"
   }, {
-    "@value" : "Ilaria Baroni (Cefriel)"
+    "@id" : "https://orcid.org/0000-0001-9962-7193"
   }, {
-    "@value" : "Irene Celino (Cefriel)"
+    "@id" : "https://orcid.org/0000-0002-9066-1229"
   } ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Mario Scrocca (Cefriel)"
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0002-8235-7331"
   }, {
-    "@value" : "Valentina Carriero (Cefriel)"
+    "@id" : "https://orcid.org/0000-0003-1427-3723"
   } ],
-  "http://purl.org/dc/elements/1.1/title" : [ {
-    "@value" : "Procedural Knowledge Ontology (PKO)"
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents."
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
@@ -774,12 +830,14 @@
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "Cefriel"
   } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Procedural Knowledge Ontology (PKO)"
+  } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@language" : "en",
     "@value" : "Published Ontology"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@language" : "en",
     "@value" : "pko"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {

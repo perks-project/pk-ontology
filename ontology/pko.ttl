@@ -1,6 +1,5 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix m4ing: <http://w3id.org/nfdi4ing/metadata4ing#> .
@@ -17,25 +16,23 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dc:contributor a owl:AnnotationProperty .
-
-dc:creator a owl:AnnotationProperty .
-
-dc:title a owl:AnnotationProperty .
-
 dcterms:MediaTypeOrExtent a owl:Class ;
     rdfs:label "Media Type Or Extent" .
 
 dcterms:PeriodOfTime a owl:Class ;
     rdfs:label "Period Of Time" .
 
+dcterms:contributor a owl:AnnotationProperty .
+
 dcterms:created a owl:DatatypeProperty ;
     rdfs:label "created" .
 
-dcterms:creator a owl:ObjectProperty ;
+dcterms:creator a owl:AnnotationProperty,
+        owl:ObjectProperty ;
     rdfs:label "creator" .
 
-dcterms:description a owl:DatatypeProperty ;
+dcterms:description a owl:AnnotationProperty,
+        owl:DatatypeProperty ;
     rdfs:label "description" .
 
 dcterms:format a owl:ObjectProperty ;
@@ -60,7 +57,8 @@ dcterms:references a owl:ObjectProperty ;
 dcterms:temporal a owl:ObjectProperty ;
     rdfs:label "temporal" .
 
-dcterms:title a owl:DatatypeProperty ;
+dcterms:title a owl:AnnotationProperty,
+        owl:DatatypeProperty ;
     rdfs:label "title" .
 
 pplan:Variable a owl:Class ;
@@ -173,16 +171,17 @@ schema:funding a owl:AnnotationProperty .
 
 <https://w3id.org/pko> a owl:Ontology ;
     rdfs:label "Procedural Knowledge Ontology (PKO)" ;
-    dc:contributor "Antonia Azzini (Cefriel)",
-        "Ilaria Baroni (Cefriel)",
-        "Irene Celino (Cefriel)" ;
-    dc:creator "Mario Scrocca (Cefriel)",
-        "Valentina Carriero (Cefriel)" ;
-    dc:title "Procedural Knowledge Ontology (PKO)" ;
+    dcterms:contributor <https://orcid.org/0000-0001-5791-8427>,
+        <https://orcid.org/0000-0001-9962-7193>,
+        <https://orcid.org/0000-0002-9066-1229> ;
+    dcterms:creator <https://orcid.org/0000-0002-8235-7331>,
+        <https://orcid.org/0000-0003-1427-3723> ;
+    dcterms:description "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
+    dcterms:title "Procedural Knowledge Ontology (PKO)" ;
     bibo:status "Published Ontology"@en ;
-    vann:preferredNamespacePrefix "pko"@en ;
+    vann:preferredNamespacePrefix "pko" ;
     vann:preferredNamespaceUri "https://w3id.org/pko#" ;
     owl:priorVersion <https://w3id.org/pko/0.1.0> ;
     owl:versionIRI <https://w3id.org/pko/1.0.0> ;
