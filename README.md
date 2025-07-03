@@ -23,3 +23,7 @@ The resources associated with the requirements specification are available in th
 The RDF files describing the different versions of the ontology and its modules can be found in the folder [pko](./pko). A [Chowlk](https://chowlk.linkeddata.es/) diagram for the current version of the ontology can be found in the [ontology](./ontology) folder.
 
 The Widoco tool is used to automatise the ontology publication through the `run-onto.sh` script as described in the template repo https://github.com/cefriel/ontology-template.
+
+## PKO Adoption and Maintenance
+
+If you are using (or willing to use) PKO for your project, create a new issue with the template "Use case for PKO", where you can also provide feedback or add feature requests. Alternatively, you can start from a blank issue.
