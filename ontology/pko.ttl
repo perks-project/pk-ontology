@@ -33,7 +33,8 @@ dcterms:creator a owl:AnnotationProperty,
 
 dcterms:description a owl:AnnotationProperty,
         owl:DatatypeProperty ;
-    rdfs:label "description" .
+    rdfs:label "description" ;
+    rdfs:range xsd:string .
 
 dcterms:format a owl:ObjectProperty ;
     rdfs:label "format" .
@@ -41,12 +42,15 @@ dcterms:format a owl:ObjectProperty ;
 dcterms:identifier a owl:DatatypeProperty ;
     rdfs:label "identifier" .
 
+dcterms:issued a owl:AnnotationProperty .
+
 dcterms:language a owl:DatatypeProperty ;
     rdfs:label "language" .
 
 dcterms:license a owl:AnnotationProperty .
 
-dcterms:modified a owl:DatatypeProperty ;
+dcterms:modified a owl:AnnotationProperty,
+        owl:DatatypeProperty ;
     rdfs:label "modified" .
 
 dcterms:publisher a owl:AnnotationProperty .
@@ -177,7 +181,9 @@ schema:funding a owl:AnnotationProperty .
     dcterms:creator <https://orcid.org/0000-0002-8235-7331>,
         <https://orcid.org/0000-0003-1427-3723> ;
     dcterms:description "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." ;
+    dcterms:issued "2025-03-11" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2025-07-09" ;
     dcterms:publisher <https://ror.org/046bfkz44> ;
     dcterms:title "Procedural Knowledge Ontology (PKO)" ;
     bibo:status "Published Ontology"@en ;
@@ -341,6 +347,13 @@ pko:isCurrentVersionOf a owl:ObjectProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
 
+pko:isFirstStepOf a owl:ObjectProperty ;
+    rdfs:label "is first step of" ;
+    rdfs:domain pplan:Step ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( pko:Procedure pplan:MultiStep ) ],
+        pko:Procedure .
+
 pko:isIncludedInProcedureExecution a owl:ObjectProperty ;
     rdfs:label "is included in procedure execution" ;
     rdfs:domain pko:StepExecution ;
@@ -371,23 +384,13 @@ pko:isTemplate a owl:DatatypeProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range xsd:boolean .
 
-pko:issueCauseBySoftwareAgent a owl:DatatypeProperty ;
-    rdfs:label "issue cause by software agent" ;
+pko:issueCause a owl:DatatypeProperty ;
+    rdfs:label "issue cause" ;
     rdfs:domain pko:IssueOccurrence ;
     rdfs:range xsd:string .
 
-pko:issueCauseByUser a owl:DatatypeProperty ;
-    rdfs:label "issue cause by user" ;
-    rdfs:domain pko:IssueOccurrence ;
-    rdfs:range xsd:string .
-
-pko:issueSolutionBySoftwareAgent a owl:DatatypeProperty ;
-    rdfs:label "issue solution by software agent" ;
-    rdfs:domain pko:IssueOccurrence ;
-    rdfs:range xsd:string .
-
-pko:issueSolutionByUser a owl:DatatypeProperty ;
-    rdfs:label "issue solution by user" ;
+pko:issueSolution a owl:DatatypeProperty ;
+    rdfs:label "issue solution" ;
     rdfs:domain pko:IssueOccurrence ;
     rdfs:range xsd:string .
 
@@ -426,15 +429,10 @@ pko:nextVersion a owl:ObjectProperty ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:Procedure .
 
-pko:notesBySoftwareAgent a owl:DatatypeProperty ;
-    rdfs:label "notes by software agent" ;
-    rdfs:domain owl:Thing ;
-    rdfs:range xsd:string .
-
-pko:notesByUser a owl:DatatypeProperty ;
-    rdfs:label "notes by user" ;
-    rdfs:domain owl:Thing ;
-    rdfs:range xsd:string .
+pko:previousAlternativeStep a owl:ObjectProperty ;
+    rdfs:label "previous alternative step" ;
+    rdfs:domain pplan:Step ;
+    rdfs:range pplan:Step .
 
 pko:previousStep a owl:ObjectProperty ;
     rdfs:label "previous step" ;
@@ -522,6 +520,9 @@ pplan:Plan a owl:Class ;
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
 
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
 time:Duration a owl:Class ;
     rdfs:label "Duration" .
 
@@ -547,18 +548,15 @@ pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
     rdfs:subClassOf pplan:Step .
 
-pplan:MultiStep a owl:Class ;
-    rdfs:label "Multi Step" .
-
-owl:Thing a owl:Class ;
-    rdfs:label "Thing" .
-
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
 
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
+
+pplan:MultiStep a owl:Class ;
+    rdfs:label "Multi Step" .
 
 pko:Error a owl:Class ;
     rdfs:label "Error" .
@@ -581,6 +579,10 @@ pko:UserQuestionOccurrence a owl:Class ;
     rdfs:label "User Question Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
 
+pko:IssueOccurrence a owl:Class ;
+    rdfs:label "Issue Occurrence" ;
+    rdfs:subClassOf prov:InstantaneousEvent .
+
 dcat:Resource a owl:Class ;
     rdfs:label "Resource" .
 
@@ -589,10 +591,6 @@ prov:Agent a owl:Class ;
 
 prov:Activity a owl:Class ;
     rdfs:label "Activity" .
-
-pko:IssueOccurrence a owl:Class ;
-    rdfs:label "Issue Occurrence" ;
-    rdfs:subClassOf prov:InstantaneousEvent .
 
 pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" ;
