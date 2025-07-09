@@ -137,6 +137,9 @@
     "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the identifier of an entity, including: a Procedure, a Step, a Procedure Execution, a Step Execution, a Step Verification, a FAQ Category, a FAQ Target, a Resource that is referenced by or which a Procedure was extracted from."
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/language",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/dcam/domainIncludes" : [ {
@@ -837,8 +840,14 @@
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents."
   } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2025-03-11"
+  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2025-07-09"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://ror.org/046bfkz44"

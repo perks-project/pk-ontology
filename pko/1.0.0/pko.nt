@@ -3,6 +3,7 @@
 <https://w3id.org/pko> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-5791-8427> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-9962-7193> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-9066-1229> .
+<https://w3id.org/pko> <http://purl.org/dc/terms/issued> "2025-03-11" .
 <https://w3id.org/pko> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/publisher> <https://ror.org/046bfkz44> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/title> "Procedural Knowledge Ontology (PKO)" .
@@ -38,6 +39,9 @@
 # 
 # http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -1064,6 +1068,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/pko> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-8235-7331> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-1427-3723> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/description> "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." .
+<https://w3id.org/pko> <http://purl.org/dc/terms/modified> "2025-07-09" .
 # 
 # https://w3id.org/pko#Approval
 <https://w3id.org/pko#Approval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
