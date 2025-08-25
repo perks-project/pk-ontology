@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2025-07-09T14:28:50.130Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="GE_InNOqu0WBn75cx7d9" version="23.0.2" type="device" pages="3">
+<mxfile host="Electron" modified="2025-08-25T12:24:24.348Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="C5Y6g1d0HzqdaqDqGh_f" version="23.0.2" type="device" pages="3">
   <diagram name="pko" id="m8YNppsp5nKSXWjHvn1q">
-    <mxGraphModel dx="2643" dy="2338" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2097" dy="1827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,7 +25,7 @@
         <mxCell id="9d43khAp4z9KavK-o5Pn-4" value="&lt;div&gt;&lt;b&gt;@base:&lt;/b&gt; https://w3id.org/pko#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;pko:&lt;/b&gt;&amp;nbsp;https://w3id.org/pko#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;pplan:&lt;/b&gt; http://purl.org/net/p-plan#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;prov:&lt;/b&gt; http://www.w3.org/ns/prov#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcat:&lt;/b&gt;&amp;nbsp;http://www.w3.org/ns/dcat#&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:&amp;nbsp;&lt;/b&gt;http://purl.org/dc/terms/&lt;/div&gt;&lt;div&gt;&lt;b&gt;time:&lt;/b&gt;&amp;nbsp;http://www.w3.org/2006/time#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;adms:&lt;/b&gt;&amp;nbsp;http://www.w3.org/ns/adms#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;m4ing:&lt;/b&gt;&amp;nbsp;http://w3id.org/nfdi4ing/metadata4ing#&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;pro:&lt;/b&gt;&amp;nbsp;http://purl.org/spar/pro/&lt;/div&gt;&lt;div&gt;&lt;b&gt;pko-ind:&lt;/b&gt; https://w3id.org/pko/industry#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;bibo:&lt;/b&gt;&amp;nbsp;http://purl.org/ontology/bibo/&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann:&lt;/b&gt;&amp;nbsp;http://purl.org/vocab/vann/&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;schema:&amp;nbsp;&lt;/b&gt;https://schema.org/&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
           <mxGeometry x="340" y="-530" width="290" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-5" value="&lt;div&gt;&lt;b&gt;owl:Ontology: &lt;/b&gt;&amp;lt;https://w3id.org/pko&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:title:&lt;/b&gt;&amp;nbsp;Procedural Knowledge Ontology (PKO)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs:label: &lt;/b&gt;Procedural Knowledge Ontology (PKO)&amp;nbsp;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:description&lt;/b&gt;: The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents.&lt;div&gt;&lt;b&gt;dct:publisher:&lt;/b&gt;&amp;nbsp;&amp;lt;https://ror.org/046bfkz44&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionIRI:&lt;/b&gt; &amp;lt;https://w3id.org/pko/1.0.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;vann:preferredNamespacePrefix:&lt;/b&gt;&amp;nbsp;pko&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;vann:preferredNamespaceUri:&lt;/b&gt;&amp;nbsp;https://w3id.org/pko#&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:creator:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0003-1427-3723&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:creator:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0002-8235-7331&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:contributor:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0001-5791-8427&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:contributor:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0002-9066-1229&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:contributor:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0001-9962-7193&amp;gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo:&lt;/b&gt;&amp;nbsp;1.0.0&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;owl:priorVersion:&amp;nbsp;&lt;/b&gt;&amp;lt;https://w3id.org/pko/0.1.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;bibo:status:&lt;/b&gt;&amp;nbsp;&quot;Published Ontology&quot;@en&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:issued:&amp;nbsp;&lt;/b&gt;&quot;2025-03-11&quot;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:modified: &lt;/b&gt;&quot;2025-07-09&quot;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:license: &lt;/b&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&amp;lt;&lt;/span&gt;https://creativecommons.org/licenses/by/4.0/&amp;gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;schema:funding:&amp;nbsp;&lt;/b&gt;&amp;lt;https://doi.org/10.3030/101120323&amp;gt;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;schema:citation&lt;/b&gt;&lt;b&gt;:&lt;/b&gt; Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO).&lt;div&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.05555555555555555;spacing=4;" parent="1" vertex="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-5" value="&lt;div&gt;&lt;b&gt;owl:Ontology: &lt;/b&gt;&amp;lt;https://w3id.org/pko&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:title:&lt;/b&gt;&amp;nbsp;Procedural Knowledge Ontology (PKO)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs:label: &lt;/b&gt;Procedural Knowledge Ontology (PKO)&amp;nbsp;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:description&lt;/b&gt;: The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents.&lt;div&gt;&lt;b&gt;dct:publisher:&lt;/b&gt;&amp;nbsp;&amp;lt;https://ror.org/046bfkz44&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionIRI:&lt;/b&gt; &amp;lt;https://w3id.org/pko/1.0.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;vann:preferredNamespacePrefix:&lt;/b&gt;&amp;nbsp;pko&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;vann:preferredNamespaceUri:&lt;/b&gt;&amp;nbsp;https://w3id.org/pko#&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:creator:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0003-1427-3723&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:creator:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0002-8235-7331&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:contributor:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0001-5791-8427&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:contributor:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0002-9066-1229&amp;gt;&lt;br&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:contributor:&lt;/b&gt;&amp;nbsp;&amp;lt;https://orcid.org/0000-0001-9962-7193&amp;gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo:&lt;/b&gt;&amp;nbsp;1.1.0&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;owl:priorVersion:&amp;nbsp;&lt;/b&gt;&amp;lt;https://w3id.org/pko/1.0.0&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;bibo:status:&lt;/b&gt;&amp;nbsp;&quot;Published Ontology&quot;@en&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:issued:&amp;nbsp;&lt;/b&gt;&quot;2025-03-11&quot;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dct:modified: &lt;/b&gt;&quot;2025-08-25&quot;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;dct:license: &lt;/b&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&amp;lt;&lt;/span&gt;https://creativecommons.org/licenses/by/4.0/&amp;gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;schema:funding:&amp;nbsp;&lt;/b&gt;&amp;lt;https://doi.org/10.3030/101120323&amp;gt;&lt;/div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;schema:citation&lt;/b&gt;&lt;b&gt;:&lt;/b&gt; Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO).&lt;div&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.05555555555555555;spacing=4;" parent="1" vertex="1">
           <mxGeometry x="-30" y="-630" width="350" height="460" as="geometry" />
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-6" value="" style="endArrow=block;html=1;fontColor=#000099;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endFill=0;entryX=0.9;entryY=1;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="9d43khAp4z9KavK-o5Pn-8" target="9d43khAp4z9KavK-o5Pn-7" edge="1">
@@ -199,12 +199,13 @@
             <mxPoint x="-1" y="-22" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-38" value="" style="endArrow=classic;html=1;exitX=0.1;exitY=0;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;dashed=1;edgeStyle=orthogonalEdgeStyle;entryX=0.9;entryY=1;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-22" target="9d43khAp4z9KavK-o5Pn-52" edge="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-38" value="" style="endArrow=classic;html=1;exitX=0.057;exitY=-0.056;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;dashed=1;edgeStyle=orthogonalEdgeStyle;entryX=0.9;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-22" target="9d43khAp4z9KavK-o5Pn-52" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1288" y="540" as="sourcePoint" />
             <mxPoint x="870" y="422" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1231" y="422" />
+              <mxPoint x="1220" y="548" />
+              <mxPoint x="1220" y="422" />
               <mxPoint x="849" y="422" />
             </Array>
           </mxGeometry>
@@ -807,13 +808,13 @@
         <mxCell id="9d43khAp4z9KavK-o5Pn-150" value="pko:FrequentlyAskedQuestion" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
           <mxGeometry x="1390" y="-40" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-151" value="" style="endArrow=block;html=1;fontColor=#000099;exitX=0.2;exitY=0;exitDx=0;exitDy=0;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-150" target="9d43khAp4z9KavK-o5Pn-9" edge="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-151" value="" style="endArrow=block;html=1;fontColor=#000099;exitX=0.2;exitY=0;exitDx=0;exitDy=0;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.9;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-150" target="9d43khAp4z9KavK-o5Pn-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1385" y="-101" as="sourcePoint" />
             <mxPoint x="1470" y="-240" as="targetPoint" />
             <Array as="points">
               <mxPoint x="1432" y="-200" />
-              <mxPoint x="898" y="-200" />
+              <mxPoint x="914" y="-200" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1083,8 +1084,7 @@
             <mxPoint x="530" y="1281" as="sourcePoint" />
             <mxPoint x="490" y="1421" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="298" y="1555" />
-              <mxPoint x="650" y="1555" />
+              <mxPoint x="298" y="1556" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1426,7 +1426,7 @@
             <mxPoint x="33" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-54" target="9d43khAp4z9KavK-o5Pn-56">
+        <mxCell id="YWpG2y03LV9fscx1La0I-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.1;entryDx=0;entryDy=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-54" target="9d43khAp4z9KavK-o5Pn-56" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1430" y="713" as="sourcePoint" />
             <mxPoint x="1430" y="635" as="targetPoint" />
@@ -1437,47 +1437,47 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-2" value="&lt;div&gt;pko:previousAlternativeStep&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YWpG2y03LV9fscx1La0I-1">
+        <mxCell id="YWpG2y03LV9fscx1La0I-2" value="&lt;div&gt;pko:previousAlternativeStep&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="YWpG2y03LV9fscx1La0I-1" vertex="1" connectable="0">
           <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
             <mxPoint x="-71" y="7" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-3" value="&lt;div&gt;&amp;lt;&amp;lt;owl:ObjectProperty&amp;gt;&amp;gt; pko:isFirstStepOf&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="YWpG2y03LV9fscx1La0I-3" value="&lt;div&gt;&amp;lt;&amp;lt;owl:ObjectProperty&amp;gt;&amp;gt; pko:isFirstStepOf&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1617" y="1240" width="180" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-4" value="" style="endArrow=open;html=1;fontColor=#000099;endFill=0;dashed=1;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;arcSize=0;exitX=0;exitY=1;exitDx=0;exitDy=0;rounded=0;" edge="1" parent="1" source="YWpG2y03LV9fscx1La0I-3" target="YWpG2y03LV9fscx1La0I-6">
+        <mxCell id="YWpG2y03LV9fscx1La0I-4" value="" style="endArrow=open;html=1;fontColor=#000099;endFill=0;dashed=1;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;arcSize=0;exitX=0;exitY=1;exitDx=0;exitDy=0;rounded=0;" parent="1" source="YWpG2y03LV9fscx1La0I-3" target="YWpG2y03LV9fscx1La0I-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1576.996601717798" y="1420.6066017177982" as="sourcePoint" />
             <mxPoint x="1617" y="1345" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-5" value="&lt;div&gt;&amp;lt;&amp;lt;rdfs:range&amp;gt;&amp;gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YWpG2y03LV9fscx1La0I-4">
+        <mxCell id="YWpG2y03LV9fscx1La0I-5" value="&lt;div&gt;&amp;lt;&amp;lt;rdfs:range&amp;gt;&amp;gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="YWpG2y03LV9fscx1La0I-4" vertex="1" connectable="0">
           <mxGeometry x="-0.055" y="2" relative="1" as="geometry">
             <mxPoint x="-11" y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-6" value="&lt;span class=&quot;st&quot;&gt;⨆&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;" vertex="1" parent="1">
+        <mxCell id="YWpG2y03LV9fscx1La0I-6" value="&lt;span class=&quot;st&quot;&gt;⨆&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;" parent="1" vertex="1">
           <mxGeometry x="1600" y="1350" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-7" value="pko:Procedure" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+        <mxCell id="YWpG2y03LV9fscx1La0I-7" value="pko:Procedure" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
           <mxGeometry x="1667" y="1325" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-8" value="pplan:MultiStep" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+        <mxCell id="YWpG2y03LV9fscx1La0I-8" value="pplan:MultiStep" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" parent="1" vertex="1">
           <mxGeometry x="1667" y="1375" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-9" value="" style="endArrow=diamondThin;endSize=12;html=1;fontColor=#000099;exitX=1;exitY=0;exitDx=0;exitDy=0;endFill=0;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;arcSize=0;rounded=0;" edge="1" parent="1" source="YWpG2y03LV9fscx1La0I-6" target="YWpG2y03LV9fscx1La0I-7">
+        <mxCell id="YWpG2y03LV9fscx1La0I-9" value="" style="endArrow=diamondThin;endSize=12;html=1;fontColor=#000099;exitX=1;exitY=0;exitDx=0;exitDy=0;endFill=0;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;arcSize=0;rounded=0;" parent="1" source="YWpG2y03LV9fscx1La0I-6" target="YWpG2y03LV9fscx1La0I-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1426" y="1364" as="sourcePoint" />
             <mxPoint x="1467" y="1350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-10" value="" style="endArrow=diamondThin;endSize=12;html=1;fontColor=#000099;exitX=1;exitY=1;exitDx=0;exitDy=0;endFill=0;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;arcSize=0;rounded=0;" edge="1" parent="1" source="YWpG2y03LV9fscx1La0I-6" target="YWpG2y03LV9fscx1La0I-8">
+        <mxCell id="YWpG2y03LV9fscx1La0I-10" value="" style="endArrow=diamondThin;endSize=12;html=1;fontColor=#000099;exitX=1;exitY=1;exitDx=0;exitDy=0;endFill=0;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;arcSize=0;rounded=0;" parent="1" source="YWpG2y03LV9fscx1La0I-6" target="YWpG2y03LV9fscx1La0I-8" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1636" y="1364" as="sourcePoint" />
             <mxPoint x="1677" y="1350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-11" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.9;entryY=1;entryDx=0;entryDy=0;exitX=0.1;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-22" target="9d43khAp4z9KavK-o5Pn-52">
+        <mxCell id="YWpG2y03LV9fscx1La0I-11" value="" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.9;entryY=1;entryDx=0;entryDy=0;exitX=0.1;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;" parent="1" source="9d43khAp4z9KavK-o5Pn-22" target="9d43khAp4z9KavK-o5Pn-52" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="880" y="390" as="sourcePoint" />
             <mxPoint x="1262" y="560" as="targetPoint" />
@@ -1487,9 +1487,69 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="YWpG2y03LV9fscx1La0I-12" value="&lt;div&gt;pko:isFirstStepOf&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YWpG2y03LV9fscx1La0I-11">
+        <mxCell id="YWpG2y03LV9fscx1La0I-12" value="&lt;div&gt;pko:isFirstStepOf&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="YWpG2y03LV9fscx1La0I-11" vertex="1" connectable="0">
           <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
             <mxPoint x="-53" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-1" value="pko:ProcedureChangeOfStatus" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="-310" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-2" value="prov:Activity" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="1315" y="-350" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-3" value="" style="endArrow=block;html=1;fontColor=#000099;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="yKxxpVAkfH1aS19yMAqH-1" target="yKxxpVAkfH1aS19yMAqH-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1430" y="-214" as="sourcePoint" />
+            <mxPoint x="1431" y="-360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-4" value="" style="endArrow=classic;html=1;exitX=0.7;exitY=0;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.4;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-9" target="yKxxpVAkfH1aS19yMAqH-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="-139" as="sourcePoint" />
+            <mxPoint x="1046" y="-30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-5" value="&lt;div&gt;pko:hasProcedureChangeOfStatus&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yKxxpVAkfH1aS19yMAqH-4">
+          <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
+            <mxPoint x="-7" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yKxxpVAkfH1aS19yMAqH-1" target="9d43khAp4z9KavK-o5Pn-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="892" y="-154" as="sourcePoint" />
+            <mxPoint x="1230" y="-270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1238" y="-210" />
+              <mxPoint x="898" y="-210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-7" value="&lt;div&gt;pko:isProcedureChangeOfStatusOf&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yKxxpVAkfH1aS19yMAqH-6">
+          <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
+            <mxPoint x="3" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-8" value="" style="endArrow=classic;html=1;exitX=0.9;exitY=1;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="yKxxpVAkfH1aS19yMAqH-1" target="9d43khAp4z9KavK-o5Pn-113">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1248" y="-270" as="sourcePoint" />
+            <mxPoint x="908" y="-154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-9" value="&lt;div&gt;pko:fromStatus&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yKxxpVAkfH1aS19yMAqH-8">
+          <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
+            <mxPoint x="-16" y="-74" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-11" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.9;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="yKxxpVAkfH1aS19yMAqH-1" target="9d43khAp4z9KavK-o5Pn-113">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1318" y="-270" as="sourcePoint" />
+            <mxPoint x="1290" y="-41" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKxxpVAkfH1aS19yMAqH-12" value="&lt;div&gt;pko:toStatus&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yKxxpVAkfH1aS19yMAqH-11">
+          <mxGeometry x="-0.1912" y="-1" relative="1" as="geometry">
+            <mxPoint x="11" y="-62" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>

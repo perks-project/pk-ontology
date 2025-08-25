@@ -183,15 +183,15 @@ schema:funding a owl:AnnotationProperty .
     dcterms:description "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." ;
     dcterms:issued "2025-03-11" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2025-07-09" ;
+    dcterms:modified "2025-08-25" ;
     dcterms:publisher <https://ror.org/046bfkz44> ;
     dcterms:title "Procedural Knowledge Ontology (PKO)" ;
     bibo:status "Published Ontology"@en ;
     vann:preferredNamespacePrefix "pko" ;
     vann:preferredNamespaceUri "https://w3id.org/pko#" ;
-    owl:priorVersion <https://w3id.org/pko/0.1.0> ;
+    owl:priorVersion <https://w3id.org/pko/1.0.0> ;
     owl:versionIRI <https://w3id.org/pko/1.0.0> ;
-    owl:versionInfo "1.0.0" ;
+    owl:versionInfo "1.1.0" ;
     schema:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO)." ;
     schema:funding <https://doi.org/10.3030/101120323> ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
@@ -265,6 +265,11 @@ pko:feedbackOnProcedureExecution a owl:DatatypeProperty ;
     rdfs:domain pko:UserFeedbackOccurrence ;
     rdfs:range xsd:string .
 
+pko:fromStatus a owl:ObjectProperty ;
+    rdfs:label "from status" ;
+    rdfs:domain pko:ProcedureChangeOfStatus ;
+    rdfs:range pko:ProcedureStatus .
+
 pko:hasEncounteredError a owl:ObjectProperty ;
     rdfs:label "has encountered error" ;
     rdfs:domain pko:IssueOccurrence ;
@@ -301,6 +306,11 @@ pko:hasIssueOccurrence a owl:ObjectProperty ;
     rdfs:label "has issue occurrence" ;
     rdfs:domain prov:Activity ;
     rdfs:range pko:IssueOccurrence .
+
+pko:hasProcedureChangeOfStatus a owl:ObjectProperty ;
+    rdfs:label "has procedure change of status" ;
+    rdfs:domain dcat:Resource ;
+    rdfs:range pko:ProcedureChangeOfStatus .
 
 pko:hasProcedureTarget a owl:ObjectProperty ;
     rdfs:label "has procedure target" ;
@@ -358,6 +368,11 @@ pko:isIncludedInProcedureExecution a owl:ObjectProperty ;
     rdfs:label "is included in procedure execution" ;
     rdfs:domain pko:StepExecution ;
     rdfs:range pko:ProcedureExecution .
+
+pko:isProcedureChangeOfStatusOf a owl:ObjectProperty ;
+    rdfs:label "is procedure change of status of" ;
+    rdfs:domain pko:ProcedureChangeOfStatus ;
+    rdfs:range dcat:Resource .
 
 pko:isQuestionAddressedBy a owl:ObjectProperty ;
     rdfs:label "is question addressed by" ;
@@ -474,6 +489,11 @@ pko:stepNumber a owl:DatatypeProperty ;
     rdfs:domain pplan:Step ;
     rdfs:range xsd:string .
 
+pko:toStatus a owl:ObjectProperty ;
+    rdfs:label "to status" ;
+    rdfs:domain pko:ProcedureChangeOfStatus ;
+    rdfs:range pko:ProcedureStatus .
+
 pko:versionNumber a owl:DatatypeProperty ;
     rdfs:label "version number" ;
     rdfs:domain pko:Procedure ;
@@ -565,11 +585,12 @@ pko:FrequentlyAskedQuestion a owl:Class ;
     rdfs:label "Frequently Asked Question" ;
     rdfs:subClassOf dcat:Resource .
 
+pko:ProcedureChangeOfStatus a owl:Class ;
+    rdfs:label "Procedure Change Of Status" ;
+    rdfs:subClassOf prov:Activity .
+
 pko:ProcedureExecutionStatus a owl:Class ;
     rdfs:label "Procedure Execution Status" .
-
-pko:ProcedureStatus a owl:Class ;
-    rdfs:label "Procedure Status" .
 
 pko:UserFeedbackOccurrence a owl:Class ;
     rdfs:label "User Feedback Occurrence" ;
@@ -583,18 +604,21 @@ pko:IssueOccurrence a owl:Class ;
     rdfs:label "Issue Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
 
-dcat:Resource a owl:Class ;
-    rdfs:label "Resource" .
-
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
 
-prov:Activity a owl:Class ;
-    rdfs:label "Activity" .
+pko:ProcedureStatus a owl:Class ;
+    rdfs:label "Procedure Status" .
 
 pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" ;
     rdfs:subClassOf prov:Activity .
+
+dcat:Resource a owl:Class ;
+    rdfs:label "Resource" .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Activity" .
 
 pko:Procedure a owl:Class ;
     rdfs:label "Procedure" ;
