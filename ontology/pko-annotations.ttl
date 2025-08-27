@@ -105,8 +105,8 @@ pko:isStepVerificationOf rdfs:comment "In the context of the Procedural Knowledg
 
 ###  https://w3id.org/pko#nextStep
 pko:nextStep owl:inverseOf pko:previousStep ;
-             rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step."@en ;
-             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step."@en .
+             rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step. If a Step is linked to multiple Steps with this property, it means that such next steps can be executed regardless of their order."@en ;
+             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to its direct next Step. If a Step is linked to multiple Steps with this property, it means that such next steps can be executed regardless of their order."@en .
 
 
 ###  https://w3id.org/pko#nextStepExecution
