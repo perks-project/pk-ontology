@@ -270,8 +270,13 @@ pko:feedbackOnProcedureExecution a owl:DatatypeProperty ;
 
 pko:fromStatus a owl:ObjectProperty ;
     rdfs:label "from status" ;
-    rdfs:domain pko:ProcedureChangeOfStatus ;
-    rdfs:range pko:ProcedureStatus .
+    rdfs:domain pko:ChangeOfStatus ;
+    rdfs:range pko:Status .
+
+pko:hasChangeOfStatus a owl:ObjectProperty ;
+    rdfs:label "has change of status" ;
+    rdfs:domain owl:Thing ;
+    rdfs:range pko:ChangeOfStatus .
 
 pko:hasEncounteredError a owl:ObjectProperty ;
     rdfs:label "has encountered error" ;
@@ -309,11 +314,6 @@ pko:hasIssueOccurrence a owl:ObjectProperty ;
     rdfs:label "has issue occurrence" ;
     rdfs:domain prov:Activity ;
     rdfs:range pko:IssueOccurrence .
-
-pko:hasProcedureChangeOfStatus a owl:ObjectProperty ;
-    rdfs:label "has procedure change of status" ;
-    rdfs:domain dcat:Resource ;
-    rdfs:range pko:ProcedureChangeOfStatus .
 
 pko:hasProcedureTarget a owl:ObjectProperty ;
     rdfs:label "has procedure target" ;
@@ -360,6 +360,11 @@ pko:isAdoptedBy a owl:ObjectProperty ;
     rdfs:label "is adopted by" ;
     rdfs:domain pko:Procedure .
 
+pko:isChangeOfStatusOf a owl:ObjectProperty ;
+    rdfs:label "is change of status of" ;
+    rdfs:domain pko:ChangeOfStatus ;
+    rdfs:range owl:Thing .
+
 pko:isCurrentVersionOf a owl:ObjectProperty ;
     rdfs:label "is current version of" ;
     rdfs:domain pko:Procedure ;
@@ -376,11 +381,6 @@ pko:isIncludedInProcedureExecution a owl:ObjectProperty ;
     rdfs:label "is included in procedure execution" ;
     rdfs:domain pko:StepExecution ;
     rdfs:range pko:ProcedureExecution .
-
-pko:isProcedureChangeOfStatusOf a owl:ObjectProperty ;
-    rdfs:label "is procedure change of status of" ;
-    rdfs:domain pko:ProcedureChangeOfStatus ;
-    rdfs:range dcat:Resource .
 
 pko:isQuestionAddressedBy a owl:ObjectProperty ;
     rdfs:label "is question addressed by" ;
@@ -504,8 +504,8 @@ pko:stepNumber a owl:DatatypeProperty ;
 
 pko:toStatus a owl:ObjectProperty ;
     rdfs:label "to status" ;
-    rdfs:domain pko:ProcedureChangeOfStatus ;
-    rdfs:range pko:ProcedureStatus .
+    rdfs:domain pko:ChangeOfStatus ;
+    rdfs:range pko:Status .
 
 pko:versionNumber a owl:DatatypeProperty ;
     rdfs:label "version number" ;
@@ -553,9 +553,6 @@ pplan:Plan a owl:Class ;
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
 
-owl:Thing a owl:Class ;
-    rdfs:label "Thing" .
-
 time:Duration a owl:Class ;
     rdfs:label "Duration" .
 
@@ -581,6 +578,9 @@ pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
     rdfs:subClassOf pplan:Step .
 
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
 
@@ -591,6 +591,10 @@ pko:ProcedureExecution a owl:Class ;
 pplan:MultiStep a owl:Class ;
     rdfs:label "Multi Step" .
 
+pko:ChangeOfStatus a owl:Class ;
+    rdfs:label "Change Of Status" ;
+    rdfs:subClassOf prov:Activity .
+
 pko:Error a owl:Class ;
     rdfs:label "Error" .
 
@@ -598,12 +602,12 @@ pko:FrequentlyAskedQuestion a owl:Class ;
     rdfs:label "Frequently Asked Question" ;
     rdfs:subClassOf dcat:Resource .
 
-pko:ProcedureChangeOfStatus a owl:Class ;
-    rdfs:label "Procedure Change Of Status" ;
-    rdfs:subClassOf prov:Activity .
-
 pko:ProcedureExecutionStatus a owl:Class ;
-    rdfs:label "Procedure Execution Status" .
+    rdfs:label "Procedure Execution Status" ;
+    rdfs:subClassOf pko:Status .
+
+pko:Status a owl:Class ;
+    rdfs:label "Status" .
 
 pko:UserFeedbackOccurrence a owl:Class ;
     rdfs:label "User Feedback Occurrence" ;
@@ -617,18 +621,19 @@ pko:IssueOccurrence a owl:Class ;
     rdfs:label "Issue Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
 
+pko:ProcedureStatus a owl:Class ;
+    rdfs:label "Procedure Status" ;
+    rdfs:subClassOf pko:Status .
+
+dcat:Resource a owl:Class ;
+    rdfs:label "Resource" .
+
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
-
-pko:ProcedureStatus a owl:Class ;
-    rdfs:label "Procedure Status" .
 
 pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" ;
     rdfs:subClassOf prov:Activity .
-
-dcat:Resource a owl:Class ;
-    rdfs:label "Resource" .
 
 prov:Activity a owl:Class ;
     rdfs:label "Activity" .
