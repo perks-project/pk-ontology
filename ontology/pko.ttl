@@ -208,6 +208,9 @@ pko:Cancelled a owl:NamedIndividual,
 pko:Completed a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
+pko:Deprecated a owl:NamedIndividual,
+        pko:ProcedureStatus .
+
 pko:Draft a owl:NamedIndividual,
         pko:ProcedureStatus .
 
@@ -333,6 +336,11 @@ pko:hasStepVerification a owl:ObjectProperty ;
     rdfs:domain pplan:Step ;
     rdfs:range pko:StepVerification .
 
+pko:hasTemplate a owl:ObjectProperty ;
+    rdfs:label "has template" ;
+    rdfs:domain pko:Procedure ;
+    rdfs:range pko:Procedure .
+
 pko:hasUserFeedbackOccurrence a owl:ObjectProperty ;
     rdfs:label "has user feedback occurrence" ;
     rdfs:domain prov:Activity ;
@@ -398,6 +406,11 @@ pko:isTemplate a owl:DatatypeProperty ;
     rdfs:label "is template" ;
     rdfs:domain pko:Procedure ;
     rdfs:range xsd:boolean .
+
+pko:isTemplateOf a owl:ObjectProperty ;
+    rdfs:label "is template of" ;
+    rdfs:domain pko:Procedure ;
+    rdfs:range pko:Procedure .
 
 pko:issueCause a owl:DatatypeProperty ;
     rdfs:label "issue cause" ;
