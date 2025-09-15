@@ -1,0 +1,115 @@
+@prefix : <https://w3id.org/pko/audit/external#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pko: <https://w3id.org/pko#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pko-aud: <https://w3id.org/pko/audit#> .
+@base <https://w3id.org/pko/audit/external#> .
+
+<https://w3id.org/pko/audit/external#> rdf:type owl:Ontology ;
+                                        owl:imports <https://w3id.org/pko/audit> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/dcam/domainIncludes
+dcam:domainIncludes rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/dcam/rangeIncludes
+dcam:rangeIncludes rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://orcid.org/0000-0001-9962-7193
+<https://orcid.org/0000-0001-9962-7193> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Irene Celino"@en .
+
+
+###  https://orcid.org/0000-0002-8235-7331
+<https://orcid.org/0000-0002-8235-7331> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Mario Scrocca"@en .
+
+
+###  https://orcid.org/0000-0003-1427-3723
+<https://orcid.org/0000-0003-1427-3723> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Valentina Anita Carriero"@en .
+
+
+###  https://ror.org/046bfkz44
+<https://ror.org/046bfkz44> rdf:type owl:NamedIndividual ,
+                                     <http://xmlns.com/foaf/0.1/Organization> ;
+                            <http://xmlns.com/foaf/0.1/name> "Cefriel"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+pko-aud:AuditBundle rdfs:comment "This class represents a Bundle that is generated during the Procedure Execution thanks to an Auditable System, and that may be collected by an Audit Service."@en ;
+                    skos:scopeNote "In the context of the Procedural Knowledge Ontology, this class represents a Bundle that is generated during the Procedure Execution thanks to an Auditable System, and that may be collected by an Audit Service."@en .
+
+
+pko-aud:AuditService rdfs:comment "This class represents a Service that performs auditing, and collects Audit Bundles that are sent by an Auditable System."@en ;
+                     skos:scopeNote "In the context of the Procedural Knowledge Ontologu (PKO), this class represents a Service that performs auditing, and collects Audit Bundles that are sent by an Auditable System."@en .
+
+
+pko-aud:AuditableProcedure rdfs:comment "This class represents a Procedure that can be audited, meaning that it can be executed involving a System that can send Bundles needed for performing auditing."@en ;
+                           skos:scopeNote "In the context of the Procedural Knowledge Ontology, this class represents a Procedure that can be audited, meaning that it can be executed involving a System that can send Bundles needed for performing auditing."@en .
+
+
+pko-aud:AuditableSystem rdfs:comment "Tthis class represents a System that can be involved in a Procedure Execution and can send Bundles needed for performing auditing."@en ;
+                        skos:scopeNote "In the context of the Procedural Knowledge Ontology, this class represents a System that can be involved in a Procedure Execution and can send Bundles needed for performing auditing."@en .
+
+
+pko-aud:hasAuditableProcedure rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Auditable Procedure."@en ;
+                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Auditable Procedure."@en .
+
+
+pko-aud:hasAuditableSystem rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable Procedur to an Auditable System."@en ;
+                           skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable Procedur to an Auditable System."@en .
+
+
+pko-aud:hasService rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Audit Service."@en ;
+                   skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Audit Service."@en .
+
+
+pko-aud:isServiceFor rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Service to an Auditable System."@en ;
+                     skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Service to an Auditable System."@en .
+
+
+pko-aud:wasCollectedBy skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Bundle to an Audit Service."@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
