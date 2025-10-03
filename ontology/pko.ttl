@@ -248,16 +248,6 @@ pko:errorCode a owl:DatatypeProperty ;
     rdfs:domain pko:Error ;
     rdfs:range xsd:string .
 
-pko:executesProcedure a owl:ObjectProperty ;
-    rdfs:label "executes procedure" ;
-    rdfs:domain pko:ProcedureExecution ;
-    rdfs:range pko:Procedure .
-
-pko:executesStep a owl:ObjectProperty ;
-    rdfs:label "executes step" ;
-    rdfs:domain pko:StepExecution ;
-    rdfs:range pplan:Step .
-
 pko:feedbackOnProcedure a owl:DatatypeProperty ;
     rdfs:label "feedback on procedure" ;
     rdfs:domain pko:UserFeedbackOccurrence ;
@@ -282,6 +272,17 @@ pko:hasEncounteredError a owl:ObjectProperty ;
     rdfs:label "has encountered error" ;
     rdfs:domain pko:IssueOccurrence ;
     rdfs:range pko:Error .
+
+pko:hasExecutedProcedure a owl:ObjectProperty ;
+    rdfs:label "has executed procedure" ;
+    rdfs:domain pko:ProcedureExecution ;
+    rdfs:range pko:Procedure .
+
+pko:hasExecutedStep a owl:ObjectProperty ;
+    rdfs:label "has executed step" ;
+    rdfs:domain pko:StepExecution ;
+    rdfs:range pplan:Step ;
+    rdfs:subPropertyOf pplan:correspondsToStep .
 
 pko:hasExpectedDuration a owl:ObjectProperty ;
     rdfs:label "has expected duration" ;
@@ -549,6 +550,9 @@ pko:wasProvidedBy a owl:ObjectProperty ;
 
 pplan:Plan a owl:Class ;
     rdfs:label "Plan" .
+
+pplan:correspondsToStep a owl:ObjectProperty ;
+    rdfs:label "corresponds to step" .
 
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
