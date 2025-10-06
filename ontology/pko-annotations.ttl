@@ -491,8 +491,8 @@ pko:minRepetitions rdfs:comment "In the context of the Procedural Knowledge Onto
                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the maximum number of repetitions for a Step. If the minRepetitions is equal to 1, it means that the Step is mandatory. If the minRepetitions is equal to 0, it means that the Step is optional."@en .
 
 
-pko:newVersionMotivation rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en ;
-                         skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en .
+pko:newVersionMotivation rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control."@en ;
+                         skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control."@en .
 
 
 pko:nextAlternativeStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to at least two alternative Steps, if only one of such steps should be executed."@en ;
