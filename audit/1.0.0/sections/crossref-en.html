@@ -1,0 +1,496 @@
+<h2 id="crossreference" class="list">Cross-reference for Audit module of Procedural Knowledge Ontology (PKO) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Audit module of Procedural Knowledge Ontology (PKO).
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AuditBundle" title="https://w3id.org/pko/audit#AuditBundle">Audit Bundle</a></li>
+  <li><a href="#AuditService" title="https://w3id.org/pko/audit#AuditService">Audit Service</a></li>
+  <li><a href="#AuditableProcedure" title="https://w3id.org/pko/audit#AuditableProcedure">Auditable Procedure</a></li>
+  <li><a href="#AuditableSystem" title="https://w3id.org/pko/audit#AuditableSystem">Auditable System</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#Bundle" title="http://www.w3.org/ns/prov#Bundle">Bundle</a></li>
+  <li><a href="#https://w3id.org/pko#Procedure" title="https://w3id.org/pko#Procedure">Procedure</a></li>
+  <li><a href="#https://w3id.org/pko#ProcedureExecution" title="https://w3id.org/pko#ProcedureExecution">Procedure Execution</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">Software Agent</a></li>
+  <li><a href="#https://w3id.org/pko#StepExecution" title="https://w3id.org/pko#StepExecution">Step Execution</a></li>
+ </ul>
+ <div class="entity" id="AuditBundle">
+  <h3>Audit Bundle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#AuditBundle</p>
+  <div class="comment">
+   <span class="markdown">This class represents a Bundle that is generated during the Procedure Execution thanks to an Auditable System, and that may be collected by an Audit Service.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology, this class represents a Bundle that is generated during the Procedure Execution thanks to an Auditable System, and that may be collected by an Audit Service.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#Bundle" title="http://www.w3.org/ns/prov#Bundle">Bundle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#wasCollectedBy" title="https://w3id.org/pko/audit#wasCollectedBy">was collected by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuditService">
+  <h3>Audit Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#AuditService</p>
+  <div class="comment">
+   <span class="markdown">This class represents a Service that performs auditing, and collects Audit Bundles that are sent by an Auditable System.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontologu (PKO), this class represents a Service that performs auditing, and collects Audit Bundles that are sent by an Auditable System.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">Software Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isServiceFor" title="https://w3id.org/pko/audit#isServiceFor">is service for</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasService" title="https://w3id.org/pko/audit#hasService">has service</a> <sup class="type-op" title="object property">op</sup>, <a href="#wasCollectedBy" title="https://w3id.org/pko/audit#wasCollectedBy">was collected by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuditableProcedure">
+  <h3>Auditable Procedure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#AuditableProcedure</p>
+  <div class="comment">
+   <span class="markdown">This class represents a Procedure that can be audited, meaning that it can be executed involving a System that can send Bundles needed for performing auditing.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology, this class represents a Procedure that can be audited, meaning that it can be executed involving a System that can send Bundles needed for performing auditing.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/pko#Procedure" title="https://w3id.org/pko#Procedure">Procedure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAuditableSystem" title="https://w3id.org/pko/audit#hasAuditableSystem">has auditable system</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAuditableProcedure" title="https://w3id.org/pko/audit#hasAuditableProcedure">has auditable procedure</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuditableSystem">
+  <h3>Auditable System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#AuditableSystem</p>
+  <div class="comment">
+   <span class="markdown">Tthis class represents a System that can be involved in a Procedure Execution and can send Bundles needed for performing auditing.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology, this class represents a System that can be involved in a Procedure Execution and can send Bundles needed for performing auditing.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">Software Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAuditableProcedure" title="https://w3id.org/pko/audit#hasAuditableProcedure">has auditable procedure</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasService" title="https://w3id.org/pko/audit#hasService">has service</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAuditableSystem" title="https://w3id.org/pko/audit#hasAuditableSystem">has auditable system</a> <sup class="type-op" title="object property">op</sup>, <a href="#isServiceFor" title="https://w3id.org/pko/audit#isServiceFor">is service for</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#Bundle">
+  <h3>Bundle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Bundle</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AuditBundle" title="https://w3id.org/pko/audit#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/pko#Procedure">
+  <h3>Procedure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#Procedure</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AuditableProcedure" title="https://w3id.org/pko/audit#AuditableProcedure">Auditable Procedure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/pko#ProcedureExecution">
+  <h3>Procedure Execution<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#ProcedureExecution</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#SoftwareAgent">
+  <h3>Software Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#SoftwareAgent</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AuditService" title="https://w3id.org/pko/audit#AuditService">Audit Service</a> <sup class="type-c" title="class">c</sup>, <a href="#AuditableSystem" title="https://w3id.org/pko/audit#AuditableSystem">Auditable System</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/pko#StepExecution">
+  <h3>Step Execution<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#StepExecution</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/pko#executesProcedure" title="https://w3id.org/pko#executesProcedure">executes procedure</a></li>
+  <li><a href="#hasAuditableProcedure" title="https://w3id.org/pko/audit#hasAuditableProcedure">has auditable procedure</a></li>
+  <li><a href="#hasAuditableSystem" title="https://w3id.org/pko/audit#hasAuditableSystem">has auditable system</a></li>
+  <li><a href="#hasService" title="https://w3id.org/pko/audit#hasService">has service</a></li>
+  <li><a href="#isServiceFor" title="https://w3id.org/pko/audit#isServiceFor">is service for</a></li>
+  <li><a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">references</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasAssociatedWith" title="http://www.w3.org/ns/prov#wasAssociatedWith">was associated with</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">was attributed to</a></li>
+  <li><a href="#wasCollectedBy" title="https://w3id.org/pko/audit#wasCollectedBy">was collected by</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy">was generated by</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/pko#executesProcedure">
+  <h3>executes procedure<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko#executesProcedure</p>
+ </div>
+ <div class="entity" id="hasAuditableProcedure">
+  <h3>has auditable procedure<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#hasAuditableProcedure</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Auditable Procedure.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Auditable Procedure.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditableSystem" title="https://w3id.org/pko/audit#AuditableSystem">Auditable System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuditableProcedure" title="https://w3id.org/pko/audit#AuditableProcedure">Auditable Procedure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAuditableSystem">
+  <h3>has auditable system<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#hasAuditableSystem</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable Procedur to an Auditable System.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable Procedur to an Auditable System.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditableProcedure" title="https://w3id.org/pko/audit#AuditableProcedure">Auditable Procedure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuditableSystem" title="https://w3id.org/pko/audit#AuditableSystem">Auditable System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasService">
+  <h3>has service<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#hasService</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Audit Service.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Audit Service.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditableSystem" title="https://w3id.org/pko/audit#AuditableSystem">Auditable System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuditService" title="https://w3id.org/pko/audit#AuditService">Audit Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isServiceFor">
+  <h3>is service for<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#isServiceFor</p>
+  <div class="comment">
+   <span class="markdown">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Service to an Auditable System.</span>
+  </div>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Service to an Auditable System.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditService" title="https://w3id.org/pko/audit#AuditService">Audit Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuditableSystem" title="https://w3id.org/pko/audit#AuditableSystem">Auditable System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/references">
+  <h3>references<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/references</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasAssociatedWith">
+  <h3>was associated with<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAssociatedWith</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasAttributedTo">
+  <h3>was attributed to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAttributedTo</p>
+ </div>
+ <div class="entity" id="wasCollectedBy">
+  <h3>was collected by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pko/audit#wasCollectedBy</p>
+  <dl>
+   <dt>
+    scope note
+   </dt>
+   <dd>
+    In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Bundle to an Audit Service.
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditBundle" title="https://w3id.org/pko/audit#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuditService" title="https://w3id.org/pko/audit#AuditService">Audit Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasGeneratedBy">
+  <h3>was generated by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasGeneratedBy</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/prov#generatedAtTime" title="http://www.w3.org/ns/prov#generatedAtTime">generated at time</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/ns/prov#generatedAtTime">
+  <h3>generated at time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#generatedAtTime</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#https://orcid.org/0000-0001-9962-7193" title="https://orcid.org/0000-0001-9962-7193"> <span>0000 0001 9962 7193</span> </a></li>
+  <li><a href="#https://orcid.org/0000-0002-6932-5036" title="https://orcid.org/0000-0002-6932-5036"> <span>0000 0002 6932 5036</span> </a></li>
+  <li><a href="#https://orcid.org/0000-0002-8235-7331" title="https://orcid.org/0000-0002-8235-7331"> <span>0000 0002 8235 7331</span> </a></li>
+  <li><a href="#https://orcid.org/0000-0003-1427-3723" title="https://orcid.org/0000-0003-1427-3723"> <span>0000 0003 1427 3723</span> </a></li>
+  <li><a href="#https://ror.org/046bfkz44" title="https://ror.org/046bfkz44"> <span>046bfkz44</span> </a></li>
+ </ul>
+ <div class="entity" id="https://orcid.org/0000-0001-9962-7193">
+  <h3>0000 0001 9962 7193<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://orcid.org/0000-0001-9962-7193</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/name" target="_blank" title="http://xmlns.com/foaf/0.1/name">name</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Irene Celino"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://orcid.org/0000-0002-6932-5036">
+  <h3>0000 0002 6932 5036<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://orcid.org/0000-0002-6932-5036</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/name" target="_blank" title="http://xmlns.com/foaf/0.1/name">name</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Laura Waltersdorfer"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://orcid.org/0000-0002-8235-7331">
+  <h3>0000 0002 8235 7331<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://orcid.org/0000-0002-8235-7331</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/name" target="_blank" title="http://xmlns.com/foaf/0.1/name">name</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Mario Scrocca"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://orcid.org/0000-0003-1427-3723">
+  <h3>0000 0003 1427 3723<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://orcid.org/0000-0003-1427-3723</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/name" target="_blank" title="http://xmlns.com/foaf/0.1/name">name</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Valentina Anita Carriero"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://ror.org/046bfkz44">
+  <h3>046bfkz44<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ror.org/046bfkz44</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Organization" target="_blank" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/name" target="_blank" title="http://xmlns.com/foaf/0.1/name">name</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cefriel"@en</span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

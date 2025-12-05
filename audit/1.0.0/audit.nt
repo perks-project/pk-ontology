@@ -1,0 +1,263 @@
+<https://w3id.org/pko/audit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/pko/audit> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/audit/1.0.0> .
+<https://w3id.org/pko/audit> <http://purl.org/dc/elements/1.1/title> "Audit module of Procedural Knowledge Ontology (PKO)" .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-9962-7193> .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-6932-5036> .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-8235-7331> .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-1427-3723> .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/issued> "2025-09-12" .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/modified> "2025-09-12" .
+<https://w3id.org/pko/audit> <http://purl.org/dc/terms/publisher> <https://ror.org/046bfkz44> .
+<https://w3id.org/pko/audit> <http://purl.org/ontology/bibo/status> "Published Ontology"@en .
+<https://w3id.org/pko/audit> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pko-aud" .
+<https://w3id.org/pko/audit> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/pko/audit#" .
+<https://w3id.org/pko/audit> <http://schema.org/funding> <https://doi.org/10.3030/101120323> .
+<https://w3id.org/pko/audit> <http://www.w3.org/2000/01/rdf-schema#label> "Audit module of Procedural Knowledge Ontology (PKO)" .
+<https://w3id.org/pko/audit> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/pko/audit> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/dcam/domainIncludes
+<http://purl.org/dc/dcam/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/dcam/rangeIncludes
+<http://purl.org/dc/dcam/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/funding
+<http://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#label> "references" .
+# 
+# http://www.w3.org/ns/prov#wasAssociatedWith
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "was associated with" .
+# 
+# http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "was attributed to" .
+# 
+# http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was generated by" .
+# 
+# https://w3id.org/pko#executesProcedure
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "executes procedure" .
+# 
+# https://w3id.org/pko/audit#hasAuditableProcedure
+<https://w3id.org/pko/audit#hasAuditableProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/audit#hasAuditableProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko/audit#AuditableSystem> .
+<https://w3id.org/pko/audit#hasAuditableProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/audit#AuditableProcedure> .
+<https://w3id.org/pko/audit#hasAuditableProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Auditable Procedure."@en .
+<https://w3id.org/pko/audit#hasAuditableProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "has auditable procedure" .
+<https://w3id.org/pko/audit#hasAuditableProcedure> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Auditable Procedure."@en .
+# 
+# https://w3id.org/pko/audit#hasAuditableSystem
+<https://w3id.org/pko/audit#hasAuditableSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/audit#hasAuditableSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko/audit#AuditableProcedure> .
+<https://w3id.org/pko/audit#hasAuditableSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/audit#AuditableSystem> .
+<https://w3id.org/pko/audit#hasAuditableSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable Procedur to an Auditable System."@en .
+<https://w3id.org/pko/audit#hasAuditableSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has auditable system" .
+<https://w3id.org/pko/audit#hasAuditableSystem> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable Procedur to an Auditable System."@en .
+# 
+# https://w3id.org/pko/audit#hasService
+<https://w3id.org/pko/audit#hasService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/audit#hasService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko/audit#AuditableSystem> .
+<https://w3id.org/pko/audit#hasService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/audit#AuditService> .
+<https://w3id.org/pko/audit#hasService> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Audit Service."@en .
+<https://w3id.org/pko/audit#hasService> <http://www.w3.org/2000/01/rdf-schema#label> "has service" .
+<https://w3id.org/pko/audit#hasService> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Auditable System to an Audit Service."@en .
+# 
+# https://w3id.org/pko/audit#isServiceFor
+<https://w3id.org/pko/audit#isServiceFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/audit#isServiceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko/audit#AuditService> .
+<https://w3id.org/pko/audit#isServiceFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/audit#AuditableSystem> .
+<https://w3id.org/pko/audit#isServiceFor> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Service to an Auditable System."@en .
+<https://w3id.org/pko/audit#isServiceFor> <http://www.w3.org/2000/01/rdf-schema#label> "is service for" .
+<https://w3id.org/pko/audit#isServiceFor> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Service to an Auditable System."@en .
+# 
+# https://w3id.org/pko/audit#wasCollectedBy
+<https://w3id.org/pko/audit#wasCollectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/audit#wasCollectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko/audit#AuditBundle> .
+<https://w3id.org/pko/audit#wasCollectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/audit#AuditService> .
+<https://w3id.org/pko/audit#wasCollectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was collected by" .
+<https://w3id.org/pko/audit#wasCollectedBy> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Audit Bundle to an Audit Service."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#generatedAtTime
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/2000/01/rdf-schema#label> "generated at time" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#Bundle
+<http://www.w3.org/ns/prov#Bundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Bundle> <http://www.w3.org/2000/01/rdf-schema#label> "Bundle" .
+# 
+# http://www.w3.org/ns/prov#SoftwareAgent
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Software Agent" .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/pko#Procedure
+<https://w3id.org/pko#Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko#Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure" .
+# 
+# https://w3id.org/pko#ProcedureExecution
+<https://w3id.org/pko#ProcedureExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko#ProcedureExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure Execution" .
+# 
+# https://w3id.org/pko#StepExecution
+<https://w3id.org/pko#StepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko#StepExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Step Execution" .
+# 
+# https://w3id.org/pko/audit#AuditBundle
+<https://w3id.org/pko/audit#AuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/audit#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Bundle> .
+<https://w3id.org/pko/audit#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Bundle that is generated during the Procedure Execution thanks to an Auditable System, and that may be collected by an Audit Service."@en .
+<https://w3id.org/pko/audit#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Audit Bundle" .
+<https://w3id.org/pko/audit#AuditBundle> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology, this class represents a Bundle that is generated during the Procedure Execution thanks to an Auditable System, and that may be collected by an Audit Service."@en .
+# 
+# https://w3id.org/pko/audit#AuditService
+<https://w3id.org/pko/audit#AuditService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/audit#AuditService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<https://w3id.org/pko/audit#AuditService> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Service that performs auditing, and collects Audit Bundles that are sent by an Auditable System."@en .
+<https://w3id.org/pko/audit#AuditService> <http://www.w3.org/2000/01/rdf-schema#label> "Audit Service" .
+<https://w3id.org/pko/audit#AuditService> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontologu (PKO), this class represents a Service that performs auditing, and collects Audit Bundles that are sent by an Auditable System."@en .
+# 
+# https://w3id.org/pko/audit#AuditableProcedure
+<https://w3id.org/pko/audit#AuditableProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/audit#AuditableProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pko#Procedure> .
+<https://w3id.org/pko/audit#AuditableProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Procedure that can be audited, meaning that it can be executed involving a System that can send Bundles needed for performing auditing."@en .
+<https://w3id.org/pko/audit#AuditableProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Auditable Procedure" .
+<https://w3id.org/pko/audit#AuditableProcedure> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology, this class represents a Procedure that can be audited, meaning that it can be executed involving a System that can send Bundles needed for performing auditing."@en .
+# 
+# https://w3id.org/pko/audit#AuditableSystem
+<https://w3id.org/pko/audit#AuditableSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/audit#AuditableSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<https://w3id.org/pko/audit#AuditableSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Tthis class represents a System that can be involved in a Procedure Execution and can send Bundles needed for performing auditing."@en .
+<https://w3id.org/pko/audit#AuditableSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Auditable System" .
+<https://w3id.org/pko/audit#AuditableSystem> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology, this class represents a System that can be involved in a Procedure Execution and can send Bundles needed for performing auditing."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://orcid.org/0000-0001-9962-7193
+<https://orcid.org/0000-0001-9962-7193> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0001-9962-7193> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0001-9962-7193> <http://xmlns.com/foaf/0.1/name> "Irene Celino"@en .
+# 
+# https://orcid.org/0000-0002-6932-5036
+<https://orcid.org/0000-0002-6932-5036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0002-6932-5036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0002-6932-5036> <http://xmlns.com/foaf/0.1/name> "Laura Waltersdorfer"@en .
+# 
+# https://orcid.org/0000-0002-8235-7331
+<https://orcid.org/0000-0002-8235-7331> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0002-8235-7331> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0002-8235-7331> <http://xmlns.com/foaf/0.1/name> "Mario Scrocca"@en .
+# 
+# https://orcid.org/0000-0003-1427-3723
+<https://orcid.org/0000-0003-1427-3723> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0003-1427-3723> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0003-1427-3723> <http://xmlns.com/foaf/0.1/name> "Valentina Anita Carriero"@en .
+# 
+# https://ror.org/046bfkz44
+<https://ror.org/046bfkz44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ror.org/046bfkz44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<https://ror.org/046bfkz44> <http://xmlns.com/foaf/0.1/name> "Cefriel"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
