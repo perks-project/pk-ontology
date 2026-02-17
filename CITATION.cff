@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+title: Procedural Knowledge Ontology (PKO)
+message: >-
+  If you use this ontology, please cite it using the
+  metadata from this file.
+type: data
+authors:
+  - given-names: Valentina Anita
+    family-names: Carriero
+    email: valentina.carriero@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0003-1427-3723'
+  - given-names: Mario
+    family-names: Scrocca
+    email: mario.scrocca@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0002-8235-7331'
+  - given-names: Ilaria
+    family-names: Baroni
+    email: ilaria.baroni@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0001-5791−8427'
+  - given-names: Antonia
+    family-names: Azzini
+    email: antonia.azzini@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000−0002−9066−1229'
+  - given-names: Irene
+    family-names: Celino
+    email: irene.celino@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0001-9962-7193'
+repository-code: 'https://github.com/cefriel/rapid-triples'
+abstract: >-
+  rapid-triples enables a form-based approach to create and curate RDF data.
+license: Apache-2.0
+preferred-citation:
+  type: conference-paper
+  authors:
+  - given-names: Valentina Anita
+    family-names: Carriero
+    email: valentina.carriero@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0003-1427-3723'
+  - given-names: Mario
+    family-names: Scrocca
+    email: mario.scrocca@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0002-8235-7331'
+  - given-names: Ilaria
+    family-names: Baroni
+    email: ilaria.baroni@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0001-5791−8427'
+  - given-names: Antonia
+    family-names: Azzini
+    email: antonia.azzini@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000−0002−9066−1229'
+  - given-names: Irene
+    family-names: Celino
+    email: irene.celino@cefriel.com
+    affiliation: Cefriel
+    orcid: 'https://orcid.org/0000-0001-9962-7193'
+  url: "https://doi.org/10.1007/978-3-031-94578-6_19"
+  conference:
+    name: "Proceedings of the 22nd European Semantic Web Conference (ESWC) 2025"
+  title: "Procedural Knowledge Ontology (PKO)"
+  year: 2025
