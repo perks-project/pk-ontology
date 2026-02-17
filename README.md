@@ -28,5 +28,9 @@ The Widoco tool is used to automatise the ontology publication through the `run-
 
 If you are using (or willing to use) PKO for your project, create a new issue with the template [Use case for PKO](https://github.com/perks-project/pk-ontology/issues/new?template=use_case.md), where you can also provide feedback or add feature requests. Alternatively, you can start from a blank issue.
 
-## Publications
-Valentina Anita Carriero, Mario Scrocca, Ilaria Baroni, Antonia Azzini, Irene Celino: _Procedural Knowledge Ontology (PKO)_. ESWC (2) 2025: 334-350. https://doi.org/10.1007/978-3-031-94578-6_19
+## Cite as
+
+If you use the PKO ontology, cite the following article: 
+
+> Valentina Anita Carriero, Mario Scrocca, Ilaria Baroni, Antonia Azzini, Irene Celino: _Procedural Knowledge Ontology (PKO)_. Proceedings of the 22nd European Semantic Web Conference (ESWC) 2025. https://doi.org/10.1007/978-3-031-94578-6_19
+
