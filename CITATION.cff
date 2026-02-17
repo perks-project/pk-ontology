@@ -32,7 +32,7 @@ authors:
     orcid: 'https://orcid.org/0000-0001-9962-7193'
 repository-code: 'https://github.com/cefriel/rapid-triples'
 abstract: >-
-  rapid-triples enables a form-based approach to create and curate RDF data.
+  The Procedural Knowledge Ontology (PKO) is defined to support the holistic governance of procedural knowledge in its entire life cycle, from elicitation to management, from access to exploitation of explicit PK.
 license: Apache-2.0
 preferred-citation:
   type: conference-paper
