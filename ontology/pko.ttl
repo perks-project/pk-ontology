@@ -121,9 +121,6 @@ time:unitType a owl:ObjectProperty ;
 adms:status a owl:ObjectProperty ;
     rdfs:label "status" .
 
-dcat:accessURL a owl:DatatypeProperty ;
-    rdfs:label "access u r l" .
-
 dcat:endDate a owl:DatatypeProperty ;
     rdfs:label "end date" .
 
@@ -173,6 +170,9 @@ schema:citation a owl:AnnotationProperty .
 
 schema:funding a owl:AnnotationProperty .
 
+schema:url a owl:DatatypeProperty ;
+    rdfs:label "url" .
+
 <https://w3id.org/pko> a owl:Ontology ;
     rdfs:label "Procedural Knowledge Ontology (PKO)" ;
     dcterms:contributor <https://orcid.org/0000-0001-5791-8427>,
@@ -202,6 +202,9 @@ pko:Approval a owl:NamedIndividual,
 pko:Approved a owl:NamedIndividual,
         pko:ProcedureStatus .
 
+pko:Archived a owl:NamedIndividual,
+        pko:ProcedureStatus .
+
 pko:Cancelled a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
@@ -214,11 +217,23 @@ pko:Deprecated a owl:NamedIndividual,
 pko:Draft a owl:NamedIndividual,
         pko:ProcedureStatus .
 
+pko:Expert a owl:NamedIndividual,
+        pko:ExpertiseLevel .
+
 pko:InProgress a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
+pko:Junior a owl:NamedIndividual,
+        pko:ExpertiseLevel .
+
+pko:Master a owl:NamedIndividual,
+        pko:ExpertiseLevel .
+
 pko:Paused a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
+
+pko:Senior a owl:NamedIndividual,
+        pko:ExpertiseLevel .
 
 pko:Validation a owl:NamedIndividual,
         pko:ProcedureStatus .
@@ -563,9 +578,6 @@ time:Duration a owl:Class ;
 pko:Action a owl:Class ;
     rdfs:label "Action" .
 
-pko:ExpertiseLevel a owl:Class ;
-    rdfs:label "Expertise Level" .
-
 pko:FAQCategory a owl:Class ;
     rdfs:label "F A Q Category" .
 
@@ -621,19 +633,22 @@ pko:UserQuestionOccurrence a owl:Class ;
     rdfs:label "User Question Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
 
+pko:ExpertiseLevel a owl:Class ;
+    rdfs:label "Expertise Level" .
+
 pko:IssueOccurrence a owl:Class ;
     rdfs:label "Issue Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
-
-pko:ProcedureStatus a owl:Class ;
-    rdfs:label "Procedure Status" ;
-    rdfs:subClassOf pko:Status .
 
 dcat:Resource a owl:Class ;
     rdfs:label "Resource" .
 
 prov:Agent a owl:Class ;
     rdfs:label "Agent" .
+
+pko:ProcedureStatus a owl:Class ;
+    rdfs:label "Procedure Status" ;
+    rdfs:subClassOf pko:Status .
 
 pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" ;

@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6" pages="3">
   <diagram name="pko" id="m8YNppsp5nKSXWjHvn1q">
-    <mxGraphModel dx="1240" dy="1831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2037" dy="2301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -657,7 +657,7 @@
             <mxPoint x="123" y="35" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-119" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];dashed=1;fontColor=#ffffff;fillColor=#e51400;strokeColor=#B20000;" value="dcat:accessURL anyURI" vertex="1">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-119" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];dashed=1;" value="schema:url anyURI" vertex="1">
           <mxGeometry height="30" width="160" x="770" y="69" as="geometry" />
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-120" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-9" style="endArrow=classic;html=1;exitX=0;exitY=0.9;exitDx=0;exitDy=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.1;entryDx=0;entryDy=0;dashed=1;" target="9d43khAp4z9KavK-o5Pn-9" value="">
@@ -678,7 +678,7 @@
         <mxCell id="9d43khAp4z9KavK-o5Pn-122" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#b0e3e6;strokeColor=#0e8088;" value="pko:ExpertiseLevel" vertex="1">
           <mxGeometry height="30" width="150" x="1400" y="110" as="geometry" />
         </mxCell>
-        <mxCell id="9d43khAp4z9KavK-o5Pn-123" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-22" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;entryX=0;entryY=0.9;entryDx=0;entryDy=0;exitX=0.4;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="9ClxTH4N-MdjV449E7lB-4" value="">
+        <mxCell id="9d43khAp4z9KavK-o5Pn-123" edge="1" parent="1" source="9d43khAp4z9KavK-o5Pn-22" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.4;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="9d43khAp4z9KavK-o5Pn-122" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="1720" y="210" as="sourcePoint" />
             <mxPoint x="1262" y="560" as="targetPoint" />
@@ -686,7 +686,7 @@
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-124" connectable="0" parent="9d43khAp4z9KavK-o5Pn-123" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;pko:isStepForExpertiseLevel&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1912" y="-1" as="geometry">
-            <mxPoint x="55" y="-101" as="offset" />
+            <mxPoint x="65" y="-61" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="9d43khAp4z9KavK-o5Pn-125" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#cdeb8b;strokeColor=#ACC475;" value="m4ing:Tool" vertex="1">
