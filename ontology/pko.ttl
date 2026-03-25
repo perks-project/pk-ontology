@@ -269,6 +269,11 @@ pko:errorCode a owl:DatatypeProperty ;
     rdfs:domain pko:Error ;
     rdfs:range xsd:string .
 
+pko:expectedSignalValue a owl:DatatypeProperty ;
+    rdfs:label "expected signal value" ;
+    rdfs:domain pko:SignalVerification ;
+    rdfs:range xsd:string .
+
 pko:feedbackOnProcedure a owl:DatatypeProperty ;
     rdfs:label "feedback on procedure" ;
     rdfs:domain pko:UserFeedbackOccurrence ;
@@ -542,6 +547,11 @@ pko:requiresTool a owl:ObjectProperty ;
     rdfs:domain pplan:Step ;
     rdfs:range m4ing:Tool .
 
+pko:signalIdentifier a owl:DatatypeProperty ;
+    rdfs:label "signal identifier" ;
+    rdfs:domain pko:SignalVerification ;
+    rdfs:range xsd:string .
+
 pko:stepNumber a owl:DatatypeProperty ;
     rdfs:label "step number" ;
     rdfs:domain pplan:Step ;
@@ -630,9 +640,9 @@ pko:RequirementType a owl:Class ;
 pko:Requirement a owl:Class ;
     rdfs:label "Requirement" .
 
-pko:StepVerification a owl:Class ;
-    rdfs:label "Step Verification" ;
-    rdfs:subClassOf pplan:Step .
+pko:SignalVerification a owl:Class ;
+    rdfs:label "Signal Verification" ;
+    rdfs:subClassOf pko:StepVerification .
 
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
@@ -640,6 +650,10 @@ prov:InstantaneousEvent a owl:Class ;
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
+
+pko:StepVerification a owl:Class ;
+    rdfs:label "Step Verification" ;
+    rdfs:subClassOf pplan:Step .
 
 pko:Transition a owl:Class ;
     rdfs:label "Transition" .
