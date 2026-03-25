@@ -220,6 +220,9 @@ pko:Draft a owl:NamedIndividual,
 pko:Expert a owl:NamedIndividual,
         pko:ExpertiseLevel .
 
+pko:Explanation a owl:Class ;
+    rdfs:label "Explanation" .
+
 pko:InProgress a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
@@ -281,6 +284,11 @@ pko:fromStatus a owl:ObjectProperty ;
     rdfs:domain pko:ChangeOfStatus ;
     rdfs:range pko:Status .
 
+pko:fromStep a owl:ObjectProperty ;
+    rdfs:label "from step" ;
+    rdfs:domain pko:Transition ;
+    rdfs:range pplan:Step .
+
 pko:hasChangeOfStatus a owl:ObjectProperty ;
     rdfs:label "has change of status" ;
     rdfs:domain owl:Thing ;
@@ -307,6 +315,9 @@ pko:hasExpectedDuration a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( pplan:Step pko:Procedure ) ] ;
     rdfs:range time:Duration .
+
+pko:hasExplanation a owl:ObjectProperty ;
+    rdfs:label "has explanation" .
 
 pko:hasFAQCategory a owl:ObjectProperty ;
     rdfs:label "has f a q category" ;
@@ -347,7 +358,7 @@ pko:hasProcedureType a owl:ObjectProperty ;
 pko:hasRequirement a owl:ObjectProperty ;
     rdfs:label "has requirement" ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( pplan:Step pko:Procedure ) ] .
+            owl:unionOf ( pplan:Step pko:Procedure pko:Transition ) ] .
 
 pko:hasRequirementType a owl:ObjectProperty ;
     rdfs:label "has requirement type" ;
@@ -541,6 +552,11 @@ pko:toStatus a owl:ObjectProperty ;
     rdfs:domain pko:ChangeOfStatus ;
     rdfs:range pko:Status .
 
+pko:toStep a owl:ObjectProperty ;
+    rdfs:label "to step" ;
+    rdfs:domain pko:Transition ;
+    rdfs:range pplan:Step .
+
 pko:versionNumber a owl:DatatypeProperty ;
     rdfs:label "version number" ;
     rdfs:domain pko:Procedure ;
@@ -624,6 +640,9 @@ prov:InstantaneousEvent a owl:Class ;
 pko:ProcedureExecution a owl:Class ;
     rdfs:label "Procedure Execution" ;
     rdfs:subClassOf prov:Activity .
+
+pko:Transition a owl:Class ;
+    rdfs:label "Transition" .
 
 pplan:MultiStep a owl:Class ;
     rdfs:label "Multi Step" .
