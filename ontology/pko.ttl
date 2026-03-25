@@ -232,6 +232,9 @@ pko:Master a owl:NamedIndividual,
 pko:Paused a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
+pko:Qualification a owl:Class ;
+    rdfs:label "Qualification" .
+
 pko:Senior a owl:NamedIndividual,
         pko:ExpertiseLevel .
 
@@ -340,6 +343,16 @@ pko:hasProcedureType a owl:ObjectProperty ;
     rdfs:label "has procedure type" ;
     rdfs:domain pko:Procedure ;
     rdfs:range pko:ProcedureType .
+
+pko:hasRequirement a owl:ObjectProperty ;
+    rdfs:label "has requirement" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pplan:Step pko:Procedure ) ] .
+
+pko:hasRequirementType a owl:ObjectProperty ;
+    rdfs:label "has requirement type" ;
+    rdfs:domain pko:Requirement ;
+    rdfs:range pko:RequirementType .
 
 pko:hasStep a owl:ObjectProperty ;
     rdfs:label "has step" ;
@@ -498,6 +511,11 @@ pko:questionByUser a owl:DatatypeProperty ;
     rdfs:domain pko:UserQuestionOccurrence ;
     rdfs:range xsd:string .
 
+pko:requiredEntity a owl:ObjectProperty ;
+    rdfs:label "required entity" ;
+    rdfs:domain pko:Requirement ;
+    rdfs:range owl:Thing .
+
 pko:requiresAction a owl:ObjectProperty ;
     rdfs:label "requires action" ;
     rdfs:domain pplan:Step ;
@@ -590,12 +608,15 @@ pko:Function a owl:Class ;
 pko:ProcedureType a owl:Class ;
     rdfs:label "Procedure Type" .
 
+pko:RequirementType a owl:Class ;
+    rdfs:label "Requirement Type" .
+
+pko:Requirement a owl:Class ;
+    rdfs:label "Requirement" .
+
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
     rdfs:subClassOf pplan:Step .
-
-owl:Thing a owl:Class ;
-    rdfs:label "Thing" .
 
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
@@ -606,6 +627,9 @@ pko:ProcedureExecution a owl:Class ;
 
 pplan:MultiStep a owl:Class ;
     rdfs:label "Multi Step" .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
 
 pko:ChangeOfStatus a owl:Class ;
     rdfs:label "Change Of Status" ;
