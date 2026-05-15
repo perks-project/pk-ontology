@@ -142,9 +142,6 @@ dcat:previousVersion a owl:ObjectProperty ;
 dcat:startDate a owl:DatatypeProperty ;
     rdfs:label "start date" .
 
-prov:Entity a owl:Class ;
-    rdfs:label "Entity" .
-
 prov:Organization a owl:Class ;
     rdfs:label "Organization" .
 
@@ -183,7 +180,7 @@ schema:url a owl:DatatypeProperty ;
     dcterms:description "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." ;
     dcterms:issued "2025-03-11" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2025-08-25" ;
+    dcterms:modified "2026-05-15" ;
     dcterms:publisher <https://ror.org/046bfkz44> ;
     dcterms:title "Procedural Knowledge Ontology (PKO)" ;
     bibo:status "Published Ontology"@en ;
@@ -232,11 +229,24 @@ pko:Junior a owl:NamedIndividual,
 pko:Master a owl:NamedIndividual,
         pko:ExpertiseLevel .
 
+pko:NotEvaluated a owl:NamedIndividual,
+        pko:RequirementSatisfactionLevel .
+
+pko:NotSatisfied a owl:NamedIndividual,
+        pko:RequirementSatisfactionLevel .
+
+pko:PartiallySatisfied a owl:NamedIndividual,
+        pko:RequirementSatisfactionLevel .
+
 pko:Paused a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
 pko:Qualification a owl:Class ;
-    rdfs:label "Qualification" .
+    rdfs:label "Qualification" ;
+    rdfs:subClassOf prov:Entity .
+
+pko:Satisfied a owl:NamedIndividual,
+        pko:RequirementSatisfactionLevel .
 
 pko:Senior a owl:NamedIndividual,
         pko:ExpertiseLevel .
@@ -364,6 +374,16 @@ pko:hasRequirement a owl:ObjectProperty ;
     rdfs:label "has requirement" ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( pplan:Step pko:Procedure pko:Transition ) ] .
+
+pko:hasRequirementSatisfaction a owl:ObjectProperty ;
+    rdfs:label "has requirement satisfaction" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pplan:StepExecution pko:ProcedureExecution ) ] .
+
+pko:hasRequirementSatisfactionLevel a owl:ObjectProperty ;
+    rdfs:label "has requirement satisfaction level" ;
+    rdfs:domain pko:RequirementSatisfaction ;
+    rdfs:range pko:RequirementSatisfactionLevel .
 
 pko:hasRequirementType a owl:ObjectProperty ;
     rdfs:label "has requirement type" ;
@@ -527,10 +547,13 @@ pko:questionByUser a owl:DatatypeProperty ;
     rdfs:domain pko:UserQuestionOccurrence ;
     rdfs:range xsd:string .
 
+pko:refersToRequirement a owl:ObjectProperty ;
+    rdfs:label "refers to requirement" ;
+    rdfs:domain pko:RequirementSatisfaction ;
+    rdfs:range pko:Requirement .
+
 pko:requiredEntity a owl:ObjectProperty ;
-    rdfs:label "required entity" ;
-    rdfs:domain pko:Requirement ;
-    rdfs:range owl:Thing .
+    rdfs:label "required entity" .
 
 pko:requiresAction a owl:ObjectProperty ;
     rdfs:label "requires action" ;
@@ -610,6 +633,9 @@ pko:wasProvidedBy a owl:ObjectProperty ;
 pplan:Plan a owl:Class ;
     rdfs:label "Plan" .
 
+pplan:StepExecution a owl:Class ;
+    rdfs:label "Step Execution" .
+
 pplan:correspondsToStep a owl:ObjectProperty ;
     rdfs:label "corresponds to step" .
 
@@ -618,6 +644,9 @@ m4ing:Tool a owl:Class ;
 
 time:Duration a owl:Class ;
     rdfs:label "Duration" .
+
+prov:Entity a owl:Class ;
+    rdfs:label "Entity" .
 
 pko:Action a owl:Class ;
     rdfs:label "Action" .
@@ -640,16 +669,19 @@ pko:RequirementType a owl:Class ;
 pko:Requirement a owl:Class ;
     rdfs:label "Requirement" .
 
+pko:RequirementSatisfaction a owl:Class ;
+    rdfs:label "Requirement Satisfaction" ;
+    rdfs:subClassOf prov:Activity .
+
 pko:SignalVerification a owl:Class ;
     rdfs:label "Signal Verification" ;
     rdfs:subClassOf pko:StepVerification .
 
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
-
-pko:ProcedureExecution a owl:Class ;
-    rdfs:label "Procedure Execution" ;
-    rdfs:subClassOf prov:Activity .
 
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
@@ -661,9 +693,6 @@ pko:Transition a owl:Class ;
 pplan:MultiStep a owl:Class ;
     rdfs:label "Multi Step" .
 
-owl:Thing a owl:Class ;
-    rdfs:label "Thing" .
-
 pko:ChangeOfStatus a owl:Class ;
     rdfs:label "Change Of Status" ;
     rdfs:subClassOf prov:Activity .
@@ -674,6 +703,10 @@ pko:Error a owl:Class ;
 pko:FrequentlyAskedQuestion a owl:Class ;
     rdfs:label "Frequently Asked Question" ;
     rdfs:subClassOf dcat:Resource .
+
+pko:ProcedureExecution a owl:Class ;
+    rdfs:label "Procedure Execution" ;
+    rdfs:subClassOf prov:Activity .
 
 pko:ProcedureExecutionStatus a owl:Class ;
     rdfs:label "Procedure Execution Status" ;
@@ -696,6 +729,9 @@ pko:ExpertiseLevel a owl:Class ;
 pko:IssueOccurrence a owl:Class ;
     rdfs:label "Issue Occurrence" ;
     rdfs:subClassOf prov:InstantaneousEvent .
+
+pko:RequirementSatisfactionLevel a owl:Class ;
+    rdfs:label "Requirement Satisfaction Level" .
 
 dcat:Resource a owl:Class ;
     rdfs:label "Resource" .
