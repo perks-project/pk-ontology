@@ -4,6 +4,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix m4ing: <http://w3id.org/nfdi4ing/metadata4ing#> .
 @prefix mod: <https://w3id.org/mod#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pko: <https://w3id.org/pko#> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
@@ -12,6 +13,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix sotw: <https://w3id.org/force/sotw#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -42,7 +44,9 @@ dcterms:format a owl:ObjectProperty ;
 dcterms:identifier a owl:DatatypeProperty ;
     rdfs:label "identifier" .
 
-dcterms:issued a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty,
+        owl:DatatypeProperty ;
+    rdfs:label "issued" .
 
 dcterms:language a owl:DatatypeProperty ;
     rdfs:label "language" .
@@ -81,9 +85,6 @@ pplan:isStepOfPlan a owl:ObjectProperty ;
     rdfs:label "is step of plan" .
 
 bibo:status a owl:AnnotationProperty .
-
-pro:Role a owl:Class ;
-    rdfs:label "Role" .
 
 pro:RoleInTime a owl:Class ;
     rdfs:label "Role In Time" .
@@ -142,6 +143,12 @@ dcat:previousVersion a owl:ObjectProperty ;
 dcat:startDate a owl:DatatypeProperty ;
     rdfs:label "start date" .
 
+odrl:Policy a owl:Class ;
+    rdfs:label "Policy" .
+
+odrl:hasPolicy a owl:ObjectProperty ;
+    rdfs:label "has policy" .
+
 prov:Organization a owl:Class ;
     rdfs:label "Organization" .
 
@@ -170,6 +177,15 @@ schema:funding a owl:AnnotationProperty .
 schema:url a owl:DatatypeProperty ;
     rdfs:label "url" .
 
+sotw:EvaluationRequest a owl:Class ;
+    rdfs:label "Evaluation Request" .
+
+sotw:evaluatedAction a owl:ObjectProperty ;
+    rdfs:label "evaluated action" .
+
+sotw:evaluatedTarget a owl:ObjectProperty ;
+    rdfs:label "evaluated target" .
+
 <https://w3id.org/pko> a owl:Ontology ;
     rdfs:label "Procedural Knowledge Ontology (PKO)" ;
     dcterms:contributor <https://orcid.org/0000-0001-5791-8427>,
@@ -192,6 +208,9 @@ schema:url a owl:DatatypeProperty ;
     schema:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO)." ;
     schema:funding <https://doi.org/10.3030/101120323> ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
+
+pko:Accepted a owl:NamedIndividual,
+        pko:EvaluationRequestStatus .
 
 pko:Approval a owl:NamedIndividual,
         pko:ProcedureStatus .
@@ -241,9 +260,15 @@ pko:PartiallySatisfied a owl:NamedIndividual,
 pko:Paused a owl:NamedIndividual,
         pko:ProcedureExecutionStatus .
 
+pko:Pending a owl:NamedIndividual,
+        pko:EvaluationRequestStatus .
+
 pko:Qualification a owl:Class ;
     rdfs:label "Qualification" ;
     rdfs:subClassOf prov:Entity .
+
+pko:Rejected a owl:NamedIndividual,
+        pko:EvaluationRequestStatus .
 
 pko:Satisfied a owl:NamedIndividual,
         pko:RequirementSatisfactionLevel .
@@ -263,6 +288,11 @@ pko:answer a owl:DatatypeProperty ;
     rdfs:label "answer" ;
     rdfs:domain pko:FrequentlyAskedQuestion ;
     rdfs:range xsd:string .
+
+pko:assigneeRole a owl:ObjectProperty ;
+    rdfs:label "assignee role" ;
+    rdfs:domain odrl:Rule ;
+    rdfs:range pro:Role .
 
 pko:changelogDescription a owl:DatatypeProperty ;
     rdfs:label "changelog description" ;
@@ -487,6 +517,9 @@ pko:issueSolution a owl:DatatypeProperty ;
     rdfs:domain pko:IssueOccurrence ;
     rdfs:range xsd:string .
 
+pko:manage a owl:NamedIndividual,
+        odrl:Action .
+
 pko:maxRepetitions a owl:DatatypeProperty ;
     rdfs:label "max repetitions" ;
     rdfs:domain pplan:Step ;
@@ -551,6 +584,10 @@ pko:refersToRequirement a owl:ObjectProperty ;
     rdfs:label "refers to requirement" ;
     rdfs:domain pko:RequirementSatisfaction ;
     rdfs:range pko:Requirement .
+
+pko:requestStatusMotivation a owl:DatatypeProperty ;
+    rdfs:label "request status motivation" ;
+    rdfs:range xsd:string .
 
 pko:requiredEntity a owl:ObjectProperty ;
     rdfs:label "required entity" .
@@ -639,11 +676,20 @@ pplan:StepExecution a owl:Class ;
 pplan:correspondsToStep a owl:ObjectProperty ;
     rdfs:label "corresponds to step" .
 
+pro:Role a owl:Class ;
+    rdfs:label "Role" .
+
 m4ing:Tool a owl:Class ;
     rdfs:label "Tool" .
 
 time:Duration a owl:Class ;
     rdfs:label "Duration" .
+
+odrl:Action a owl:Class ;
+    rdfs:label "Action" .
+
+odrl:Rule a owl:Class ;
+    rdfs:label "Rule" .
 
 prov:Entity a owl:Class ;
     rdfs:label "Entity" .
@@ -682,6 +728,9 @@ owl:Thing a owl:Class ;
 
 prov:InstantaneousEvent a owl:Class ;
     rdfs:label "Instantaneous Event" .
+
+pko:EvaluationRequestStatus a owl:Class ;
+    rdfs:label "Evaluation Request Status" .
 
 pko:StepVerification a owl:Class ;
     rdfs:label "Step Verification" ;
