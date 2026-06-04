@@ -1,0 +1,64 @@
+@prefix pko: <https://w3id.org/pko#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pko:executesProcedure a owl:ObjectProperty;
+    rdfs:domain pko:ProcedureExecution;
+    rdfs:range pko:Procedure;
+    rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en;
+    rdfs:label "executes procedure";
+    <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en;
+    owl:deprecated true ;
+    skos:changeNote "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedProcedure"@en .
+pko:executesStep a owl:ObjectProperty;
+    rdfs:domain pko:StepExecution;
+    rdfs:range <http://purl.org/net/p-plan#Step>;
+    rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en;
+    rdfs:label "executes step";
+    <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en;
+    owl:deprecated true;
+    skos:changeNote "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedStep"@en .
+pko:issueCauseBySoftwareAgent a owl:DatatypeProperty;
+    rdfs:domain pko:IssueOccurrence;
+    rdfs:range xsd:string;
+    rdfs:label "issue cause by software agent";
+    owl:deprecated true;
+    skos:changeNote "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause"@en .
+pko:issueCauseByUser a owl:DatatypeProperty;
+    rdfs:domain pko:IssueOccurrence;
+    rdfs:range xsd:string;
+    rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en;
+    rdfs:label "issue cause by user";
+    <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en;
+    owl:deprecated true;
+    skos:changeNote "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause"@en .
+pko:issueSolutionBySoftwareAgent a owl:DatatypeProperty;
+    rdfs:domain pko:IssueOccurrence;
+    rdfs:range xsd:string;
+    rdfs:label "issue solution by software agent";
+    owl:deprecated true;
+    skos:changeNote "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution"@en .
+pko:issueSolutionByUser a owl:DatatypeProperty;
+    rdfs:domain pko:IssueOccurrence;
+    rdfs:range xsd:string;
+    rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user."@en;
+    rdfs:label "issue solution by user";
+    <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user."@en;
+    owl:deprecated true;
+    skos:changeNote "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution"@en .
+pko:notesBySoftwareAgent a owl:DatatypeProperty;
+    rdfs:domain owl:Thing;
+    rdfs:range xsd:string;
+    rdfs:label "notes by software agent";
+    owl:deprecated true.
+pko:notesByUser a owl:DatatypeProperty;
+    rdfs:domain owl:Thing;
+    rdfs:range xsd:string;
+    rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence)."@en;
+    rdfs:label "notes by user";
+    <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence)."@en;
+    owl:deprecated true.
