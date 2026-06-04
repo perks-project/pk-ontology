@@ -1,0 +1,64 @@
+Identifier,Fact
+F-1,A Procedure represents a sequence of actions to be executed in order to achieve a desired outcome.
+F-2,A version of a Procedure is a description of a specific set of Steps for the execution of a Procedure. A Procedure that is not associated with a set of Steps can not be executed.
+F-3,A Step groups one or more actions to execute a portion of a Procedure.
+F-4,"The Steps of a Procedure are, at least partially, sequential. Indeed, a Procedure always starts with a first step."
+F-5,"A Procedure Execution is an Activity representing the execution of a certain Procedure Version, performed by one or more Agents, during a time interval."
+F-6,"A Procedure is described by an identifier, a title, a description, keyword(s)."
+F-7,A Procedure can be associated with a web page or a web URL for visualising or downloading it.
+F-8,A Procedure is created by one or more Agents at a certain time.
+F-9,A Procedure can be modified by one or more Agents at a certain time.
+F-10,"A Procedure can refer to one or more Resources (e.g., Documents, Media, other Procedures). "
+F-11,The desired outcome of a Procedure can be expressed in terms of a Type of Activity executed on a Procedure Target.
+F-12,"A Procedure is associated with one or more Procedure Targets, that are the objects at which the actions of the Procedure are directed. A Procedure Target can be, for instance: a Commissioning Project, an Equipment, a Machine, a Workstation."
+F-13,"A Procedure can be categorised by a certain Procedure Type, which can be, for instance: Commissioning, Maintenance, etc."
+F-14,A Procedure can be defined by an Organisation.
+F-15,A Procedure can be associated with an Organisation adopting it.
+F-16,A Procedure is a Template if it is associated with one or more versions of a Procedure that describe a preset of Steps that can be used to define an Executable Procedure. The versions of a Procedure associated with a Template Procedure are not directly executable in the form they are specified.
+F-17,A Procedure Template can be associated with multiple Executable Procedures.
+F-18,An Agent interacting with a Procedure can have a certain role.
+F-19,The same Agent can have multiple roles at the same time.
+F-20,A specific version of a Procedure is created by one or more Agents at a certain time.
+F-21,"A specific version of a Procedure can be modified by one or more Agents at a certain time, thus creating a new version of the Procedure."
+F-22,"A Procedure can have multiple versions, which can be sequentially ordered. There is always one version that is considered the current one."
+F-23,"A version of a Procedure is associated with a version number, the motivation why a new version has been created, and a changelog description detailing all updates with respect to the previous version."
+F-24,"A version of a Procedure is linked to its previous and next version(s), when applicable."
+F-25,"A version of a Procedure can be extracted from one or more Resources (e.g., Documents, Media)."
+F-26,"A version of a Procedure can refer to one or more Resources (e.g., Documents, Media, other Procedure Versions). "
+F-27,A version of a Procedure is associated with a current Status.
+F-28,"The status of Procedure can be one of: Draft, Validated, Approved, Archived."
+F-29,"A Procedure can be associated with a change of its status (e.g., from Approved to Archived)."
+F-30,"A Change of Status of a Procedure, from a start status to an end status, is performed by one or more Agents, at a certain time, and can be associated with a specific motivation of the change of status."
+F-31,"A Step is linked to its previous and next step(s), when applicable, with respect to the intended sequential order of execution."
+F-32,"A Step of a Procedure can be either atomic, or decomposed into a subset of multiple steps."
+F-33,"A Step is described by an identifier, a title, a description."
+F-34,"A Step can be associated with a set of input parameters, that require the identification of specific values in order to execute the step."
+F-35,"A Step can be associated with a set of output parameters, that are identified after the execution of the step."
+F-36,"A Step can refer to one or more Resources (e.g., Documents, Media). "
+F-37,A Step can be associated with an expected duration for its execution.
+F-38,"A Step is repeatable if it can be executed multiple times. In any case, the sequential order with respect to the other steps must be preserved."
+F-39,"A Step is optional if it can be skipped, otherwise its execution is mandatory."
+F-40,"If a Step is followed by one direct next step, this Step should be subsequently evaluated for execution. If a Step is followed by multiple direct next steps, they should be all subsequently evaluted for execution."
+F-41,"If a Step is followed by multiple direct next steps, these steps can be marked as alternative steps, if only one of such steps should be executed. Alternatively, such steps should be executed without a specific order."
+F-42,A Step can be associated with a description of the way in which the execution of the step can be verified.
+F-43,"A Step can require the use of a Tool, that is an object needed to execute the step. "
+F-44,A Step can require one or more Actions to be performed by a human Agent or via a Function executed by Software.
+F-45,"A Step can be associated with a Level of Expertise, meaning that the step (or set of steps) is targeted at persons with a certain expertise level (e.g., junior, senior)."
+F-46,A Procedure can have one or more subsets of steps that represent Fallback Procedures.
+F-47,"Fallback Procedure is associated with a trigger condition (e.g., an Error) that needs to be addressed by executing the fallback procedure."
+F-48,"A Procedure Execution may be confirmed by one or more Agents (e.g., Person, Software), which may be the same Agents performing the Procedure Execution."
+F-49,A Procedure Execution is associated with a current Status.
+F-50,"The Status of the Procedure Execution can be one of: In Progress, Completed, Paused, Cancelled."
+F-51,A Procedure Execution can be associated with one or more Feedbacks from the Agent executing it. The Feedback can be related to either the Procedure or the Procedure Execution performed.
+F-52,"A Step Execution is an Activity representing the execution of a certain Step of a Procedure Version, performed by one or more Agents, during a time interval."
+F-53,"A Step Execution is linked to the Steps that have been executed before and after, representing the actual order of execution within a specific Procedure Execution. The order of execution can be different across Procedure Executions, considering Steps that are repeatable, alternative, or optional."
+F-54,"If a Procedure Execution is performed by an Agent with a certain Level of Expertise, all the Steps that are marked with a lower level of expertise can be considered optional."
+F-55,A Step Execution can be associated with the Values of the Parameters used as input and output for the specific Procedure Execution.
+F-56,"During a Procedure Execution, an Error can occur at a certain time. An Error Occurrence is linked to the Error and to the timestamp of occurrence. "
+F-57,"An error occurrence can be further specified with the cause identified by the Agent, the solution applied by the Agent, and possible additional notes."
+F-58,"An Error is described by an identifier, the error message, and the potential error cause."
+F-59,A Step Execution can be associated with a set of questions or doubts that the Agent had to solve while performing the Step. 
+F-60,The Step Execution can be linked to a Resource that helped address the question or doubt of the Agent performing the Step.
+F-61,"A FAQ is a Resource, and is associated with an identifier, a question, and an answer to the question."
+F-62,
+F-63,

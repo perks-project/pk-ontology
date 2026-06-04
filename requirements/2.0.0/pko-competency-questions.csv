@@ -1,0 +1,52 @@
+Identifier,Competency Question
+CQ-1,In which status is the procedure?
+CQ-2,Which is the role/access rights of a user with respect to a certain procedure?
+CQ-3,What role did the user have at this specific moment in time?
+CQ-4,Which are the sub-parts (steps or group of steps) of a procedure that can be reused for other procedures?
+CQ-5,Which are the steps of a procedure that may not be executed (optional / alternative steps)?
+CQ-6,"Which is the template procedure (i.e., abstract procedure) corresponding to one (or more than one) procedure that can be actually executed?"
+CQ-7,Which are the media/documents related to a procedure?
+CQ-8,Which are the media/documents related to a step of a procedure?
+CQ-9,"Which are the media/documents related to the object (e.g., a machine) involved in a certain procedure?"
+CQ-10,When was a media/document created/modified?
+CQ-11,Which is the author of a procedure?
+CQ-12,"Who changed the status of a procedure, when and with which role?"
+CQ-13,What is the motivation associated with a change of status for a procedure?
+CQ-14,Which are the procedures associated with a certain keyword?
+CQ-15,"Which (part/component of an) object (e.g., machine) is associated with a certain (step of a) procedure?"
+CQ-16,Which are the sub-steps of a procedure that may be not useful for an expert user?
+CQ-17,In which status is the execution of a procedure?
+CQ-18,"When did the execution of a certain (step of a) procedure start, and when did it end? "
+CQ-19,Which errors/problems have been encountered during the execution of (a step of) a procedure?
+CQ-20,How many errors/problems occured for each project / step /  technician ? 
+CQ-21,Was the execution of a step confirmed by the user or by the machine?
+CQ-22,Has a certain step been executed multiple times?
+CQ-23,What is the time usually required to perform a (step of a) procedure? 
+CQ-24,Which is the cause identified by the user for a problem/error arisen during execution?
+CQ-25,How was a problem/error solved during execution?
+CQ-26,What are the versions of a certain procedure?
+CQ-27,What was the motivation for creating a new version of a procedure?
+CQ-28,Who created/validated/implemented a new version of a procedure and when?
+CQ-29,"Which feedback has been given about a procedure (during or at the end of its execution), and by whom?"
+CQ-30,Which procedures have been executed during a specific time interval?
+CQ-31,How many times has a procedure been executed?
+CQ-32,"How often did a certain problem occur within the execution of a procedure, or across multiple executions of a procedure?"
+CQ-33,Which are the steps of a procedure?
+CQ-34,Who is executing a (step of a) procedure?
+CQ-35,From which data source a piece of information associated with a procedure has been collected?
+CQ-36,Which is the category of a FAQ posed by a user?
+CQ-37,Which are the FAQs related to (a step of) a procedure?
+CQ-38,Which is the name of the project in the context of which a procedure has been executed?
+CQ-39,Which variables affect the way a certain step of the procedure should be executed?
+CQ-40,Which is the target of a certain procedure?
+CQ-41,Where is the equipment associated with a procedure (execution) located?
+CQ-42,Which are the tools required to perform (a step of) a procedure?
+CQ-43,Which were the doubts of a user during a specific procedure execution?
+CQ-44,Which are the explanations to the user associated with a certain procedure (execution)?
+CQ-45,Which is the description for a user to execute a certain step?
+CQ-46,Which is the language of the description for a user to execute a certain step?
+CQ-47,Which is the previous/next version of the procedure?
+CQ-48,Which steps of a procedure have been actually executed during a procedure execution?
+CQ-49,
+CQ-50,
+CQ-51,

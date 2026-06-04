@@ -1,0 +1,5 @@
+Identifier,Fact
+F-1,"A Step can require the use of a Personal Protective Equipment, that is an equipment that the user can wear or hold, to be protected against risks."
+F-2,"In the context of a LOTO procedure, a Step can require the use of a padlock, that is a lock that prevents the accidental energisation and start-up of a machine which has been deactivated."
+F-3,A machine is manufactured by one or more Agents.
+F-4,A machine can be associated with a Machine Type and a Location (e.g. a Factory).
