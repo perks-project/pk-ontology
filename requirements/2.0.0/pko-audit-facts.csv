@@ -1,0 +1,11 @@
+Identifier,Fact
+F-1,An Auditable Procedure is a Procedure that can be monitored for audit purposes.
+F-2,An Auditable System is a Software Agent participating in the execution and monitoring of procedures.
+F-3,An Audit Service is a Software Agent that supports the collection of audit data.
+F-4,An Auditable System can be associated with one or more Auditable Procedures.
+F-5,An Auditable Procedure can be associated with one or more Auditable Systems.
+F-6,An Auditable System can provide one or more Audit Services.
+F-7,An Audit Service can be associated with one or more Auditable Systems.
+F-8,An Audit Bundle is a Bundle that groups audit-related provenance information.
+F-9,An Audit Bundle can be collected by an Audit Service.
+F-10,An Audit Bundle is linked to an Auditable System it was attributed to, the Step Execution it references, the time when it was generated, and the Audit Service that collected the bundles.
