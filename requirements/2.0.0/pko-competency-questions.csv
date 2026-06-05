@@ -53,6 +53,6 @@ CQ-51,Who modified the procedure version last?
 CQ-52,Who is associated with a change of status of a procedure version?
 CQ-53,Who (specific agent) can manage (= owner) / read / modify / execute a procedure?
 CQ-54,Who (user role) can manage (= owner) / read / modify / execute a procedure?
-CQ-55,Who made a request of access to the procedure, and when?
+CQ-55,"Who made a request of access to the procedure, and when?"
 CQ-56,Which is the status of the request of access to a procedure?
 CQ-57,Which is the motivation for the status of the request of access to a procedure?
