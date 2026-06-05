@@ -147,7 +147,6 @@ pko:hasChangeOfStatus ?changeOfStatus .
 prov:startedAtTime ?startTime ;
 prov:endedAtTime ?endTime
 }  "
-CQ-13,What is the motivation associated with a change of status for a procedure?,
 CQ-14,Which are the procedures associated with a certain keyword?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dcat: <http://www.w3.org/ns/dcat#> 
 
@@ -156,7 +155,6 @@ WHERE {
 ?procedure a pko:Procedure ;
 dcat:keyword ?keyword .
 }  "
-CQ-15,"Which (part/component of an) object (e.g., machine) is associated with a certain (step of a) procedure?","Which (part/component of an) object (e.g., machine) is associated with a certain (step of a) procedure?"
 CQ-16,Which are the sub-steps of a procedure that may be not useful for an expert user?,"PREFIX pko: <https://w3id.org/pko#> 
 
 SELECT *
@@ -171,7 +169,7 @@ PREFIX adms: <http://www.w3.org/ns/adms#>
 SELECT *
 WHERE {
 ?procedure a pko:ProcedureExecution ;
-pko:executesProcedure ?procedure ;
+pko:hasExecutedProcedure ?procedure ;
 adms:status ?procedureExecutionStatus .
 }"
 CQ-18,"When did the execution of a certain (step of a) procedure start, and when did it end? ","PREFIX pko: <https://w3id.org/pko#> 
@@ -181,7 +179,7 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 prov:startedAtTime ?startTime ;
 prov:endedAtTime ?endTime .
 ?step pplan:isStepOfPlan ?procedure .
@@ -193,24 +191,22 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 pko:hasIssueOccurrence ?issue .
 ?step pplan:isStepOfPlan ?procedure .
 ?procedure a pko:Procedure .
 }"
-CQ-20,How many errors/problems occured for each project / step /  technician ? ,How many errors/problems occured for each project / step /  technician ? 
 CQ-21,Was the execution of a step confirmed by the user or by the machine?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX pplan: <http://purl.org/net/p-plan#>
 
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 pko:wasConfirmedBy ? agent .
 ?step pplan:isStepOfPlan ?procedure .
 ?procedure a pko:Procedure .
 }"
-CQ-22,Has a certain step been executed multiple times?,Has a certain step been executed multiple times?
 CQ-23,What is the time usually required to perform a (step of a) procedure? ,"PREFIX pko: <https://w3id.org/pko#> 
 
 SELECT *
@@ -235,7 +231,7 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 pko:hasIssueOccurrence ?issue .
 ?issue pko:issueCauseByUser ?causeByUser .
 ?step pplan:isStepOfPlan ?procedure .
@@ -247,7 +243,7 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 pko:hasIssueOccurrence ?issue .
 ?issue pko:issueSolutionByUser ?solutionByUser .
 ?step pplan:isStepOfPlan ?procedure .
@@ -260,7 +256,12 @@ SELECT *
 WHERE {
 ?procedure a pko:Procedure ;
 dcat:hasVersion ?procedureVersion .}"
-CQ-27,What was the motivation for creating a new version of a procedure?,What was the motivation for creating a new version of a procedure?
+CQ-27,What was the motivation for creating a new version of a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?procedure a pko:Procedure ;
+pko:newVersionMotivation ?procedureVersionMotivation .}"
 CQ-28,Who created/validated/implemented a new version of a procedure and when?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dct: <http://purl.org/dc/terms/>
@@ -277,7 +278,7 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 pko:hasUserFeedbackOccurrence ?feedbackOcc .
 ?feedbackOcc pko:feedbackOnProcedure ?feedback ;
 pko:wasExecutedBy ?agent .
@@ -291,13 +292,11 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?procedureExecution a pko:ProcedureExecution ;
-pko:executesProcedure ?procedure ;
+pko:hasExecutedProcedure ?procedure ;
 prov:startedAtTime ?startTime ;
 prov:endedAtTime ?endTime .
 ?procedure a pko:Procedure .
 }"
-CQ-31,How many times has a procedure been executed?,How many times has a procedure been executed?
-CQ-32,"How often did a certain problem occur within the execution of a procedure, or across multiple executions of a procedure?","How often did a certain problem occur within the execution of a procedure, or across multiple executions of a procedure?"
 CQ-33,Which are the steps of a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dct: <http://purl.org/dc/terms/> 
 
@@ -314,7 +313,7 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 pko:wasExecutedBy ?agent .
 ?step pplan:isStepOfPlan ?procedure .
 ?procedure a pko:Procedure .
@@ -337,8 +336,19 @@ WHERE {
 pko:hasFAQCategory ?FAQCategory . 
 }  "
 CQ-37,Which are the FAQs related to (a step of) a procedure?,Which are the FAQs related to (a step of) a procedure?
-CQ-38,Which is the name of the project in the context of which a procedure has been executed?,Which is the name of the project in the context of which a procedure has been executed?
-CQ-39,Which variables affect the way a certain step of the procedure should be executed?,Which variables affect the way a certain step of the procedure should be executed?
+CQ-39,Which variables affect the way a certain step of the procedure should be executed?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX pplan: <http://purl.org/net/p-plan#>
+
+SELECT * 
+WHERE { 
+?procedure a pko:Procedure ; 
+dct:title ?procedureTitle ; 
+pko:hasStep ?step . 
+?step dct:title ?stepTitle ;
+pplan:hasInputVar ?inputVariable ; 
+pplan:hasOutputVar ?outputVariable .
+}  "
 CQ-40,Which is the target of a certain procedure?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dct: <http://purl.org/dc/terms/> 
 PREFIX prov: <http://www.w3.org/ns/prov#> 
@@ -352,7 +362,6 @@ pko:hasProcedureTarget ?procedureTarget .
 OPTIONAL { ?procedureTarget pko:hasMachineType ?machineType ; 
 prov:atLocation ?procedureTargetLocation } 
 }  "
-CQ-41,Where is the equipment associated with a procedure (execution) located?,
 CQ-42,Which are the tools required to perform (a step of) a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
 
 SELECT *
@@ -361,7 +370,17 @@ WHERE {
 pko:hasStep ?step .
 ?step pko:requiresTool ?tool
 }"
-CQ-43,Which were the doubts of a user during a specific procedure execution?,
+CQ-43,Which were the doubts of a user during a specific procedure execution?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX pplan: <http://purl.org/net/p-plan#>
+
+SELECT *
+WHERE {
+?stepExecution a pko:StepExecution ;
+pko:hasExecutedStep ?step ;
+pko:hasUserQuestionOccurrence ?question .
+?step pplan:isStepOfPlan ?procedure .
+?procedure a pko:Procedure .
+}"
 CQ-44,Which are the explanations to the user associated with a certain procedure (execution)?,
 CQ-45,Which is the description for a user to execute a certain step?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dct: <http://purl.org/dc/terms/> 
@@ -372,7 +391,6 @@ WHERE {
 pko:hasStep ?step .
 ?step dct:description ?stepDescription
 }"
-CQ-46,Which is the language of the description for a user to execute a certain step?,Which is the language of the description for a user to execute a certain step?
 CQ-47,Which is the previous/next version of the procedure?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 
@@ -397,7 +415,7 @@ PREFIX pplan: <http://purl.org/net/p-plan#>
 SELECT *
 WHERE {
 ?stepExecution a pko:StepExecution ;
-pko:executesStep ?step ;
+pko:hasExecutedStep ?step ;
 pko:isIncludedInProcedureExecution ?procedureExecution .
 ?step pplan:isStepOfPlan ?procedure .
 ?procedure a pko:Procedure .
