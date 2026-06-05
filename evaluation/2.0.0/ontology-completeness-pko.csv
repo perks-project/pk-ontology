@@ -1,5 +1,4 @@
 ﻿Identifier,Competency Question,SPARQL Query
-,,
 CQ-1,In which status is the procedure?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dct: <http://purl.org/dc/terms/> 
 PREFIX adms: <http://www.w3.org/ns/adms#> 
@@ -136,7 +135,18 @@ WHERE {
 ?procedure a pko:Procedure ;
 dct:creator ?creator
 }  "
-CQ-12,"Who changed the status of a procedure, when and with which role?",
+CQ-12,"Who changed the status of a procedure, and when?","PREFIX pko: <https://w3id.org/pko#> 
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT * 
+WHERE { 
+?procedure a pko:Procedure ;
+pko:hasChangeOfStatus ?changeOfStatus . 
+?changeOfStatus pko:wasExecutedBy ?agent ;
+prov:startedAtTime ?startTime ;
+prov:endedAtTime ?endTime
+}  "
 CQ-13,What is the motivation associated with a change of status for a procedure?,
 CQ-14,Which are the procedures associated with a certain keyword?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dcat: <http://www.w3.org/ns/dcat#> 
