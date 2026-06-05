@@ -60,5 +60,9 @@ F-58,"An Error is described by an identifier, the error message, and the potenti
 F-59,A Step Execution can be associated with a set of questions or doubts that the Agent had to solve while performing the Step. 
 F-60,The Step Execution can be linked to a Resource that helped address the question or doubt of the Agent performing the Step.
 F-61,"A FAQ is a Resource, and is associated with an identifier, a question, and an answer to the question."
-F-62,
-F-63,
+F-62,A Procedure Version can be associated with the Agent who performed the latest modification.
+F-63,A Procedure can define permissions for specific Agents to manage, read, modify, or execute it.
+F-64,A Procedure can define permissions for specific Roles to manage, read, modify, or execute it.
+F-65,An Access Request to a Procedure is performed by an Agent at a certain time.
+F-66,An Access Request to a Procedure is associated with a current Status.
+F-67,An Access Request Status can be associated with a specific motivation.
