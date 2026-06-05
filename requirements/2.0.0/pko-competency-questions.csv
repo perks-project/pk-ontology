@@ -10,8 +10,7 @@ CQ-8,Which are the media/documents related to a step of a procedure?
 CQ-9,"Which are the media/documents related to the object (e.g., a machine) involved in a certain procedure?"
 CQ-10,When was a media/document created/modified?
 CQ-11,Which is the author of a procedure?
-CQ-12,"Who changed the status of a procedure, when and with which role?"
-CQ-13,What is the motivation associated with a change of status for a procedure?
+CQ-12,"Who changed the status of a procedure, and when?"
 CQ-14,Which are the procedures associated with a certain keyword?
 CQ-15,"Which (part/component of an) object (e.g., machine) is associated with a certain (step of a) procedure?"
 CQ-16,Which are the sub-steps of a procedure that may be not useful for an expert user?
@@ -44,7 +43,6 @@ CQ-42,Which are the tools required to perform (a step of) a procedure?
 CQ-43,Which were the doubts of a user during a specific procedure execution?
 CQ-44,Which are the explanations to the user associated with a certain procedure (execution)?
 CQ-45,Which is the description for a user to execute a certain step?
-CQ-46,Which is the language of the description for a user to execute a certain step?
 CQ-47,Which is the previous/next version of the procedure?
 CQ-48,Which steps of a procedure have been actually executed during a procedure execution?
 CQ-49,Who created the procedure / procedure version?
