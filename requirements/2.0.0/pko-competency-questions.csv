@@ -12,14 +12,12 @@ CQ-10,When was a media/document created/modified?
 CQ-11,Which is the author of a procedure?
 CQ-12,"Who changed the status of a procedure, and when?"
 CQ-14,Which are the procedures associated with a certain keyword?
-CQ-15,"Which (part/component of an) object (e.g., machine) is associated with a certain (step of a) procedure?"
 CQ-16,Which are the sub-steps of a procedure that may be not useful for an expert user?
 CQ-17,In which status is the execution of a procedure?
 CQ-18,"When did the execution of a certain (step of a) procedure start, and when did it end? "
 CQ-19,Which errors/problems have been encountered during the execution of (a step of) a procedure?
 CQ-20,How many errors/problems occured for each project / step /  technician ? 
 CQ-21,Was the execution of a step confirmed by the user or by the machine?
-CQ-22,Has a certain step been executed multiple times?
 CQ-23,What is the time usually required to perform a (step of a) procedure? 
 CQ-24,Which is the cause identified by the user for a problem/error arisen during execution?
 CQ-25,How was a problem/error solved during execution?
@@ -41,7 +39,6 @@ CQ-40,Which is the target of a certain procedure?
 CQ-41,Where is the equipment associated with a procedure (execution) located?
 CQ-42,Which are the tools required to perform (a step of) a procedure?
 CQ-43,Which were the doubts of a user during a specific procedure execution?
-CQ-44,Which are the explanations to the user associated with a certain procedure (execution)?
 CQ-45,Which is the description for a user to execute a certain step?
 CQ-47,Which is the previous/next version of the procedure?
 CQ-48,Which steps of a procedure have been actually executed during a procedure execution?
