@@ -66,3 +66,12 @@ F-64,A Procedure can define permissions for specific Roles to manage, read, modi
 F-65,An Access Request to a Procedure is performed by an Agent at a certain time.
 F-66,An Access Request to a Procedure is associated with a current Status.
 F-67,An Access Request Status can be associated with a specific motivation.
+F-68,"A Procedure, a Step, or a Transition can be associated with one or more Requirements."
+F-69,A Requirement can be associated with a Requirement Type.
+F-70,"A Requirement can refer to a required entity (e.g., a Tool, an Qualification, or another relevant entity)."
+F-71,A Procedure Execution or a Step Execution can be associated with one or more Requirement Satisfactions, which refer to a Requirement each.
+F-72,A Requirement Satisfaction can be associated with a Requirement Satisfaction Level.
+F-73,A Transition can connect a source Step to a target Step.
+F-74,An Explanation can be associated with a Transition or with a Step Execution.
+F-75,A Step can be associated with one or more Step Verifications. A Signal Verification is a type of Step Verification.
+F-76,A Signal Verification can be associated with a signal identifier and an expected signal value.
