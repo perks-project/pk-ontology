@@ -381,7 +381,6 @@ pko:hasUserQuestionOccurrence ?question .
 ?step pplan:isStepOfPlan ?procedure .
 ?procedure a pko:Procedure .
 }"
-CQ-44,Which are the explanations to the user associated with a certain procedure (execution)?,
 CQ-45,Which is the description for a user to execute a certain step?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dct: <http://purl.org/dc/terms/> 
 
@@ -420,6 +419,12 @@ pko:isIncludedInProcedureExecution ?procedureExecution .
 ?step pplan:isStepOfPlan ?procedure .
 ?procedure a pko:Procedure .
 }"
-CQ-49,,
-CQ-50,,
-CQ-51,,
+CQ-49,Who created the procedure / procedure version?,
+CQ-50,Who modified the procedure version?,
+CQ-51,Who modified the procedure version last?,
+CQ-52,Who is associated with a change of status of a procedure version?,
+CQ-53,Who (specific agent) can manage (= owner) / read / modify / execute a procedure?,
+CQ-54,Who (user role) can manage (= owner) / read / modify / execute a procedure?,
+CQ-55,"Who made a request of access to the procedure, and when?",
+CQ-56,Which is the status of the request of access to a procedure?,
+CQ-57,Which is the motivation for the status of the request of access to a procedure?,
