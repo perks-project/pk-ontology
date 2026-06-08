@@ -242,12 +242,8 @@ pko:wasExecutedBy rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWit
 
 
 <http://www.w3.org/ns/adms#status> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
-                                   dcam:rangeIncludes pko:ProcedureStatus ;
+                                   dcam:rangeIncludes pko:ProcedureStatus , pko:ProcedureExecutionStatus , pko:EvaluationRequestStatus ;
                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link either a Procedure or a Procedure Execution to its Status."@en .
-
-
-<http://www.w3.org/ns/dcat#accessURL> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
-                                      skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent a URL of a Resource (e.g., a Procedure or a document referenced by a Procedure) that gives access to a distribution of it."@en .
 
 
 <http://www.w3.org/ns/dcat#endDate> dcam:domainIncludes <http://purl.org/dc/terms/PeriodOfTime> ;
@@ -275,9 +271,6 @@ pko:wasExecutedBy rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWit
                                       skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the start of a Period Of Time."@en .
 
 
-<http://www.w3.org/ns/prov#atLocation> skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Target to the Location where is Target is located."@en .
-
-
 <http://www.w3.org/ns/prov#atTime> dcam:domainIncludes <http://www.w3.org/ns/prov#InstantaneousEvent> ;
                                    dcam:rangeIncludes xsd:dateTime ;
                                    skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the dateTime at which an InstantaneousEvent occurred."@en .
@@ -301,6 +294,26 @@ pko:wasExecutedBy rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWit
 <http://www.w3.org/ns/prov#wasGeneratedBy> dcam:domainIncludes <http://www.w3.org/ns/prov#Entity> ;
                                            dcam:rangeIncludes pko:StepExecution ;
                                            skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to an Entity that was generated during execution, and that may correspond to an output Variable of the Step."@en .
+
+
+<http://www.w3.org/ns/odrl/2/hasPolicy> dcam:domainIncludes pko:Procedure , pko:ProcedureType ;
+                                        dcam:rangeIncludes <http://www.w3.org/ns/odrl/2/Policy> ;
+                                        skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure to an ODRL policy governing permissions such as manage/read/modify/execute."@en .
+
+
+<https://schema.org/url> dcam:domainIncludes <http://www.w3.org/ns/dcat#Resource> ;
+                         dcam:rangeIncludes xsd:string ;
+                         skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the URL associated with a Resource."@en .
+
+
+<https://w3id.org/force/sotw#evaluatedAction> dcam:domainIncludes <https://w3id.org/force/sotw#EvaluationRequest> ;
+                                              dcam:rangeIncludes <http://www.w3.org/ns/odrl/2/Action> ;
+                                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an evaluation request to the action being evaluated for authorization."@en .
+
+
+<https://w3id.org/force/sotw#evaluatedTarget> dcam:domainIncludes <https://w3id.org/force/sotw#EvaluationRequest> ;
+                                              dcam:rangeIncludes pko:Procedure , pko:ProcedureType ;
+                                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an evaluation request to the target resource for which the action is evaluated, e.g. a Procedure or a Procedure Type."@en .
 
 
 pko:Action rdfs:comment "This class represents an Action performed by a human Agent."@en ;
