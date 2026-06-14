@@ -1,7 +1,56 @@
 ﻿Identifier,Competency Question,SPARQL Query
-CQ-1,Which are the personal protective equipment items required to perform a step of a procedure?,
-CQ-2,Which are the padlocks required to perform a step of a procedure?,
-CQ-3,Who manufactured a machine?,
-CQ-4,Where is a machine located?,
-CQ-5,In which factory is a machine located?,
-CQ-6,Which is the type of a machine?,
+CQ-1,Which are the personal protective equipment items required to perform a step of a procedure?,"PREFIX pko-ind: <https://w3id.org/pko/industry#> 
+PREFIX pplan: <http://purl.org/net/p-plan#> 
+
+SELECT *
+WHERE {
+?step a pplan:Step ;
+pko-ind:requiresPPE ?ppe .
+}"
+CQ-2,Which are the padlocks required to perform a step of a procedure?,"PREFIX pko-ind: <https://w3id.org/pko/industry#> 
+PREFIX pplan: <http://purl.org/net/p-plan#> 
+
+SELECT *
+WHERE {
+?step a pplan:Step ;
+pko-ind:requiresPadlock ?padlock .
+}"
+CQ-3,Who manufactured a machine?,"PREFIX pko-ind: <https://w3id.org/pko/industry#> 
+
+SELECT *
+WHERE {
+?machine a pko-ind:Machine ;
+pko-ind:wasManufacturedBy ?manufacturer .
+}"
+CQ-4,Where is a machine located?,"PREFIX pko-ind: <https://w3id.org/pko/industry#> 
+PREFIX prov: <http://www.w3.org/ns/prov#> 
+
+SELECT *
+WHERE {
+?machine a pko-ind:Machine ;
+prov:atLocation ?location .
+}"
+CQ-5,In which factory is a machine located?,"PREFIX pko-ind: <https://w3id.org/pko/industry#> 
+PREFIX prov: <http://www.w3.org/ns/prov#> 
+
+SELECT *
+WHERE {
+?machine a pko-ind:Machine ;
+prov:atLocation ?factory .
+?factory a pko-ind:Factory .
+}"
+CQ-6,Which is the type of a machine?,"PREFIX pko-ind: <https://w3id.org/pko/industry#> 
+
+SELECT *
+WHERE {
+?machine a pko-ind:Machine ;
+pko-ind:hasMachineType ?machineType .
+}"
+CQ-7,On which machine is an activity executed?,"PREFIX pko-ind: <https://w3id.org/pko/industry#> 
+PREFIX prov: <http://www.w3.org/ns/prov#> 
+
+SELECT *
+WHERE {
+?activity a prov:Activity ;
+pko-ind:isExecutedOnMachine ?machine .
+}"
