@@ -346,7 +346,15 @@ WHERE {
 ?FAQ a pko:FrequentlyAskedQuestion ; 
 pko:hasFAQCategory ?FAQCategory . 
 }  "
-CQ-31,Which are the FAQs related to (a step of) a procedure?,Which are the FAQs related to (a step of) a procedure?
+CQ-31,Which are the FAQs related to (a step of) a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+
+SELECT *
+WHERE {
+?procedure a pko:Procedure ;
+dct:references ?FAQ .
+?FAQ a pko:FrequentlyAskedQuestion .
+}"
 CQ-32,Which variables affect the way a certain step of the procedure should be executed?,"PREFIX pko: <https://w3id.org/pko#> 
 PREFIX dct: <http://purl.org/dc/terms/> 
 PREFIX pplan: <http://purl.org/net/p-plan#>
