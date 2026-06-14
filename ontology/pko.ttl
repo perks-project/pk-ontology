@@ -196,7 +196,7 @@ sotw:evaluatedTarget a owl:ObjectProperty ;
     dcterms:description "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." ;
     dcterms:issued "2025-03-11" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-05-15" ;
+    dcterms:modified "2026-05-18" ;
     dcterms:publisher <https://ror.org/046bfkz44> ;
     dcterms:title "Procedural Knowledge Ontology (PKO)" ;
     bibo:status "Published Ontology"@en ;
@@ -204,7 +204,7 @@ sotw:evaluatedTarget a owl:ObjectProperty ;
     vann:preferredNamespaceUri "https://w3id.org/pko#" ;
     owl:priorVersion <https://w3id.org/pko/1.0.0> ;
     owl:versionIRI <https://w3id.org/pko/1.0.0> ;
-    owl:versionInfo "1.1.0" ;
+    owl:versionInfo "2.0.0" ;
     schema:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO)." ;
     schema:funding <https://doi.org/10.3030/101120323> ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
