@@ -430,36 +430,271 @@ pko:isIncludedInProcedureExecution ?procedureExecution .
 ?step pplan:isStepOfPlan ?procedure .
 ?procedure a pko:Procedure .
 }"
-CQ-39,Who created the procedure / procedure version?,
-CQ-40,Who modified the procedure version?,
-CQ-41,Who modified the procedure version last?,
-CQ-42,Who is associated with a change of status of a procedure (version) or a procedure execution?,
-CQ-43,From which and to which status was a procedure (execution) status changed?,
-CQ-44,Who (specific agent) can manage (= owner) / read / modify / execute a procedure?,
-CQ-45,Who (user role) can manage (= owner) / read / modify / execute a procedure?,
-CQ-46,"Who made a request of access to the procedure, and when?",
-CQ-47,Which is the status of the request of access to a procedure?,
-CQ-48,Which is the motivation for the status of the request of access to a procedure?,
-CQ-49,Which is the requirement associated with a procedure / step / transition between steps?,
-CQ-50,Which is the type of requirement associated with a procedure / step / transition between steps?,
-CQ-51,Which is the entity required for a certain requirement associated with a procedure / step / transition between steps?,
-CQ-52,Which is the requirement satisfaction associated with a procedure / step execution?,
-CQ-53,To which requirements does a requirement satisfaction refer? ,
-CQ-54,Which is the level of requirement satisfaction?,
-CQ-55,From which and to which step is a transition between steps? ,
-CQ-56,Which is the explanation associated with a transition between steps / step execution?,
-CQ-57,Which is the step verification associated with a step?,
-CQ-58,Which is the signal verification associated with a step?,
-CQ-59,Which is the expected signal value for a signal verification?,
-CQ-60,Which is the signal identifier for a signal verification?,
-CQ-61,Which is the current version of a procedure?,
-CQ-62,Which is the version number of a procedure version?,
-CQ-63,Which is the changelog description of a procedure version?,
-CQ-64,Which actions are required to perform a step?,
-CQ-65,Which functions are required to perform a step?,
-CQ-66,Which are the input and output variables of a step?,
-CQ-67,Which is the expected duration of a procedure / step?,
-CQ-68,Which are the minimum and maximum repetitions allowed for a step?,
-CQ-69,Which error is addressed by a specific fallback step?,
-CQ-70,Which is the target of a FAQ?,
-CQ-71,Which are the question and answer of a FAQ?,
+CQ-39,Who created the procedure / procedure version?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+
+SELECT *
+WHERE {
+?procedure a pko:Procedure ;
+dct:creator ?creator .
+}"
+CQ-40,Who modified the procedure version?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?procedureVersion a pko:Procedure ;
+pko:wasModifiedBy ?agent .
+}"
+CQ-41,Who modified the procedure version last?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+
+SELECT *
+WHERE {
+?procedureVersion a pko:Procedure ;
+pko:wasModifiedBy ?agent ;
+dct:modified ?modifiedOn .
+}
+ORDER BY DESC(?modifiedOn)
+LIMIT 1"
+CQ-42,Who is associated with a change of status of a procedure (version) or a procedure execution?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?entity pko:hasChangeOfStatus ?changeOfStatus .
+?changeOfStatus pko:wasExecutedBy ?agent .
+}"
+CQ-43,From which and to which status was a procedure (execution) status changed?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?entity pko:hasChangeOfStatus ?changeOfStatus .
+?changeOfStatus pko:fromStatus ?fromStatus ;
+pko:toStatus ?toStatus .
+}"
+CQ-44,Who (specific agent) can manage (= owner) / read / modify / execute a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/> 
+
+SELECT *
+WHERE {
+?procedure a pko:Procedure ;
+odrl:hasPolicy ?policy .
+?policy odrl:permission ?rule .
+?rule odrl:assignee ?agent ;
+odrl:action ?action .
+}"
+CQ-45,Who (user role) can manage (= owner) / read / modify / execute a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/> 
+
+SELECT *
+WHERE {
+?procedure a pko:Procedure ;
+odrl:hasPolicy ?policy .
+?policy odrl:permission ?rule .
+?rule pko:assigneeRole ?role ;
+odrl:action ?action .
+}"
+CQ-46,"Who made a request of access to the procedure, and when?","PREFIX pko: <https://w3id.org/pko#> 
+PREFIX sotw: <https://w3id.org/force/sotw#> 
+PREFIX prov: <http://www.w3.org/ns/prov#> 
+
+SELECT *
+WHERE {
+?request a sotw:EvaluationRequest ;
+sotw:evaluatedTarget ?procedure ;
+prov:wasAssociatedWith ?agent ;
+prov:atTime ?time .
+?procedure a pko:Procedure .
+}"
+CQ-47,Which is the status of the request of access to a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX sotw: <https://w3id.org/force/sotw#> 
+PREFIX adms: <http://www.w3.org/ns/adms#> 
+
+SELECT *
+WHERE {
+?request a sotw:EvaluationRequest ;
+sotw:evaluatedTarget ?procedure ;
+adms:status ?status .
+?procedure a pko:Procedure .
+}"
+CQ-48,Which is the motivation for the status of the request of access to a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX sotw: <https://w3id.org/force/sotw#> 
+
+SELECT *
+WHERE {
+?request a sotw:EvaluationRequest ;
+sotw:evaluatedTarget ?procedure ;
+pko:requestStatusMotivation ?motivation .
+?procedure a pko:Procedure .
+}"
+CQ-49,Which is the requirement associated with a procedure / step / transition between steps?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?entity pko:hasRequirement ?requirement .
+}"
+CQ-50,Which is the type of requirement associated with a procedure / step / transition between steps?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?entity pko:hasRequirement ?requirement .
+?requirement pko:hasRequirementType ?requirementType .
+}"
+CQ-51,Which is the entity required for a certain requirement associated with a procedure / step / transition between steps?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?entity pko:hasRequirement ?requirement .
+?requirement pko:requiredEntity ?requiredEntity .
+}"
+CQ-52,Which is the requirement satisfaction associated with a procedure / step execution?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?execution pko:hasRequirementSatisfaction ?requirementSatisfaction .
+}"
+CQ-53,To which requirements does a requirement satisfaction refer? ,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?requirementSatisfaction a pko:RequirementSatisfaction ;
+pko:refersToRequirement ?requirement .
+}"
+CQ-54,Which is the level of requirement satisfaction?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?requirementSatisfaction a pko:RequirementSatisfaction ;
+pko:hasRequirementSatisfactionLevel ?level .
+}"
+CQ-55,From which and to which step is a transition between steps? ,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?transition a pko:Transition ;
+pko:fromStep ?fromStep ;
+pko:toStep ?toStep .
+}"
+CQ-56,Which is the explanation associated with a transition between steps / step execution?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE 
+{ ?transition a pko:Transition ;
+pko:fromStep ?fromStep ;
+pko:toStep ?toStep ;
+pko:hasExplanation ?explanation . }
+
+###
+
+PREFIX pko: <https://w3id.org/pko#> 
+SELECT *
+WHERE 
+{ ?stepExecution a pko:StepExecution ;
+pko:hasExecutedStep ?Step ;
+pko:hasExplanation ?explanation . }
+
+"
+CQ-57,Which is the step verification associated with a step?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?step pko:hasStepVerification ?stepVerification .
+}"
+CQ-58,Which is the signal verification associated with a step?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?step pko:hasStepVerification ?signalVerification .
+?signalVerification a pko:SignalVerification .
+}"
+CQ-59,Which is the expected signal value for a signal verification?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?signalVerification a pko:SignalVerification ;
+pko:expectedSignalValue ?expectedSignalValue .
+}"
+CQ-60,Which is the signal identifier for a signal verification?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?signalVerification a pko:SignalVerification ;
+pko:signalIdentifier ?signalIdentifier .
+}"
+CQ-61,Which is the current version of a procedure?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX dcat: <http://www.w3.org/ns/dcat#> 
+
+SELECT *
+WHERE {
+?procedure a pko:Procedure ;
+dcat:hasCurrentVersion ?currentVersion .
+}"
+CQ-62,Which is the version number of a procedure version?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?procedureVersion a pko:Procedure ;
+pko:versionNumber ?versionNumber .
+}"
+CQ-63,Which is the changelog description of a procedure version?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?procedureVersion a pko:Procedure ;
+pko:changelogDescription ?changelogDescription .
+}"
+CQ-64,Which actions are required to perform a step?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?step pko:requiresAction ?action .
+}"
+CQ-65,Which functions are required to perform a step?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?step pko:requiresFunction ?function .
+}"
+CQ-66,Which are the input and output variables of a step?,"PREFIX pko: <https://w3id.org/pko#> 
+PREFIX pplan: <http://purl.org/net/p-plan#> 
+
+SELECT *
+WHERE {
+?step pplan:hasInputVar ?inputVariable ;
+pplan:hasOutputVar ?outputVariable .
+}"
+CQ-67,Which is the expected duration of a procedure / step?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?entity pko:hasExpectedDuration ?expectedDuration .
+}"
+CQ-68,Which are the minimum and maximum repetitions allowed for a step?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?step pko:minRepetitions ?minRepetitions ;
+pko:maxRepetitions ?maxRepetitions .
+}"
+CQ-69,Which error is addressed by a specific fallback step?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?procedure a pko:Procedure ;
+pko:hasFallbackStep ?fallbackStep .
+?fallbackStep pko:addressesError ?error .
+}"
+CQ-70,Which is the target of a FAQ?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?faq a pko:FrequentlyAskedQuestion ;
+pko:hasFAQTarget ?faqTarget .
+}"
+CQ-71,Which are the question and answer of a FAQ?,"PREFIX pko: <https://w3id.org/pko#> 
+
+SELECT *
+WHERE {
+?faq a pko:FrequentlyAskedQuestion ;
+pko:question ?question ;
+pko:answer ?answer .
+}"
