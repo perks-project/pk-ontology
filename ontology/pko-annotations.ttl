@@ -308,7 +308,7 @@ pko:wasExecutedBy rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWit
 
 <https://w3id.org/force/sotw#evaluatedAction> dcam:domainIncludes <https://w3id.org/force/sotw#EvaluationRequest> ;
                                               dcam:rangeIncludes <http://www.w3.org/ns/odrl/2/Action> ;
-                                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an evaluation request to the action being evaluated for authorization."@en .
+                                              skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an evaluation request to the action being evaluated."@en .
 
 
 <https://w3id.org/force/sotw#evaluatedTarget> dcam:domainIncludes <https://w3id.org/force/sotw#EvaluationRequest> ;
