@@ -1,0 +1,195 @@
+@prefix : <https://w3id.org/pko/shapes/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pko: <https://w3id.org/pko#> .
+@prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ProcedureExecutionShape
+    a sh:NodeShape ;
+    sh:targetClass pko:ProcedureExecution ;
+    sh:closed false ;
+    sh:property [
+        sh:path dcterms:identifier ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:hasExecutedProcedure ;
+        sh:class pko:Procedure ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path prov:startedAtTime ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+        ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path prov:endedAtTime ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+        ) ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:wasExecutedBy ;
+        sh:class prov:Agent ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1
+    ] ;
+    sh:property [
+        sh:path pko:wasConfirmedBy ;
+        sh:class prov:Agent ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path adms:status ;
+        sh:class pko:ProcedureExecutionStatus ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:includesStepExecution ;
+        sh:node :StepExecutionShape
+    ] ;
+    sh:property [
+        sh:path pko:hasIssueOccurrence ;
+        sh:node :IssueOccurrenceShape
+    ] ;
+    sh:property [
+        sh:path pko:hasUserQuestionOccurrence ;
+        sh:node :UserQuestionOccurrenceShape
+    ] ;
+    sh:property [
+        sh:path pko:hasUserFeedbackOccurrence ;
+        sh:node :UserFeedbackOccurrenceShape
+    ] .
+
+:StepExecutionShape
+    a sh:NodeShape ;
+    sh:targetClass pko:StepExecution ;
+    sh:closed false ;
+    sh:property [
+        sh:path pko:hasExecutedStep ;
+        sh:class pplan:Step ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:isIncludedInProcedureExecution ;
+        sh:class pko:ProcedureExecution ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path prov:startedAtTime ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+        ) ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path prov:endedAtTime ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+        ) ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:wasExecutedBy ;
+        sh:class prov:Agent ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pko:wasConfirmedBy ;
+        sh:class prov:Agent ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pko:previousStepExecution ;
+        sh:node :StepExecutionShape ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:nextStepExecution ;
+        sh:node :StepExecutionShape ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:hasIssueOccurrence ;
+        sh:node :IssueOccurrenceShape
+    ] ;
+    sh:property [
+        sh:path pko:hasUserQuestionOccurrence ;
+        sh:node :UserQuestionOccurrenceShape
+    ] ;
+    sh:property [
+        sh:path pko:hasUserFeedbackOccurrence ;
+        sh:node :UserFeedbackOccurrenceShape
+    ] .
+
+:IssueOccurrenceShape
+    a sh:NodeShape ;
+    sh:targetClass pko:IssueOccurrence ;
+    sh:closed false ;
+    sh:property [
+        sh:path pko:hasEncounteredError ;
+        sh:class pko:Error ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pko:issueCause ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pko:issueSolution ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pko:wasEncounteredBy ;
+        sh:class prov:Agent ;
+        sh:nodeKind sh:IRI
+    ] .
+
+:UserQuestionOccurrenceShape
+    a sh:NodeShape ;
+    sh:targetClass pko:UserQuestionOccurrence ;
+    sh:closed false ;
+    sh:property [
+        sh:path pko:questionByUser ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pko:wasAskedBy ;
+        sh:class prov:Agent ;
+        sh:nodeKind sh:IRI
+    ] .
+
+:UserFeedbackOccurrenceShape
+    a sh:NodeShape ;
+    sh:targetClass pko:UserFeedbackOccurrence ;
+    sh:closed false ;
+    sh:property [
+        sh:path pko:feedbackOnProcedure ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pko:feedbackOnProcedureExecution ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pko:wasProvidedBy ;
+        sh:class prov:Agent ;
+        sh:nodeKind sh:IRI
+    ] .

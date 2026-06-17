@@ -1,0 +1,214 @@
+@prefix : <https://w3id.org/pko/shapes/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pko: <https://w3id.org/pko#> .
+@prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:StepLikeShape
+    a sh:NodeShape ;
+    sh:or (
+        [ sh:class pplan:Step ]
+        [ sh:class pplan:MultiStep ]
+    ) .
+
+:ProcedureShape
+    a sh:NodeShape ;
+    sh:targetClass pko:Procedure ;
+    sh:closed false ;
+    sh:property [
+        sh:path dcterms:title ;
+        sh:datatype xsd:string ;
+        sh:minCount 1
+    ] ;
+    sh:property [
+        sh:path dcterms:description ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path dcterms:identifier ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path dcterms:created ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+        )
+    ] ;
+    sh:property [
+        sh:path dcterms:modified ;
+        sh:or (
+            [ sh:datatype xsd:dateTime ]
+            [ sh:datatype xsd:date ]
+        )
+    ] ;
+    sh:property [
+        sh:path dcterms:creator ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path dcterms:references ;
+        sh:class dcat:Resource ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path dcat:keyword ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pko:hasProcedureType ;
+        sh:class pko:ProcedureType ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pko:hasStep ;
+        sh:minCount 1 ;
+        sh:node :StepLikeShape
+    ] ;
+    sh:property [
+        sh:path pko:hasFirstStep ;
+        sh:maxCount 1 ;
+        sh:node :StepLikeShape
+    ] ;
+    sh:property [
+        sh:path pko:isAdoptedBy ;
+        sh:class prov:Organization ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pko:hasProcedureTarget ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path adms:status ;
+        sh:class pko:ProcedureStatus ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:versionNumber ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1
+    ] .
+
+:StepShape
+    a sh:NodeShape ;
+    sh:targetClass pplan:Step ;
+    sh:closed false ;
+    sh:property [
+        sh:path dcterms:title ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path dcterms:description ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path dcterms:identifier ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:stepNumber ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:previousStep ;
+        sh:maxCount 1 ;
+        sh:node :StepLikeShape
+    ] ;
+    sh:property [
+        sh:path pko:nextStep ;
+        sh:maxCount 1 ;
+        sh:node :StepLikeShape
+    ] ;
+    sh:property [
+        sh:path pko:nextAlternativeStep ;
+        sh:node :StepLikeShape
+    ] ;
+    sh:property [
+        sh:path pko:minRepetitions ;
+        sh:datatype xsd:integer
+    ] ;
+    sh:property [
+        sh:path pko:maxRepetitions ;
+        sh:datatype xsd:integer
+    ] ;
+    sh:property [
+        sh:path pko:hasStepVerification ;
+        sh:node :StepVerificationShape
+    ] ;
+    sh:property [
+        sh:path pko:requiresAction ;
+        sh:class pko:Action ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pko:requiresFunction ;
+        sh:class pko:Function ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pplan:hasInputVar ;
+        sh:class pplan:Variable ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path pplan:hasOutputVar ;
+        sh:class pplan:Variable ;
+        sh:nodeKind sh:IRI
+    ] ;
+    sh:property [
+        sh:path dcterms:references ;
+        sh:class dcat:Resource ;
+        sh:nodeKind sh:IRI
+    ] .
+
+:MultiStepShape
+    a sh:NodeShape ;
+    sh:targetClass pplan:MultiStep ;
+    sh:closed false ;
+    sh:property [
+        sh:path pko:hasStep ;
+        sh:minCount 1 ;
+        sh:node :StepLikeShape
+    ] ;
+    sh:property [
+        sh:path pko:hasFirstStep ;
+        sh:maxCount 1 ;
+        sh:node :StepLikeShape
+    ] .
+
+:StepVerificationShape
+    a sh:NodeShape ;
+    sh:targetClass pko:StepVerification ;
+    sh:closed false ;
+    sh:property [
+        sh:path dcterms:title ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path dcterms:description ;
+        sh:datatype xsd:string
+    ] .
+
+:SignalVerificationShape
+    a sh:NodeShape ;
+    sh:targetClass pko:SignalVerification ;
+    sh:closed false ;
+    sh:property [
+        sh:path pko:signalIdentifier ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path pko:expectedSignalValue ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1
+    ] .
