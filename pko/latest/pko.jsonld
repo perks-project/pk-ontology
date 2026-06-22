@@ -962,13 +962,13 @@
     "@value" : "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2025-03-11"
+    "@value" : "2026-06-22"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2026-05-18"
+    "@value" : "2026-06-22"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://ror.org/046bfkz44"
