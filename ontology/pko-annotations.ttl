@@ -615,7 +615,7 @@ pko:hasRequirementSatisfaction rdfs:comment "In the context of the Procedural Kn
 
 
 pko:hasRequirementSatisfactionLevel rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Requirement Satisfaction to its satisfaction level."@en ;
-                                  skos:scopeNote ""In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Requirement Satisfaction to its satisfaction level (satisfied, partially satisfied, not satisfied, not evaluated)."@en .
+                                  skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Requirement Satisfaction to its satisfaction level (satisfied, partially satisfied, not satisfied, not evaluated)."@en .
 
 
 pko:hasRequirementType rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Requirement to its Requirement Type."@en ;
@@ -675,7 +675,7 @@ pko:stepNumber rdfs:comment "In the context of the Procedural Knowledge Ontology
 
 
 pko:toStatus rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the target status of a Change Of Status."@en ;
-             skos:scopeNote In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the target status of a Change Of Status."@en .
+             skos:scopeNote "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the target status of a Change Of Status."@en .
 
 
 pko:toStep rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the target step of a transition between steps."@en ;
