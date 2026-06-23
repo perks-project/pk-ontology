@@ -9,24 +9,26 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/pko/industry">
         <owl:versionIRI rdf:resource="https://w3id.org/pko/industry/1.0.0"/>
-        <dc:contributor>Antonia Azzini (Cefriel)</dc:contributor>
-        <dc:contributor>Ilaria Baroni (Cefriel)</dc:contributor>
-        <dc:contributor>Irene Celino (Cefriel)</dc:contributor>
-        <dc:creator>Mario Scrocca (Cefriel)</dc:creator>
-        <dc:creator>Valentina Carriero (Cefriel)</dc:creator>
         <dc:title>Industry module of Procedural Knowledge Ontology (PKO)</dc:title>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-5791-8427"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-9962-7193"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-9066-1229"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-8235-7331"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0003-1427-3723"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:publisher>Cefriel</terms:publisher>
+        <terms:publisher rdf:resource="https://ror.org/046bfkz44"/>
         <bibo:status xml:lang="en">Published Ontology</bibo:status>
+        <schema:citation>Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Industry module of Procedural Knowledge Ontology (PKO).</schema:citation>
         <schema:funding rdf:resource="https://doi.org/10.3030/101120323"/>
         <rdfs:label>Industry module of Procedural Knowledge Ontology (PKO)</rdfs:label>
-        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionInfo>2.0.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
@@ -58,24 +60,24 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/contributor -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
     <!-- http://purl.org/dc/elements/1.1/title -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
@@ -97,6 +99,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- http://schema.org/citation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/citation"/>
     
 
 
@@ -132,6 +141,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
     
 
 
@@ -240,7 +256,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#requiresPadlock">
         <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Step"/>
-        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Lock"/>
         <rdfs:comment xml:lang="en">This property is used to link a Step to the Padlock it requires.</rdfs:comment>
         <rdfs:label>requires padlock</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires.</skos:scopeNote>
@@ -309,6 +325,20 @@
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
     <!-- https://w3id.org/pko/industry#Area -->
 
 
@@ -359,6 +389,15 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#Lock -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pko/industry#Lock">
+        <rdfs:label>Lock</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pko/industry#Machine -->
 
 
@@ -376,16 +415,6 @@
         <rdfs:comment xml:lang="en">This class represents the Type of a Machine.</rdfs:comment>
         <rdfs:label>Machine Type</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this class represents the Machine Type of a Machine.</skos:scopeNote>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pko/industry#Padlock -->
-
-
-    <owl:Class rdf:about="https://w3id.org/pko/industry#Padlock">
-        <rdfs:comment xml:lang="en">This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure.</rdfs:comment>
-        <rdfs:label>Padlock</rdfs:label>
     </owl:Class>
     
 
@@ -409,6 +438,15 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#Tool -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pko/industry#Tool">
+        <rdfs:label>Tool</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -421,6 +459,75 @@
     
 
 
+    <!-- https://orcid.org/0000-0001-5791-8427 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0001-5791-8427">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name xml:lang="en">Ilaria Baroni</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0001-9962-7193 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0001-9962-7193">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name xml:lang="en">Irene Celino</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0002-8235-7331 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-8235-7331">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name xml:lang="en">Mario Scrocca</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0002-9066-1229 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-9066-1229">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name xml:lang="en">Antonia Azzini</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0003-1427-3723 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0003-1427-3723">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name xml:lang="en">Valentina Anita Carriero</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ror.org/046bfkz44 -->
+
+
+    <owl:NamedIndividual rdf:about="https://ror.org/046bfkz44">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:name xml:lang="en">Cefriel</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#BallValveLockout -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#BallValveLockout">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/pko/industry#BumpCap -->
 
 
@@ -430,20 +537,29 @@
     
 
 
-    <!-- https://w3id.org/pko/industry#ButterflyValvePadlock -->
+    <!-- https://w3id.org/pko/industry#ButterflyValveLockout -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#ButterflyValvePadlock">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#ButterflyValveLockout">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/pko/industry#CablePadlock -->
+    <!-- https://w3id.org/pko/industry#CableLockout -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#CablePadlock">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#CableLockout">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#CircuitBreakerLockout -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#CircuitBreakerLockout">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
     </owl:NamedIndividual>
     
 
@@ -466,6 +582,15 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#FourLegsQuarterTurnValveLockout -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#FourLegsQuarterTurnValveLockout">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/pko/industry#GasEnergy -->
 
 
@@ -479,7 +604,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#GateValvePadlock">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
     </owl:NamedIndividual>
     
 
@@ -520,6 +645,15 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#HaspLockout -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#HaspLockout">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/pko/industry#HearingProtection -->
 
 
@@ -529,10 +663,10 @@
     
 
 
-    <!-- https://w3id.org/pko/industry#HighVisibility -->
+    <!-- https://w3id.org/pko/industry#HighVisibilityVest -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#HighVisibility">
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#HighVisibilityVest">
         <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
     </owl:NamedIndividual>
     
@@ -551,7 +685,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#LongPadlock">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
     </owl:NamedIndividual>
     
 
@@ -565,11 +699,29 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#Multimeter -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#Multimeter">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/pko/industry#PadlockAndChain -->
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#PadlockAndChain">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#PlugLockout -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#PlugLockout">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
     </owl:NamedIndividual>
     
 
@@ -579,6 +731,15 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#PneumaticEnergy">
         <rdf:type rdf:resource="https://w3id.org/pko/industry#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#PressureGauge -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#PressureGauge">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
     </owl:NamedIndividual>
     
 
@@ -619,6 +780,15 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#Screwdriver -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#Screwdriver">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/pko/industry#Sleeves -->
 
 
@@ -632,7 +802,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#StandardPadlock">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Padlock"/>
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Lock"/>
     </owl:NamedIndividual>
     
 
@@ -661,6 +831,30 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#WeldingGlasses">
         <rdf:type rdf:resource="https://w3id.org/pko/industry#PersonalProtectiveEquipment"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pko/industry#Wrenches -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#Wrenches">
+        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/pko/industry#Padlock">
+        <rdfs:comment xml:lang="en">This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure.</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
