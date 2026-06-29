@@ -1,6 +1,7 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix m4ing: <http://w3id.org/nfdi4ing/metadata4ing#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pko-ind: <https://w3id.org/pko/industry#> .
@@ -47,7 +48,7 @@ prov:atLocation a owl:ObjectProperty ;
     bibo:status "Published Ontology"@en ;
     schema:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Industry module of Procedural Knowledge Ontology (PKO)." ;
     schema:funding <https://doi.org/10.3030/101120323> ;
-    owl:versionIRI <https://w3id.org/pko/industry/1.0.0> ;
+    owl:versionIRI <https://w3id.org/pko/industry/2.0.0> ;
     owl:versionInfo "2.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
@@ -119,8 +120,8 @@ pko-ind:LongPadlock a owl:NamedIndividual,
 pko-ind:Mask a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
-pko-ind:Multimeter a owl:NamedIndividual,
-        pko-ind:Tool .
+pko-ind:Multimeter a m4ing:Tool,
+        owl:NamedIndividual .
 
 pko-ind:PadlockAndChain a owl:NamedIndividual,
         pko-ind:Lock .
@@ -131,8 +132,8 @@ pko-ind:PlugLockout a owl:NamedIndividual,
 pko-ind:PneumaticEnergy a owl:NamedIndividual,
         pko-ind:EnergySource .
 
-pko-ind:PressureGauge a owl:NamedIndividual,
-        pko-ind:Tool .
+pko-ind:PressureGauge a m4ing:Tool,
+        owl:NamedIndividual .
 
 pko-ind:ProtectiveClothing a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
@@ -146,8 +147,8 @@ pko-ind:SafetyShoes a owl:NamedIndividual,
 pko-ind:SafetyShoesESD a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
-pko-ind:Screwdriver a owl:NamedIndividual,
-        pko-ind:Tool .
+pko-ind:Screwdriver a m4ing:Tool,
+        owl:NamedIndividual .
 
 pko-ind:Sleeves a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
@@ -164,8 +165,8 @@ pko-ind:WaterEnergy a owl:NamedIndividual,
 pko-ind:WeldingGlasses a owl:NamedIndividual,
         pko-ind:PersonalProtectiveEquipment .
 
-pko-ind:Wrenches a owl:NamedIndividual,
-        pko-ind:Tool .
+pko-ind:Wrenches a m4ing:Tool,
+        owl:NamedIndividual .
 
 pko-ind:hasArea a owl:ObjectProperty ;
     rdfs:label "has area" ;
@@ -197,8 +198,8 @@ pko-ind:requiresPPE a owl:ObjectProperty ;
     rdfs:domain pplan:Step ;
     rdfs:range pko-ind:PersonalProtectiveEquipment .
 
-pko-ind:requiresPadlock a owl:ObjectProperty ;
-    rdfs:label "requires padlock" ;
+pko-ind:requiresLock a owl:ObjectProperty ;
+    rdfs:label "requires lock" ;
     rdfs:domain pplan:Step ;
     rdfs:range pko-ind:Lock .
 
@@ -228,14 +229,14 @@ pko-ind:Site a owl:Class ;
 pplan:Step a owl:Class ;
     rdfs:label "Step" .
 
+m4ing:Tool a owl:Class ;
+    rdfs:label "Tool" .
+
 prov:Location a owl:Class ;
     rdfs:label "Location" .
 
 pko-ind:Machine a owl:Class ;
     rdfs:label "Machine" .
-
-pko-ind:Tool a owl:Class ;
-    rdfs:label "Tool" .
 
 pko-ind:EnergySource a owl:Class ;
     rdfs:label "Energy Source" .
