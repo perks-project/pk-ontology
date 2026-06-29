@@ -194,16 +194,16 @@ sotw:evaluatedTarget a owl:ObjectProperty ;
     dcterms:creator <https://orcid.org/0000-0002-8235-7331>,
         <https://orcid.org/0000-0003-1427-3723> ;
     dcterms:description "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." ;
-    dcterms:issued "2026-06-22" ;
+    dcterms:issued "2026-06-29" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-06-22" ;
+    dcterms:modified "2026-06-29" ;
     dcterms:publisher <https://ror.org/046bfkz44> ;
     dcterms:title "Procedural Knowledge Ontology (PKO)" ;
     bibo:status "Published Ontology"@en ;
     vann:preferredNamespacePrefix "pko" ;
     vann:preferredNamespaceUri "https://w3id.org/pko#" ;
     owl:priorVersion <https://w3id.org/pko/1.0.0> ;
-    owl:versionIRI <https://w3id.org/pko/1.0.0> ;
+    owl:versionIRI <https://w3id.org/pko/2.0.0> ;
     owl:versionInfo "2.0.0" ;
     schema:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Procedural Knowledge Ontology (PKO)." ;
     schema:funding <https://doi.org/10.3030/101120323> ;
@@ -408,7 +408,7 @@ pko:hasRequirement a owl:ObjectProperty ;
 pko:hasRequirementSatisfaction a owl:ObjectProperty ;
     rdfs:label "has requirement satisfaction" ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( pplan:StepExecution pko:ProcedureExecution ) ] .
+            owl:unionOf ( pko:StepExecution pko:ProcedureExecution ) ] .
 
 pko:hasRequirementSatisfactionLevel a owl:ObjectProperty ;
     rdfs:label "has requirement satisfaction level" ;
@@ -669,9 +669,6 @@ pko:wasProvidedBy a owl:ObjectProperty ;
 
 pplan:Plan a owl:Class ;
     rdfs:label "Plan" .
-
-pplan:StepExecution a owl:Class ;
-    rdfs:label "Step Execution" .
 
 pplan:correspondsToStep a owl:ObjectProperty ;
     rdfs:label "corresponds to step" .
