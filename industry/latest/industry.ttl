@@ -20,6 +20,7 @@
                                  <http://schema.org/citation> "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Industry module of Procedural Knowledge Ontology (PKO)." ;
                                  <http://schema.org/funding> <https://doi.org/10.3030/101120323> ;
                                  rdfs:label "Industry module of Procedural Knowledge Ontology (PKO)" ;
+                                 owl:priorVersion <https://w3id.org/pko/industry/1.0.0> ;
                                  owl:versionInfo "2.0.0" ;
                                  <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
@@ -69,6 +70,10 @@
 
 ###  http://www.w3.org/2000/01/rdf-schema#label
 rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2002/07/owl#versionIRI

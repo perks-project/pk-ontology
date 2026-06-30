@@ -15,4 +15,5 @@
 	 prov:wasAttributedTo <https://orcid.org/0000-0002-9066-1229>;
 	 dc:contributor <https://orcid.org/0000-0002-9066-1229>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://w3id.org/pko/industry/1.0.0>;
 .
