@@ -230,11 +230,11 @@
     
 
 
-    <!-- https://w3id.org/pko#executesProcedure -->
+    <!-- https://w3id.org/pko#hasExecutedProcedure -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/pko#executesProcedure">
-        <rdfs:label>executes procedure</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko#hasExecutedProcedure">
+        <rdfs:label>has executed procedure</rdfs:label>
     </owl:ObjectProperty>
     
 

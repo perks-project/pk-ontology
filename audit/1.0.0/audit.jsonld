@@ -172,10 +172,10 @@
     "@value" : "Step Execution"
   } ]
 }, {
-  "@id" : "https://w3id.org/pko#executesProcedure",
+  "@id" : "https://w3id.org/pko#hasExecutedProcedure",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "executes procedure"
+    "@value" : "has executed procedure"
   } ]
 }, {
   "@id" : "https://w3id.org/pko/audit",
