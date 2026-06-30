@@ -29,6 +29,8 @@ The Widoco tool is used to automatise the ontology publication through the `run-
 
 If you are using (or willing to use) PKO for your project, create a new issue with the template [Use case for PKO](https://github.com/perks-project/pk-ontology/issues/new?template=use_case.md), where you can also provide feedback or add feature requests. Alternatively, you can start from a blank issue.
 
+In this [technical document](https://zenodo.org/records/20763806) you can find guidelines on how to use PKO, illustrated through examples of its application within the PERKS Platform.
+
 ## Cite as
 
 If you use the PKO ontology, cite the following article: 
