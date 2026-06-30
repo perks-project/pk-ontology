@@ -59,8 +59,8 @@ pko:ProcedureExecution a owl:Class ;
 pko:StepExecution a owl:Class ;
     rdfs:label "Step Execution" .
 
-pko:executesProcedure a owl:ObjectProperty ;
-    rdfs:label "executes procedure" .
+pko:hasExecutedProcedure a owl:ObjectProperty ;
+    rdfs:label "has executed procedure" .
 
 <https://w3id.org/pko/audit> a owl:Ontology ;
     rdfs:label "Audit module of Procedural Knowledge Ontology (PKO)" ;
