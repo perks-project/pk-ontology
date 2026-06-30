@@ -6,6 +6,7 @@ Repository for the Procedural Knowledge Ontology (PKO) and related modules.
 | -- | ------- |
 | pko:  | [https://w3id.org/pko#](https://w3id.org/pko#)  |
 | pko-ind:  | [https://w3id.org/pko/industry#](https://w3id.org/pko/industry#)  |
+| pko-aud:  | [https://w3id.org/pko/audit#](https://w3id.org/pko/audit#)  |
 
 ## Ontology purpose and scope
 
@@ -20,7 +21,7 @@ The Procedural Knowledge Ontology (PKO) is defined to support the holistic gover
 
 The resources associated with the requirements specification are available in the [`requirements`](./requirements) folder.
 
-The RDF files describing the different versions of the ontology and its modules can be found in the folder [pko](./pko). A [Chowlk](https://chowlk.linkeddata.es/) diagram for the current version of the ontology can be found in the [ontology](./ontology) folder.
+The RDF files describing the different versions of the ontology and its modules can be found in the folders [pko](./pko), [industry](./industry), and [audit](./audit). A [Chowlk](https://chowlk.linkeddata.es/) diagram for the current version of the ontology can be found in the [ontology](./ontology) folder.
 
 The Widoco tool is used to automatise the ontology publication through the `run-onto.sh` script as described in the template repo https://github.com/cefriel/ontology-template.
 
