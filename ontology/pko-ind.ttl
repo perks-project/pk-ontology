@@ -8,7 +8,7 @@
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
 dc:title a owl:AnnotationProperty .
 
@@ -22,11 +22,13 @@ dcterms:publisher a owl:AnnotationProperty .
 
 bibo:status a owl:AnnotationProperty .
 
-schema:citation a owl:AnnotationProperty .
+schema1:citation a owl:AnnotationProperty .
 
-schema:funding a owl:AnnotationProperty .
+schema1:funding a owl:AnnotationProperty .
 
 rdfs:label a owl:AnnotationProperty .
+
+owl:priorVersion a owl:AnnotationProperty .
 
 owl:versionIRI a owl:AnnotationProperty .
 
@@ -46,8 +48,9 @@ prov:atLocation a owl:ObjectProperty ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://ror.org/046bfkz44> ;
     bibo:status "Published Ontology"@en ;
-    schema:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Industry module of Procedural Knowledge Ontology (PKO)." ;
-    schema:funding <https://doi.org/10.3030/101120323> ;
+    schema1:citation "Carriero, V.A., Scrocca, M., Baroni, I., Azzini, A., Celino, I. (2025). Industry module of Procedural Knowledge Ontology (PKO)." ;
+    schema1:funding <https://doi.org/10.3030/101120323> ;
+    owl:priorVersion <https://w3id.org/pko/industry/1.0.0> ;
     owl:versionIRI <https://w3id.org/pko/industry/2.0.0> ;
     owl:versionInfo "2.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
@@ -193,15 +196,15 @@ pko-ind:isExecutedOnMachine a owl:ObjectProperty ;
     rdfs:domain prov:Activity ;
     rdfs:range pko-ind:Machine .
 
-pko-ind:requiresPPE a owl:ObjectProperty ;
-    rdfs:label "requires p p e" ;
-    rdfs:domain pplan:Step ;
-    rdfs:range pko-ind:PersonalProtectiveEquipment .
-
 pko-ind:requiresLock a owl:ObjectProperty ;
     rdfs:label "requires lock" ;
     rdfs:domain pplan:Step ;
     rdfs:range pko-ind:Lock .
+
+pko-ind:requiresPPE a owl:ObjectProperty ;
+    rdfs:label "requires p p e" ;
+    rdfs:domain pplan:Step ;
+    rdfs:range pko-ind:PersonalProtectiveEquipment .
 
 pko-ind:wasManufacturedBy a owl:ObjectProperty ;
     rdfs:label "was manufactured by" ;
