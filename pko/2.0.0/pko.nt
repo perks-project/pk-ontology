@@ -1,14 +1,14 @@
 <https://w3id.org/pko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/pko> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/1.0.0> .
+<https://w3id.org/pko> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/2.0.0> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-5791-8427> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-9962-7193> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-9066-1229> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-8235-7331> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-1427-3723> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/description> "The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents." .
-<https://w3id.org/pko> <http://purl.org/dc/terms/issued> "2026-06-22" .
+<https://w3id.org/pko> <http://purl.org/dc/terms/issued> "2026-06-29" .
 <https://w3id.org/pko> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/pko> <http://purl.org/dc/terms/modified> "2026-06-22" .
+<https://w3id.org/pko> <http://purl.org/dc/terms/modified> "2026-06-29" .
 <https://w3id.org/pko> <http://purl.org/dc/terms/publisher> <https://ror.org/046bfkz44> .
 <https://w3id.org/pko> <http://purl.org/dc/terms/title> "Procedural Knowledge Ontology (PKO)" .
 <https://w3id.org/pko> <http://purl.org/ontology/bibo/status> "Published Ontology"@en .
@@ -80,6 +80,9 @@
 # 
 # http://www.w3.org/2002/07/owl#versionInfo
 <http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2004/02/skos/core#scopeNote
 <http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -289,6 +292,26 @@
 <https://w3id.org/pko#assigneeRole> <http://www.w3.org/2000/01/rdf-schema#label> "assignee role" .
 <https://w3id.org/pko#assigneeRole> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to associate a policy rule with the role of the assignee for that rule, in the context of access control."@en .
 # 
+# https://w3id.org/pko#executesProcedure
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#ProcedureExecution> .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko#Procedure> .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "executes procedure" .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedProcedure"@en .
+<https://w3id.org/pko#executesProcedure> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed."@en .
+# 
+# https://w3id.org/pko#executesStep
+<https://w3id.org/pko#executesStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko#executesStep> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#StepExecution> .
+<https://w3id.org/pko#executesStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Step> .
+<https://w3id.org/pko#executesStep> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en .
+<https://w3id.org/pko#executesStep> <http://www.w3.org/2000/01/rdf-schema#label> "executes step" .
+<https://w3id.org/pko#executesStep> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/pko#executesStep> <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedStep"@en .
+<https://w3id.org/pko#executesStep> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed."@en .
+# 
 # https://w3id.org/pko#fromStatus
 <https://w3id.org/pko#fromStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/pko#fromStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#ChangeOfStatus> .
@@ -448,9 +471,9 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/pko#ProcedureExecution> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/pko#StepExecution> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/p-plan#StepExecution> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/pko#ProcedureExecution> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/pko#hasRequirementSatisfaction> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution or Step Execution to a Requirement Satisfaction."@en .
@@ -959,6 +982,24 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/pko#issueCause> <http://www.w3.org/2000/01/rdf-schema#label> "issue cause" .
 <https://w3id.org/pko#issueCause> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue encountered during a Procedure or Step Execution."@en .
 # 
+# https://w3id.org/pko#issueCauseBySoftwareAgent
+<https://w3id.org/pko#issueCauseBySoftwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/pko#issueCauseBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#IssueOccurrence> .
+<https://w3id.org/pko#issueCauseBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/pko#issueCauseBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#label> "issue cause by software agent" .
+<https://w3id.org/pko#issueCauseBySoftwareAgent> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/pko#issueCauseBySoftwareAgent> <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause"@en .
+# 
+# https://w3id.org/pko#issueCauseByUser
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#IssueOccurrence> .
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en .
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/2000/01/rdf-schema#label> "issue cause by user" .
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause"@en .
+<https://w3id.org/pko#issueCauseByUser> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user."@en .
+# 
 # https://w3id.org/pko#issueSolution
 <https://w3id.org/pko#issueSolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/pko#issueSolution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#IssueOccurrence> .
@@ -966,6 +1007,24 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/pko#issueSolution> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue encountered during a Procedure or Step Execution."@en .
 <https://w3id.org/pko#issueSolution> <http://www.w3.org/2000/01/rdf-schema#label> "issue solution" .
 <https://w3id.org/pko#issueSolution> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue encountered during a Procedure or Step Execution."@en .
+# 
+# https://w3id.org/pko#issueSolutionBySoftwareAgent
+<https://w3id.org/pko#issueSolutionBySoftwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/pko#issueSolutionBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#IssueOccurrence> .
+<https://w3id.org/pko#issueSolutionBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/pko#issueSolutionBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#label> "issue solution by software agent" .
+<https://w3id.org/pko#issueSolutionBySoftwareAgent> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/pko#issueSolutionBySoftwareAgent> <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution"@en .
+# 
+# https://w3id.org/pko#issueSolutionByUser
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pko#IssueOccurrence> .
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user."@en .
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/2000/01/rdf-schema#label> "issue solution by user" .
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution"@en .
+<https://w3id.org/pko#issueSolutionByUser> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user."@en .
 # 
 # https://w3id.org/pko#maxRepetitions
 <https://w3id.org/pko#maxRepetitions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -990,6 +1049,22 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/pko#newVersionMotivation> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control."@en .
 <https://w3id.org/pko#newVersionMotivation> <http://www.w3.org/2000/01/rdf-schema#label> "new version motivation" .
 <https://w3id.org/pko#newVersionMotivation> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control."@en .
+# 
+# https://w3id.org/pko#notesBySoftwareAgent
+<https://w3id.org/pko#notesBySoftwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/pko#notesBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/pko#notesBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/pko#notesBySoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#label> "notes by software agent" .
+<https://w3id.org/pko#notesBySoftwareAgent> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/pko#notesByUser
+<https://w3id.org/pko#notesByUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/pko#notesByUser> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/pko#notesByUser> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/pko#notesByUser> <http://www.w3.org/2000/01/rdf-schema#comment> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence)."@en .
+<https://w3id.org/pko#notesByUser> <http://www.w3.org/2000/01/rdf-schema#label> "notes by user" .
+<https://w3id.org/pko#notesByUser> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/pko#notesByUser> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence)."@en .
 # 
 # https://w3id.org/pko#question
 <https://w3id.org/pko#question> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1066,10 +1141,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/net/p-plan#Step
 <http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step" .
-# 
-# http://purl.org/net/p-plan#StepExecution
-<http://purl.org/net/p-plan#StepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/p-plan#StepExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Step Execution" .
 # 
 # http://purl.org/net/p-plan#Variable
 <http://purl.org/net/p-plan#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

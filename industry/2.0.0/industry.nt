@@ -1,5 +1,5 @@
 <https://w3id.org/pko/industry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/pko/industry> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/industry/1.0.0> .
+<https://w3id.org/pko/industry> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pko/industry/2.0.0> .
 <https://w3id.org/pko/industry> <http://purl.org/dc/elements/1.1/title> "Industry module of Procedural Knowledge Ontology (PKO)" .
 <https://w3id.org/pko/industry> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-5791-8427> .
 <https://w3id.org/pko/industry> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-9962-7193> .
@@ -88,13 +88,17 @@
 <https://w3id.org/pko/industry#hasArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/pko/industry#hasArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Location> .
 <https://w3id.org/pko/industry#hasArea> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#Area> .
+<https://w3id.org/pko/industry#hasArea> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to link a Location to an Area within it."@en .
 <https://w3id.org/pko/industry#hasArea> <http://www.w3.org/2000/01/rdf-schema#label> "has area" .
+<https://w3id.org/pko/industry#hasArea> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to an Area within it."@en .
 # 
 # https://w3id.org/pko/industry#hasDepartment
 <https://w3id.org/pko/industry#hasDepartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/pko/industry#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Location> .
 <https://w3id.org/pko/industry#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#Department> .
+<https://w3id.org/pko/industry#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to link a Location to a Department within it."@en .
 <https://w3id.org/pko/industry#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#label> "has department" .
+<https://w3id.org/pko/industry#hasDepartment> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to a Department within it."@en .
 # 
 # https://w3id.org/pko/industry#hasMachineType
 <https://w3id.org/pko/industry#hasMachineType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -108,7 +112,9 @@
 <https://w3id.org/pko/industry#hasSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/pko/industry#hasSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Location> .
 <https://w3id.org/pko/industry#hasSite> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#Site> .
+<https://w3id.org/pko/industry#hasSite> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to link a Location to a Site."@en .
 <https://w3id.org/pko/industry#hasSite> <http://www.w3.org/2000/01/rdf-schema#label> "has site" .
+<https://w3id.org/pko/industry#hasSite> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to a Site."@en .
 # 
 # https://w3id.org/pko/industry#isExecutedOnMachine
 <https://w3id.org/pko/industry#isExecutedOnMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -118,6 +124,14 @@
 <https://w3id.org/pko/industry#isExecutedOnMachine> <http://www.w3.org/2000/01/rdf-schema#label> "is executed on machine" .
 <https://w3id.org/pko/industry#isExecutedOnMachine> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."@en .
 # 
+# https://w3id.org/pko/industry#requiresLock
+<https://w3id.org/pko/industry#requiresLock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pko/industry#requiresLock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
+<https://w3id.org/pko/industry#requiresLock> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#Lock> .
+<https://w3id.org/pko/industry#requiresLock> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to link a Step to the Lock it requires."@en .
+<https://w3id.org/pko/industry#requiresLock> <http://www.w3.org/2000/01/rdf-schema#label> "requires lock" .
+<https://w3id.org/pko/industry#requiresLock> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Lock it requires."@en .
+# 
 # https://w3id.org/pko/industry#requiresPPE
 <https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
@@ -125,14 +139,6 @@
 <https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en .
 <https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2000/01/rdf-schema#label> "requires p p e" .
 <https://w3id.org/pko/industry#requiresPPE> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."@en .
-# 
-# https://w3id.org/pko/industry#requiresPadlock
-<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
-<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pko/industry#Lock> .
-<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to link a Step to the Padlock it requires."@en .
-<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2000/01/rdf-schema#label> "requires padlock" .
-<https://w3id.org/pko/industry#requiresPadlock> <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires."@en .
 # 
 # https://w3id.org/pko/industry#wasManufacturedBy
 <https://w3id.org/pko/industry#wasManufacturedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -155,6 +161,10 @@
 <http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step" .
 # 
+# http://w3id.org/nfdi4ing/metadata4ing#Tool
+<http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/2000/01/rdf-schema#label> "Tool" .
+# 
 # http://www.w3.org/ns/prov#Activity
 <http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/prov#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity" .
@@ -175,10 +185,12 @@
 # 
 # https://w3id.org/pko/industry#Area
 <https://w3id.org/pko/industry#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Area> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents an Area of a location."@en .
 <https://w3id.org/pko/industry#Area> <http://www.w3.org/2000/01/rdf-schema#label> "Area" .
 # 
 # https://w3id.org/pko/industry#Department
 <https://w3id.org/pko/industry#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Department of a location."@en .
 <https://w3id.org/pko/industry#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department" .
 # 
 # https://w3id.org/pko/industry#Device
@@ -200,6 +212,7 @@
 # 
 # https://w3id.org/pko/industry#Lock
 <https://w3id.org/pko/industry#Lock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Lock> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Lock, that is a device to be attached to the machine in order to prevent its re-activation, during the execution of a LOTO procedure."@en .
 <https://w3id.org/pko/industry#Lock> <http://www.w3.org/2000/01/rdf-schema#label> "Lock" .
 # 
 # https://w3id.org/pko/industry#Machine
@@ -220,11 +233,8 @@
 # 
 # https://w3id.org/pko/industry#Site
 <https://w3id.org/pko/industry#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pko/industry#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Site, that is a physical location or facility."@en .
 <https://w3id.org/pko/industry#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
-# 
-# https://w3id.org/pko/industry#Tool
-<https://w3id.org/pko/industry#Tool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/pko/industry#Tool> <http://www.w3.org/2000/01/rdf-schema#label> "Tool" .
 # 
 # 
 # 
@@ -347,7 +357,7 @@
 # 
 # https://w3id.org/pko/industry#Multimeter
 <https://w3id.org/pko/industry#Multimeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/pko/industry#Multimeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Tool> .
+<https://w3id.org/pko/industry#Multimeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/nfdi4ing/metadata4ing#Tool> .
 # 
 # https://w3id.org/pko/industry#PadlockAndChain
 <https://w3id.org/pko/industry#PadlockAndChain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -363,7 +373,7 @@
 # 
 # https://w3id.org/pko/industry#PressureGauge
 <https://w3id.org/pko/industry#PressureGauge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/pko/industry#PressureGauge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Tool> .
+<https://w3id.org/pko/industry#PressureGauge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/nfdi4ing/metadata4ing#Tool> .
 # 
 # https://w3id.org/pko/industry#ProtectiveClothing
 <https://w3id.org/pko/industry#ProtectiveClothing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -383,7 +393,7 @@
 # 
 # https://w3id.org/pko/industry#Screwdriver
 <https://w3id.org/pko/industry#Screwdriver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/pko/industry#Screwdriver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Tool> .
+<https://w3id.org/pko/industry#Screwdriver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/nfdi4ing/metadata4ing#Tool> .
 # 
 # https://w3id.org/pko/industry#Sleeves
 <https://w3id.org/pko/industry#Sleeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -407,17 +417,6 @@
 # 
 # https://w3id.org/pko/industry#Wrenches
 <https://w3id.org/pko/industry#Wrenches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/pko/industry#Wrenches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/pko/industry#Tool> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<https://w3id.org/pko/industry#Padlock> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure."@en .
+<https://w3id.org/pko/industry#Wrenches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/nfdi4ing/metadata4ing#Tool> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

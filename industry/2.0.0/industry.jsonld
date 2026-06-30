@@ -35,6 +35,12 @@
   "@id" : "http://schema.org/funding",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tool"
+  } ]
+}, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -180,7 +186,7 @@
     "@value" : "Industry module of Procedural Knowledge Ontology (PKO)"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/pko/industry/1.0.0"
+    "@id" : "https://w3id.org/pko/industry/2.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "2.0.0"
@@ -191,6 +197,10 @@
 }, {
   "@id" : "https://w3id.org/pko/industry#Area",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents an Area of a location."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Area"
   } ]
@@ -233,6 +243,10 @@
 }, {
   "@id" : "https://w3id.org/pko/industry#Department",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a Department of a location."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Department"
   } ]
@@ -347,6 +361,10 @@
 }, {
   "@id" : "https://w3id.org/pko/industry#Lock",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a Lock, that is a device to be attached to the machine in order to prevent its re-activation, during the execution of a LOTO procedure."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Lock"
   } ]
@@ -390,13 +408,7 @@
   "@id" : "https://w3id.org/pko/industry#Multimeter",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/pko/industry#Tool"
-  } ]
-}, {
-  "@id" : "https://w3id.org/pko/industry#Padlock",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure."
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool"
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#PadlockAndChain",
@@ -430,7 +442,7 @@
   "@id" : "https://w3id.org/pko/industry#PressureGauge",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/pko/industry#Tool"
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool"
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#ProtectiveClothing",
@@ -460,11 +472,15 @@
   "@id" : "https://w3id.org/pko/industry#Screwdriver",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/pko/industry#Tool"
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool"
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#Site",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a Site, that is a physical location or facility."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Site"
   } ]
@@ -487,12 +503,6 @@
     "@id" : "https://w3id.org/pko/industry#EnergySource"
   } ]
 }, {
-  "@id" : "https://w3id.org/pko/industry#Tool",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Tool"
-  } ]
-}, {
   "@id" : "https://w3id.org/pko/industry#WaterEnergy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -508,11 +518,15 @@
   "@id" : "https://w3id.org/pko/industry#Wrenches",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/pko/industry#Tool"
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool"
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#hasArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Location to an Area within it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/prov#Location"
   } ],
@@ -521,10 +535,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/pko/industry#Area"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to an Area within it."
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#hasDepartment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Location to a Department within it."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/prov#Location"
   } ],
@@ -533,6 +555,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/pko/industry#Department"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to a Department within it."
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#hasMachineType",
@@ -557,6 +583,10 @@
 }, {
   "@id" : "https://w3id.org/pko/industry#hasSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Location to a Site."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/prov#Location"
   } ],
@@ -565,6 +595,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/pko/industry#Site"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to a Site."
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#isExecutedOnMachine",
@@ -587,6 +621,26 @@
     "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link an Activity (e.g., a Step Execution) to the Machine it is executed on."
   } ]
 }, {
+  "@id" : "https://w3id.org/pko/industry#requiresLock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a Step to the Lock it requires."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/net/p-plan#Step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "requires lock"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/pko/industry#Lock"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Lock it requires."
+  } ]
+}, {
   "@id" : "https://w3id.org/pko/industry#requiresPPE",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -605,26 +659,6 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step."
-  } ]
-}, {
-  "@id" : "https://w3id.org/pko/industry#requiresPadlock",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This property is used to link a Step to the Padlock it requires."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/p-plan#Step"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "requires padlock"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/pko/industry#Lock"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
-    "@language" : "en",
-    "@value" : "In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires."
   } ]
 }, {
   "@id" : "https://w3id.org/pko/industry#wasManufacturedBy",

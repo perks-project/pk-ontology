@@ -15,16 +15,16 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/pko">
-        <owl:versionIRI rdf:resource="https://w3id.org/pko/1.0.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pko/2.0.0"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-5791-8427"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-9962-7193"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-9066-1229"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-8235-7331"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1427-3723"/>
         <terms:description>The Procedural Knowledge Ontology (PKO) addresses the Procedural Knowledge (PK) domain, and models procedures, their executions, and related resources and agents.</terms:description>
-        <terms:issued>2026-06-22</terms:issued>
+        <terms:issued>2026-06-29</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified>2026-06-22</terms:modified>
+        <terms:modified>2026-06-29</terms:modified>
         <terms:publisher rdf:resource="https://ror.org/046bfkz44"/>
         <terms:title>Procedural Knowledge Ontology (PKO)</terms:title>
         <bibo:status xml:lang="en">Published Ontology</bibo:status>
@@ -170,6 +170,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
     
 
 
@@ -533,6 +540,36 @@
     
 
 
+    <!-- https://w3id.org/pko#executesProcedure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko#executesProcedure">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#ProcedureExecution"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko#Procedure"/>
+        <rdfs:comment xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed.</rdfs:comment>
+        <rdfs:label>executes procedure</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:changeNote xml:lang="en">In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedProcedure</skos:changeNote>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Procedure Execution to the Procedure that is being executed.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pko#executesStep -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko#executesStep">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#StepExecution"/>
+        <rdfs:range rdf:resource="http://purl.org/net/p-plan#Step"/>
+        <rdfs:comment xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed.</rdfs:comment>
+        <rdfs:label>executes step</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:changeNote xml:lang="en">In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedStep</skos:changeNote>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step Execution to the Step that is being executed.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/pko#fromStatus -->
 
 
@@ -768,8 +805,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/net/p-plan#StepExecution"/>
                     <rdf:Description rdf:about="https://w3id.org/pko#ProcedureExecution"/>
+                    <rdf:Description rdf:about="https://w3id.org/pko#StepExecution"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1594,6 +1631,34 @@
     
 
 
+    <!-- https://w3id.org/pko#issueCauseBySoftwareAgent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#issueCauseBySoftwareAgent">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#IssueOccurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>issue cause by software agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:changeNote xml:lang="en">In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause</skos:changeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/pko#issueCauseByUser -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#issueCauseByUser">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#IssueOccurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user.</rdfs:comment>
+        <rdfs:label>issue cause by user</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:changeNote xml:lang="en">In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause</skos:changeNote>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the cause of an issue, encountered during a Procedure/Step Execution, as identified and defined by the user.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/pko#issueSolution -->
 
 
@@ -1603,6 +1668,34 @@
         <rdfs:comment xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue encountered during a Procedure or Step Execution.</rdfs:comment>
         <rdfs:label>issue solution</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue encountered during a Procedure or Step Execution.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/pko#issueSolutionBySoftwareAgent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#issueSolutionBySoftwareAgent">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#IssueOccurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>issue solution by software agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:changeNote xml:lang="en">In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution</skos:changeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/pko#issueSolutionByUser -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#issueSolutionByUser">
+        <rdfs:domain rdf:resource="https://w3id.org/pko#IssueOccurrence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user.</rdfs:comment>
+        <rdfs:label>issue solution by user</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:changeNote xml:lang="en">In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution</skos:changeNote>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the solution of an issue, encountered during a Procedure/Step Execution, as identified and applied by the user.</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -1642,6 +1735,32 @@
         <rdfs:comment xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control.</rdfs:comment>
         <rdfs:label>new version motivation</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/pko#notesBySoftwareAgent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#notesBySoftwareAgent">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>notes by software agent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/pko#notesByUser -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/pko#notesByUser">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence).</rdfs:comment>
+        <rdfs:label>notes by user</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the notes taken by the user about either a question that occurred during the Procedure/Step Execution (User Question Occurrence) or an issue that occurred during the Procedure/Step Execution (Issue Occurrence).</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -1776,15 +1895,6 @@
 
     <owl:Class rdf:about="http://purl.org/net/p-plan#Step">
         <rdfs:label>Step</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/net/p-plan#StepExecution -->
-
-
-    <owl:Class rdf:about="http://purl.org/net/p-plan#StepExecution">
-        <rdfs:label>Step Execution</rdfs:label>
     </owl:Class>
     
 

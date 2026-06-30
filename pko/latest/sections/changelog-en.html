@@ -13,9 +13,7 @@
 </ul>
 </li>
 </ul></details><details><summary><u>Added classes</u></summary>
-<ul><li><a href="#http://purl.org/net/p-plan#StepExecution">http://purl.org/net/p-plan#StepExecution</a>
-</li>
-<li><a href="#http://www.w3.org/ns/odrl/2/Action">http://www.w3.org/ns/odrl/2/Action</a>
+<ul><li><a href="#http://www.w3.org/ns/odrl/2/Action">http://www.w3.org/ns/odrl/2/Action</a>
 </li>
 <li><a href="#http://www.w3.org/ns/odrl/2/Policy">http://www.w3.org/ns/odrl/2/Policy</a>
 </li>
@@ -63,6 +61,18 @@
 <ul>
 <li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#EvaluationRequestStatus</li>
 <li>Added: <http://purl.org/dc/dcam/rangeIncludes> https://w3id.org/pko#ProcedureExecutionStatus</li>
+</ul>
+</li>
+<li><a href="#executesProcedure">https://w3id.org/pko#executesProcedure</a>
+<ul>
+<li>Added: <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedProcedure"@en</li>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
+</ul>
+</li>
+<li><a href="#executesStep">https://w3id.org/pko#executesStep</a>
+<ul>
+<li>Added: <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:hasExecutedStep"@en</li>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
 </ul>
 </li>
 <li><a href="#isCurrentVersionOf">https://w3id.org/pko#isCurrentVersionOf</a>
@@ -143,7 +153,7 @@
 </li>
 <li><a href="#hasRequirementSatisfaction">https://w3id.org/pko#hasRequirementSatisfaction</a>
 <ul>
-<li>Added: domain Union of (http://purl.org/net/p-plan#StepExecution, https://w3id.org/pko#ProcedureExecution)</li>
+<li>Added: domain Union of (https://w3id.org/pko#ProcedureExecution, https://w3id.org/pko#StepExecution)</li>
 </ul>
 </li>
 <li><a href="#hasRequirementSatisfactionLevel">https://w3id.org/pko#hasRequirementSatisfactionLevel</a>
@@ -180,8 +190,8 @@
 <li><a href="#isFirstStepOf">https://w3id.org/pko#isFirstStepOf</a>
 <ul>
 <li>Added: domain http://purl.org/net/p-plan#Step</li>
-<li>Added: Range https://w3id.org/pko#Procedure</li>
 <li>Added: Range Union of (http://purl.org/net/p-plan#MultiStep, https://w3id.org/pko#Procedure)</li>
+<li>Added: Range https://w3id.org/pko#Procedure</li>
 </ul>
 </li>
 <li><a href="#isTemplateOf">https://w3id.org/pko#isTemplateOf</a>
@@ -216,14 +226,33 @@
 <li>Added: domain https://w3id.org/pko#Transition</li>
 </ul>
 </li>
-</ul></details><details><summary><u>Deleted object properties</u></summary>
-<ul><li><a href="#executesProcedure">https://w3id.org/pko#executesProcedure</a>
-</li>
-<li><a href="#executesStep">https://w3id.org/pko#executesStep</a>
-</li>
 </ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
 <details><summary><u>Modified data properties</u></summary>
-<ul><li><a href="#newVersionMotivation">https://w3id.org/pko#newVersionMotivation</a>
+<ul><li><a href="#issueCauseBySoftwareAgent">https://w3id.org/pko#issueCauseBySoftwareAgent</a>
+<ul>
+<li>Added: <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause"@en</li>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
+</ul>
+</li>
+<li><a href="#issueCauseByUser">https://w3id.org/pko#issueCauseByUser</a>
+<ul>
+<li>Added: <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueCause"@en</li>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
+</ul>
+</li>
+<li><a href="#issueSolutionBySoftwareAgent">https://w3id.org/pko#issueSolutionBySoftwareAgent</a>
+<ul>
+<li>Added: <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution"@en</li>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
+</ul>
+</li>
+<li><a href="#issueSolutionByUser">https://w3id.org/pko#issueSolutionByUser</a>
+<ul>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
+<li>Added: <http://www.w3.org/2004/02/skos/core#changeNote> "In the current version of the Procedural Knowledge Ontology (PKO), this property has been replaced by pko:issueSolution"@en</li>
+</ul>
+</li>
+<li><a href="#newVersionMotivation">https://w3id.org/pko#newVersionMotivation</a>
 <ul>
 <li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control."@en</li>
 <li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage version control."@en</li>
@@ -231,6 +260,16 @@
 <ul>
 <li>Deleted: <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en</li>
 <li>Deleted: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the motivation for creating a new version of a Procedure, for which we want to manage access control."@en</li>
+</ul>
+</li>
+<li><a href="#notesBySoftwareAgent">https://w3id.org/pko#notesBySoftwareAgent</a>
+<ul>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
+</ul>
+</li>
+<li><a href="#notesByUser">https://w3id.org/pko#notesByUser</a>
+<ul>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
 </ul>
 </li>
 <li><a href="#stepNumber">https://w3id.org/pko#stepNumber</a>
@@ -241,8 +280,8 @@
 </li>
 <li><a href="#versionNumber">https://w3id.org/pko#versionNumber</a>
 <ul>
-<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage version control."@en</li>
 <li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage version control."@en</li>
+<li>Added: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage version control."@en</li>
 </ul>
 <ul>
 <li>Deleted: rdfs:comment "In the context of the Procedural Knowledge Ontology (PKO), this property is used to represent the number of the version of a Procedure, for which we want to manage access control."@en</li>
@@ -285,17 +324,5 @@
 </li>
 </ul></details><details><summary><u>Deleted data properties</u></summary>
 <ul><li><a href="#http://www.w3.org/ns/dcat#accessURL">http://www.w3.org/ns/dcat#accessURL</a>
-</li>
-<li><a href="#issueCauseBySoftwareAgent">https://w3id.org/pko#issueCauseBySoftwareAgent</a>
-</li>
-<li><a href="#issueCauseByUser">https://w3id.org/pko#issueCauseByUser</a>
-</li>
-<li><a href="#issueSolutionBySoftwareAgent">https://w3id.org/pko#issueSolutionBySoftwareAgent</a>
-</li>
-<li><a href="#issueSolutionByUser">https://w3id.org/pko#issueSolutionByUser</a>
-</li>
-<li><a href="#notesBySoftwareAgent">https://w3id.org/pko#notesBySoftwareAgent</a>
-</li>
-<li><a href="#notesByUser">https://w3id.org/pko#notesByUser</a>
 </li>
 </ul></details></div>

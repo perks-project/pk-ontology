@@ -15,7 +15,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/pko/industry">
-        <owl:versionIRI rdf:resource="https://w3id.org/pko/industry/1.0.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pko/industry/2.0.0"/>
         <dc:title>Industry module of Procedural Knowledge Ontology (PKO)</dc:title>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-5791-8427"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-9962-7193"/>
@@ -185,7 +185,9 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#hasArea">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Location"/>
         <rdfs:range rdf:resource="https://w3id.org/pko/industry#Area"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Location to an Area within it.</rdfs:comment>
         <rdfs:label>has area</rdfs:label>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to an Area within it.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -196,7 +198,9 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#hasDepartment">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Location"/>
         <rdfs:range rdf:resource="https://w3id.org/pko/industry#Department"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Location to a Department within it.</rdfs:comment>
         <rdfs:label>has department</rdfs:label>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to a Department within it.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -220,7 +224,9 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#hasSite">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Location"/>
         <rdfs:range rdf:resource="https://w3id.org/pko/industry#Site"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Location to a Site.</rdfs:comment>
         <rdfs:label>has site</rdfs:label>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Location to a Site.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -238,6 +244,19 @@
     
 
 
+    <!-- https://w3id.org/pko/industry#requiresLock -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#requiresLock">
+        <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Step"/>
+        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Lock"/>
+        <rdfs:comment xml:lang="en">This property is used to link a Step to the Lock it requires.</rdfs:comment>
+        <rdfs:label>requires lock</rdfs:label>
+        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Lock it requires.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/pko/industry#requiresPPE -->
 
 
@@ -247,19 +266,6 @@
         <rdfs:comment xml:lang="en">This property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step.</rdfs:comment>
         <rdfs:label>requires p p e</rdfs:label>
         <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Personal Protective Equipment (PPE) that is required by the Step.</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/pko/industry#requiresPadlock -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/pko/industry#requiresPadlock">
-        <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Step"/>
-        <rdfs:range rdf:resource="https://w3id.org/pko/industry#Lock"/>
-        <rdfs:comment xml:lang="en">This property is used to link a Step to the Padlock it requires.</rdfs:comment>
-        <rdfs:label>requires padlock</rdfs:label>
-        <skos:scopeNote xml:lang="en">In the context of the Procedural Knowledge Ontology (PKO), this property is used to link a Step to the Padlock it requires.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -294,6 +300,15 @@
 
     <owl:Class rdf:about="http://purl.org/net/p-plan#Step">
         <rdfs:label>Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/nfdi4ing/metadata4ing#Tool -->
+
+
+    <owl:Class rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Tool">
+        <rdfs:label>Tool</rdfs:label>
     </owl:Class>
     
 
@@ -343,6 +358,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/pko/industry#Area">
+        <rdfs:comment xml:lang="en">This class represents an Area of a location.</rdfs:comment>
         <rdfs:label>Area</rdfs:label>
     </owl:Class>
     
@@ -352,6 +368,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/pko/industry#Department">
+        <rdfs:comment xml:lang="en">This class represents a Department of a location.</rdfs:comment>
         <rdfs:label>Department</rdfs:label>
     </owl:Class>
     
@@ -393,6 +410,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/pko/industry#Lock">
+        <rdfs:comment xml:lang="en">This class represents a Lock, that is a device to be attached to the machine in order to prevent its re-activation, during the execution of a LOTO procedure.</rdfs:comment>
         <rdfs:label>Lock</rdfs:label>
     </owl:Class>
     
@@ -433,16 +451,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/pko/industry#Site">
+        <rdfs:comment xml:lang="en">This class represents a Site, that is a physical location or facility.</rdfs:comment>
         <rdfs:label>Site</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pko/industry#Tool -->
-
-
-    <owl:Class rdf:about="https://w3id.org/pko/industry#Tool">
-        <rdfs:label>Tool</rdfs:label>
     </owl:Class>
     
 
@@ -703,7 +713,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#Multimeter">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
+        <rdf:type rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Tool"/>
     </owl:NamedIndividual>
     
 
@@ -739,7 +749,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#PressureGauge">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
+        <rdf:type rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Tool"/>
     </owl:NamedIndividual>
     
 
@@ -784,7 +794,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#Screwdriver">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
+        <rdf:type rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Tool"/>
     </owl:NamedIndividual>
     
 
@@ -838,23 +848,8 @@
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pko/industry#Wrenches">
-        <rdf:type rdf:resource="https://w3id.org/pko/industry#Tool"/>
+        <rdf:type rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Tool"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://w3id.org/pko/industry#Padlock">
-        <rdfs:comment xml:lang="en">This class represents a Padlock, that is a lock to be attached to the machine in order to prevent their re-activation, during the execution of a LOTO procedure.</rdfs:comment>
-    </rdf:Description>
 </rdf:RDF>
 
 
