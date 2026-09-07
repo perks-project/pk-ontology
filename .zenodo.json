@@ -42,7 +42,7 @@
     "upload_type": "software",
     "language": "eng",
     "grants": [
-        {"id": "10.3030/101120323"}
+        {"id": "00k4n6c32::101120323"}
     ],
     "communities": [
         {"identifier": "perks_project"}
