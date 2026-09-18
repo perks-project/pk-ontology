@@ -13,19 +13,22 @@
     ],
     "contributors": [
         {
-            "name": "Baroni, Ilaria",
-            "orcid": "0000-0001-5791-8427",
-            "affiliation": "Cefriel"
-        },
-        {
             "name": "Azzini, Antonia",
             "orcid": "0000-0002-9066-1229",
-            "affiliation": "Cefriel"
+            "affiliation": "Cefriel",
+            "role": "Researcher"
+        },
+        {
+            "name": "Baroni, Ilaria",
+            "orcid": "0000-0001-5791-8427",
+            "affiliation": "Cefriel",
+            "role": "ProjectManager"
         },
         {
             "name": "Celino, Irene",
             "orcid": "0000-0001-9962-7193",
-            "affiliation": "Cefriel"
+            "affiliation": "Cefriel",
+            "role": "ProjectLeader"
         }
     ],
     "title": "Procedural Knowledge Ontology (PKO)",
