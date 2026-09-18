@@ -15,7 +15,7 @@ In industry, PK refers in general to structured processes to be followed, and ca
 
 The Procedural Knowledge Ontology (PKO) is defined to support the holistic governance of procedural knowledge in its entire life cycle, from elicitation to management, from access to exploitation of explicit PK. An overview of the concepts covered by the ontology is represented in the following figure.
 
-<p align="left"><img src="requirements/conceptual-model-v0.png" alt="Conceptual Model v0" width="800"></p>
+<p align="left"><img src="requirements/conceptual-model-v2.png" alt="Conceptual Model v2" width="800"></p>
 
 ## Content of the repository
 
