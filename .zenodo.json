@@ -16,19 +16,19 @@
             "name": "Azzini, Antonia",
             "orcid": "0000-0002-9066-1229",
             "affiliation": "Cefriel",
-            "role": "Researcher"
+            "type": "Researcher"
         },
         {
             "name": "Baroni, Ilaria",
             "orcid": "0000-0001-5791-8427",
             "affiliation": "Cefriel",
-            "role": "ProjectManager"
+            "type": "ProjectManager"
         },
         {
             "name": "Celino, Irene",
             "orcid": "0000-0001-9962-7193",
             "affiliation": "Cefriel",
-            "role": "ProjectLeader"
+            "type": "ProjectLeader"
         }
     ],
     "title": "Procedural Knowledge Ontology (PKO)",
